@@ -2,7 +2,7 @@
 
 This map gives clues to the likely locations of decorations in the game Pikmin Bloom. Data displayed on this map is from Open Street Map, and may not fully reflect what is displayed in the game.
 
-This application is not affiliated with Nintendo or Niantic Lab. The decoration category icons and the red flower illustration come from the game. This application is developed and maintained by [pixelpirate](https://pixelpirate.fr).
+This application is not affiliated with Nintendo or Niantic Lab. The decoration category icons come from the game. This application is developed and maintained by [pixelpirate](https://pixelpirate.fr).
 
 ## How does it works?
 

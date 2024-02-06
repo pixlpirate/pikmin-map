@@ -2,7 +2,7 @@
 
 Diese Karte gibt Hinweise auf die wahrscheinlichen Standorte von Dekorationen im Spiel Pikmin Bloom. Die auf dieser Karte angezeigten Daten spiegeln möglicherweise nicht vollständig das wider, was im Spiel angezeigt wird.
 
-Diese Anwendung steht in keiner Verbindung zu Nintendo oder Niantic Lab. Die Symbole der Dekorationskategorien und die Illustration der roten Blume stammen aus dem Spiel. Diese Anwendung wird von [pixelpirate] (https://pixelpirate.fr) entwickelt und gepflegt.
+Diese Anwendung ist nicht mit Nintendo oder Niantic Lab verbunden. Die Symbole der Dekorationskategorie stammen aus dem Spiel. Diese Anwendung wird von [pixelpirate] (https://pixelpirate.fr) entwickelt und gepflegt.
 
 ## Wie funktioniert es?
 

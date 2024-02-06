@@ -2,7 +2,7 @@
 
 Cette carte donne des indices sur les emplacements probables des décorations du jeu Pikmin Bloom. Les données affichées sur cette carte proviennent d'Open Street Map, il est possible qu'elle ne reflètent pas entièrement ce qui est affiché dans le jeu.
 
-Cette application n’est pas affiliée à Nintendo ou Niantic Lab. Les icônes de catégorie de déco et l’illustration de fleur rouge proviennent du jeu. Cette application est développée et maintenue par [pixelpirate](https://pixelpirate.fr).
+Cette application n'est pas affiliée à Nintendo ou Niantic Lab. Les icônes de la catégorie de décoration proviennent du jeu. Cette application est développée et maintenue par [pixelpirate](https://pixelpirate.fr).
 
 ## Comment ça marche&nbsp;?
 
