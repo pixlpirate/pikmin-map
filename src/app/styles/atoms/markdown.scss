@@ -1,10 +1,12 @@
+@import 'variables', 'responsive';
+
 /* Markdown
 ------------------------------------------------- */
 
 markdown {
 	h3 {
 		time {
-			color: rgba($black, 0.5);
+			color: $color-primary;
 			font-size: 0.5em;
 		}
 	}
