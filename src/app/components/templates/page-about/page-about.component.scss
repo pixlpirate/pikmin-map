@@ -1,0 +1,56 @@
+@import 'variables', 'responsive', 'mixins';
+
+/* Page about
+------------------------------------------------- */
+app-language-picker {
+	position: fixed;
+	top: $gap--small;
+	right: $gap--small;
+}
+
+
+.button-map {
+	@include ui-btn($btn-size);
+	position: fixed;
+	right: $gap--small;
+	bottom: $gap--small;
+}
+
+.markdown {
+	display: none;
+
+	&--loaded {
+		display: unset;
+	}
+}
+
+.social-list {
+	display: flex;
+	gap: $gap--small;
+	justify-content: center;
+	list-style: none;
+
+	a {
+		display: block;
+		color: $black;
+		font-size: 1.5em;
+		transition: $transition;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

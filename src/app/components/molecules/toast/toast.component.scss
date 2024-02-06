@@ -1,0 +1,102 @@
+@import 'variables', 'responsive';
+
+/* Toast
+------------------------------------------------- */
+:host {
+	width: 100%;
+	max-width: 768px;
+}
+
+.toast {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: $gap--small;
+	color: rgba($black, 0.75);
+	text-align: center;
+	background-color: $white;
+	border-left: 4px solid rgba($black, 0.1);
+	border-radius: $border-radius--small;
+	transition-timing-function: ease-out;
+	pointer-events: initial;
+
+	&--info {
+		border-left-color: $color-primary;
+	}
+
+	&--warning {
+		border-left-color: $yellow;
+	}
+
+	&--error {
+		border-left-color: $red;
+	}
+
+	&--success {
+		border-left-color: $color-primary;
+	}
+}
+
+.toast-message {
+	display: flex;
+	gap: 0.5ch;
+	align-items: center;
+	margin-top: calc($t-s / 6 * -1);
+	font-size: $t-s;
+}
+
+.toast-close {
+	position: relative;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	margin-left: $gap--small;
+	padding: 0;
+	color: rgba($black, 0.3);
+	font-size: 1.25rem;
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+
+	&:hover {
+		color: rgba($black, 0.6);
+	}
+}
+
+.toast-timer {
+	position: absolute;
+}
+
+.toast-timer-progress,
+.toast-timer-background {
+	stroke-width: $border-size;
+}
+
+.toast-timer-progress {
+	transform: rotate(-90deg);
+	transform-origin: center;
+	stroke: rgba($black, 0.15);
+	stroke-dasharray: 100;
+}
+
+.toast-timer-background {
+	stroke: rgba($black, 0.2);
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

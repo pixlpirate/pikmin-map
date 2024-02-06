@@ -1,0 +1,72 @@
+## Änderungsprotokoll
+
+### v1.0.0 <time>2024-02-06</time>
+
+- Komplette Code-Überarbeitung
+- Jetzt Open Source!
+
+### v0.10.1 <time>2023-11-14</time>
+
+- Hinzufügung von `shop=computer` zur Kategorie **Elektrofachgeschäfte**
+
+### v0.10.0 <time>2023-11-16</time>
+
+- Hinzufügung der Kategorie **Elektrofachgeschäfte**
+
+### v0.9.0 <time>2023-10-24</time>
+
+- Hinzufügung der Kategorie **Schreine und Tempel**
+- Abfragen wurden weiterentwickelt, um eine komplexere Kombination von OSM-Tags zu ermöglichen: `building=temple` UND (`religion=shinto` ODER `religion=buddhist`)
+- Verbesserung der Abfragen durch Einführung von Länderbeschränkungen
+
+### v0.8.1 <time>2023-09-27</time>
+
+- Hinzufügung von `cuisine=chinese` zur Kategorie **Ramen Restaurant**
+- Hinzufügung von `shop=department_store` zur Kategorie **Kosmetikladen**
+- Entfernung von `cuisine=mediterranean` aus der Kategorie **Italienisches Restaurant**
+- Dank an _GhaztliousMoths_ und _Helix_ für die Hinweise!
+- Klarstellung des Suchfeld-Platzhalters
+
+### v0.8.0 <time>2023-09-14</time>
+
+- Hinzufügung der Kategorie **Kosmetikladen**
+
+### v0.7.0 <time>2023-08-09</time>
+
+- Hinzufügung der Kategorie **Hotel**
+
+### v0.6.1 <time>2023-05-17</time>
+
+- Verbesserungen des Benutzererlebnisses auf Mobiltelefonen
+
+### v0.6.0 <time>2023-05-16</time>
+
+- Einführung von Änderungsprotokollen
+- Die App kann jetzt vom Browsermenü auf dem Telefon installiert werden
+- Beim Start zentriert sich die Karte auf die zuletzt besuchte Position
+- Marker zeigen alle Kategorien an, die mit einem Interessenspunkt verbunden sind
+- Wenn ein Interessenspunkt mehrere Kategorien hat, werden zuerst die ausgewählten Kategorien angezeigt
+
+### v0.5.0 <time>2023-05-14</time>
+
+- Hinzufügung der Kategorie **Brücke**
+
+### v0.4.0 <time>2023-04-14</time>
+
+- Hinzufügung der Kategorie **Ramen Restaurant**
+
+### v0.3.0 <time>2023-03-08</time>
+
+- Hinzufügung der Kategorie **Italienisches Restaurant**
+
+### v0.2.0 <time>2022-12-20</time>
+
+- Hinzufügung der Kategorie **Besonderer Ort**
+
+### v0.1.1 <time>2022-12-17</time>
+
+- Korrektur des responsiven Layouts
+
+### v0.1.0 <time>2022-12-16</time>
+
+- Erstveröffentlichung!

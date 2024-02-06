@@ -1,0 +1,12 @@
+<div [@slideInOut]="state" class="toast toast--{{type}}" [style.transition-duration.ms]="transitionDuration">
+	<span class="toast-message" [innerHTML]="message"></span>
+
+	<button class="toast-close" (click)="close()" aria-label="Close toast">
+		<i class="icon icon-xmark"></i>
+		<svg class="toast-timer" viewBox="0 0 30 30">
+			<circle class="toast-timer-progress" fill="none" cx="15" cy="15" r="13"
+					[attr.stroke-dashoffset]="percentage" />
+			<circle class="toast-timer-background" fill="none" cx="15" cy="15" r="13" />
+		</svg>
+	</button>
+</div>

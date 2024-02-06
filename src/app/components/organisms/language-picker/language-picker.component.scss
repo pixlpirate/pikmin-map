@@ -1,0 +1,80 @@
+@import 'variables', 'responsive';
+
+/* Language Picker
+------------------------------------------------- */
+.language-picker {
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&--open {
+		.language-list {
+			display: flex;
+		}
+	}
+}
+
+.language-active,
+.language-list-item {
+	display: flex;
+	gap: 0.75ch;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0.75rem 2rem;
+	white-space: nowrap;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $grey--lightest;
+	}
+
+	i {
+		font-size: 0.6em;
+	}
+}
+
+.language-active {
+	background-color: $white;
+	border-radius: $border-radius--small;
+}
+
+.language-list {
+	position: absolute;
+	top: calc(100% + $gap--small);
+	display: none;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	list-style: none;
+	background-color: $white;
+	border-radius: $border-radius--small;
+	box-shadow: 0 2px 5px -4px rgba($black, 0.75);
+}
+
+.language-list-item {
+	&--active {
+		color: $white;
+		background-color: $color-primary;
+		pointer-events: none;
+	}
+
+	i {
+		font-size: 0.75em;
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

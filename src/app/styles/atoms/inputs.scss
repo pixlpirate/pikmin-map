@@ -1,0 +1,38 @@
+/* Inputs
+------------------------------------------------- */
+.input-group {
+	position: relative;
+}
+
+input {
+	font-size: $t-s--small;
+
+	&[type=text] {
+		padding: 1rem;
+		font-size: $t-s--small;
+		border: $border-size solid transparent;
+		border-radius: 5rem;
+
+		&::placeholder {
+			color: rgba($black, 0.5);
+		}
+
+		&:focus {
+			border-color: $color-primary;
+			outline: none;
+		}
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

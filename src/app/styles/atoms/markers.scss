@@ -1,0 +1,71 @@
+/* Markers
+------------------------------------------------- */
+.marker {
+	&-location {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&::before,
+		&:after {
+			position: absolute;
+			width: 2.5rem;
+			height: 2.5rem;
+			border: $border-size solid $white;
+			border-radius: 50%;
+			content: "";
+		}
+
+		&::before {
+			background-color: $blue;
+			animation: marker-pulse 4s linear infinite;
+		}
+	}
+
+	&-pin {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		height: 100%;
+		color: $white;
+		background: url("/assets/icons/map/_Background.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		span {
+			font-weight: $w-medium;
+			font-size: 10px;
+			line-height: 10px;
+		}
+
+		img {
+			width: 55% !important;
+			margin-top: 25%;
+			object-fit: contain;
+			aspect-ratio: 1/1;
+		}
+	}
+}
+
+.popup {
+	&-location {
+		font-size: $t-s--small;
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

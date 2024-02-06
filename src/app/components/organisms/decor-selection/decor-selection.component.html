@@ -1,0 +1,33 @@
+<button (click)="isOpen = !isOpen" class="decor-list-toggle" aria-label="Open decor list">
+	<i class="icon" [ngClass]="isOpen ? 'icon-xmark' : 'icon-gift'"></i>
+</button>
+
+
+<form *ngIf="form" [formGroup]="form" class="decor-list-container" [ngClass]="{'decor-list-container--open': isOpen}">
+
+	<h2 class="decor-list-title">{{translate( "DECOR_LIST" )}}</h2>
+
+	<ul class="decor-list">
+
+		<li *ngFor="let decor of decors" class="decor-item">
+
+			<label class="decor-label">
+
+				<input class="decor-checkbox" type="checkbox" [formControlName]="decor.label" />
+				<span class="decor-checkmark"></span>
+
+				<img
+					class="decor-icon"
+					src="./assets/icons/picture-book/{{decor.icon}}.png"
+					alt="{{translate('ICON_NAME', translate(decor.label))}}"
+					title="{{translate(decor.label)}}">
+
+			</label>
+
+		</li>
+
+	</ul>
+
+</form>
+
+<div class="decor-list-background" (click)="isOpen = !isOpen"></div>

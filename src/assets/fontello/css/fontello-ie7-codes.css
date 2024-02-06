@@ -1,0 +1,14 @@
+
+.icon-xmark { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe817;&nbsp;'); }
+.icon-spin6 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe839;&nbsp;'); }
+.icon-caret-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe905;&nbsp;'); }
+.icon-check { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe924;&nbsp;'); }
+.icon-envelope { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9d5;&nbsp;'); }
+.icon-gift { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xea61;&nbsp;'); }
+.icon-info { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeaf2;&nbsp;'); }
+.icon-link { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb1a;&nbsp;'); }
+.icon-location-dot { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb24;&nbsp;'); }
+.icon-magnifying-glass { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb2e;&nbsp;'); }
+.icon-map-location-dot { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeb38;&nbsp;'); }
+.icon-crosshair { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xee11;&nbsp;'); }
+.icon-github { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeeb6;&nbsp;'); }

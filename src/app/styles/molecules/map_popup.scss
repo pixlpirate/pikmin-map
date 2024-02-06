@@ -1,0 +1,72 @@
+/* Moelcule - Map Popup
+------------------------------------------------- */
+.popup-content {
+	display: flex;
+	flex-direction: column;
+	gap: $gap--small;
+	align-items: center;
+	justify-content: center;
+	font-size: $t-s;
+	text-align: center;
+
+	a {
+		color: $red !important;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	i {
+		position: relative;
+		top: -0.05em;
+		font-size: 0.8em;
+	}
+
+	span {
+		padding-top: $gap--small;
+		color: $grey;
+		font-size: $t-s--small;
+		font-style: italic;
+		border-top: $border-size solid $red;
+	}
+}
+
+.popup-decor-list {
+	display: flex;
+	gap: calc($gap--small / 2);
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.popup-decor-list-item {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	width: 3.5rem;
+	height: 3.5rem;
+	background-color: $gold;
+	border-radius: 50%;
+}
+
+.popup-decor {
+	width: 65%;
+	height: 55%;
+	object-fit: contain;
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

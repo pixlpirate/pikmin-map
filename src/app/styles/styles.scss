@@ -1,0 +1,14 @@
+/**
+ * Styles are organized following the Atomic Design methodology
+ *
+ * The main idea is to create a scalable and maintainable design system
+ * It handle global styles and styles that are shared by multiple components
+ * Component specific styles are handled by the component itself
+ */
+
+@import
+	'./abstracts/',
+	'./atoms/',
+	'./molecules/',
+	'./organisms/',
+	'./vendor-fix/';

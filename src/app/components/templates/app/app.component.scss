@@ -1,0 +1,20 @@
+@import 'variables', 'responsive';
+
+/* App
+------------------------------------------------- */
+.content {
+	width: 100%;
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

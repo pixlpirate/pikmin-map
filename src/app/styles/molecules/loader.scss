@@ -1,0 +1,30 @@
+/* Loader
+------------------------------------------------- */
+.loader {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $orange;
+	animation: spin 2s linear infinite;
+	pointer-events: none;
+}
+
+.loader-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

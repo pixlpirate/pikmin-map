@@ -1,0 +1,7 @@
+<app-toast
+	*ngFor="let toast of toasts"
+	[id]="toast.id"
+	[message]="toast.message"
+	[type]="toast.type"
+	[duration]="toast.duration"
+></app-toast>

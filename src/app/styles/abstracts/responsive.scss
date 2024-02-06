@@ -1,0 +1,25 @@
+/* Responsive
+------------------------------------------------- */
+
+/* Mobile first
+--------------------------------------- */
+
+$breakpoints: (
+	sm:				576px,
+	md:				768px,
+	lg:				992px,
+	xl:				1200px,
+	xxl:			1440px
+);
+
+@mixin media-query($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+	// If $mq-breakpoint is a key that exists in
+	// $mq-breakpoints, get and use the value
+	@if map-has-key($mq-breakpoints, $mq-breakpoint) {
+		$mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+	}
+
+	@media screen and (min-width: #{$mq-breakpoint}) {
+		@content;
+	}
+}

@@ -1,0 +1,36 @@
+@import 'variables', 'responsive';
+
+/* Map
+------------------------------------------------- */
+:host {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100vh;
+}
+
+app-searchbar {
+	z-index: 1;
+}
+
+app-locate {
+	z-index: 1;
+}
+
+.map {
+	position: relative;
+	z-index: 0;
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

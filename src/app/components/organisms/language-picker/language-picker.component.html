@@ -1,0 +1,25 @@
+<nav appClickOutside (clickOutside)="close()" class="language-picker" [ngClass]="{'language-picker--open': isOpen}">
+
+	<div class="language-active" (click)="open()">
+		<span>{{getFlag(currentLanguage)}}</span>
+
+		<span>{{getLabel(currentLanguage)}}</span>
+
+		<i class="icon icon-caret-down"></i>
+	</div>
+
+	<ul class="language-list">
+
+		<li *ngFor="let lang of getAvailableLanguages()" class="language-list-item" (click)="changeLanguage(lang)">
+
+			<span>{{ getFlag(lang) }}</span>
+
+			<span>{{ getLabel(lang) }}</span>
+
+			<i *ngIf="lang === currentLanguage" class="icon icon-check"></i>
+
+		</li>
+
+	</ul>
+
+</nav>

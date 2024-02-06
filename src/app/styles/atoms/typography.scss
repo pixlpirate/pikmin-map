@@ -1,0 +1,117 @@
+/* Typography
+------------------------------------------------- */
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-weight: $w-medium;
+}
+
+h1,
+.h1 {
+	font-size: $h2-s;
+}
+
+h2,
+.h2 {
+	font-size: $h3-s;
+}
+
+h3,
+.h3 {
+	font-size: $h4-s;
+}
+
+h4,
+.h4 {
+	font-size: $t-s;
+}
+
+code {
+	display: inline-block;
+	padding: 0 0.75ch;
+	color: $color-primary;
+	font-size: 0.9em;
+	background-color: rgba($color-primary, 0.1);
+	border-radius: 2px;
+}
+
+label {
+	cursor: pointer;
+}
+
+a {
+	color: $color-primary;
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+	max-width: 100%;
+}
+
+.text {
+	&--center {
+		text-align: center;
+	}
+}
+
+.subtitle {
+	color: $grey--dark;
+	font-weight: $w-regular;
+	font-size: $h2-s;
+	font-style: italic;
+}
+
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {
+
+	h1,
+	h2,
+	h3,
+	.h1,
+	.h2,
+	.h3 {
+		margin-top: 1em;
+	}
+
+	h1,
+	.h1 {
+		font-size: $h1-s;
+	}
+
+	h2,
+	.h2 {
+		font-size: $h2-s;
+	}
+
+	h3,
+	.h3 {
+		font-size: $h3-s;
+	}
+
+	h4,
+	.h4 {
+		font-size: $h4-s;
+	}
+}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

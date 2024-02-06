@@ -1,0 +1,23 @@
+@import 'variables', 'responsive', 'mixins';
+
+/* Page map
+------------------------------------------------- */
+.button-about {
+	@include ui-btn($btn-size);
+	position: fixed;
+	right: $gap--small;
+	bottom: $gap--small;
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

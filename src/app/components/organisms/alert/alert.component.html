@@ -1,0 +1,12 @@
+<div *ngIf="isVisible" class="alert-container">
+	<div class="alert-content" appClickOutside (clickOutside)="close()">
+		<h3 *ngIf="header" class="alert-header">{{header}}</h3>
+
+		<p *ngIf="message" class="alert-message" [innerHTML]="message"></p>
+
+		<div class="alert-buttons">
+			<button class="button" aria-label="Close the modal" (click)="close()">{{translate('CLOSE')}}</button>
+			<button class="button button--secondary" aria-label="Confirm the action" (click)="doAction()">OK</button>
+		</div>
+	</div>
+</div>

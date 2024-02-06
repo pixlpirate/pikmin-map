@@ -1,0 +1,48 @@
+<app-language-picker></app-language-picker>
+
+<div class="content">
+
+	<nav class="social">
+		<ul class="social-list">
+			<li>
+				<a href="https://github.com/pixlpirate/pikmin-map" target="_blank" aria-label="Github"><i class="icon icon-github"></i></a>
+			</li>
+			<li>
+				<a href="https://pixelpirate.fr/contact" target="_blank" aria-label="Contact"><i class="icon icon-envelope"></i></a>
+			</li>
+		</ul>
+	</nav>
+
+	<div *ngIf="!aboutLoaded || !faqLoaded || !changelogLoaded" class="loader-container">
+		<i>{{translate("LOADING_CONTENT")}}</i>
+		<i class="loader icon icon-spin6"></i>
+	</div>
+
+	<markdown
+		id="about"
+		class="markdown"
+		[src]="'./assets/markdown/about/about.' + currentLanguage + '.md'"
+		(load)="aboutLoaded = true"
+		[ngClass]="aboutLoaded ? 'markdown--loaded' : ''"
+	></markdown>
+
+	<markdown
+		id="faq"
+		class="markdown"
+		[src]="'./assets/markdown/faq/faq.' + currentLanguage + '.md'"
+		(load)="faqLoaded = true"
+		[ngClass]="faqLoaded ? 'markdown--loaded' : ''"
+	></markdown>
+
+	<markdown
+		id="changelog"
+		class="markdown"
+		[src]="'./assets/markdown/changelog/changelog.' + currentLanguage + '.md'"
+		(load)="changelogLoaded = true"
+		[ngClass]="changelogLoaded ? 'markdown--loaded' : ''"
+	></markdown>
+</div>
+
+<a class="button-map" routerLink="/" aria-label="Navigate to homepage">
+	<i class="icon icon-map-location-dot"></i>
+</a>

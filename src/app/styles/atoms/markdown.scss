@@ -1,0 +1,24 @@
+/* Markdown
+------------------------------------------------- */
+
+markdown {
+	h3 {
+		time {
+			color: rgba($black, 0.5);
+			font-size: 0.5em;
+		}
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

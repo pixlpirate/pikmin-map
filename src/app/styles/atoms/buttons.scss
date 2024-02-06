@@ -1,0 +1,46 @@
+@import 'variables', 'responsive';
+
+/* Atoms - Buttons
+------------------------------------------------- */
+button,
+.button {
+	cursor: pointer;
+}
+
+.button {
+	min-width: 150px;
+	padding: 1rem 1.5rem;
+	color: $white;
+	font-size: $t-s;
+	text-decoration: none;
+	background-color: $color-primary;
+	border: $border-size solid transparent;
+
+	&:hover {
+		background-color: $color-primary--light;
+	}
+
+	&--secondary {
+		color: $color-primary;
+		background-color: $white;
+		border: $border-size solid $color-primary;
+
+		&:hover {
+			color: $white;
+			background-color: $color-primary;
+		}
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

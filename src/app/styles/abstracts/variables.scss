@@ -1,0 +1,70 @@
+/* Non colors */
+$white:					#ffffff;
+$black:					#000000;
+$grey--dark:			#333333;
+$grey:					#999999;
+$grey--light:			#cccccc;
+$grey--lighter:			#eeeeee;
+$grey--lightest:		#f5f5f5;
+
+/* Colors */
+$pikmin_red:			#f45452;
+$pikmin_yellow:			#fbd900;
+$pikmin_blue:			#498cd8;
+$pikmin_purple:			#d63ed9;
+$pikmin_grey:			#6a6a6a;
+$pikmin_pink:			#faadff;
+$pikmin_white:			#dfeafb;
+$pikmin_leaf:			#bbd94d;
+
+$red:					$pikmin_red;
+$red--light:			#f56866;
+$green--light:			#88ddb7;
+$green:					#38c184;
+$green--dark:			#1d6141;
+$blue:					$pikmin_blue;
+$blue--light:			#529df3;
+$yellow:				$pikmin_yellow;
+$orange:				#fc7137;
+$gold:					#d0b47f;
+
+$color-primary:			$green--dark;
+$color-primary--light:  lighten($green--dark, 5);
+
+/* Font color */
+$text-color:			$black;
+
+/* Font sizes */
+$t-s:					1.8rem;
+$t-s--small:			1.5rem;
+$h1-s:					7.5rem;
+$h2-s:					5rem;
+$h3-s:					3rem;
+$h4-s:					2rem;
+
+/* Font weights */
+$w-light:				300;
+$w-regular:				400;
+$w-medium:				600;
+$w-bold:				700;
+
+/* Borders */
+$border-size:			2px;
+$border-radius:			15px;
+$border-radius--small:	5px;
+$btn-size:				5rem;
+
+/* Spacing */
+$gap--large:			5.5rem;
+$gap:					3.5rem;
+$gap--medium:			2.5rem;
+$gap--small:			1rem;
+
+/* Shadows */
+$box-shadow:			0 0 10px -5px rgba($black, 0.75);
+
+/* Animation */
+$transition-properties: all;
+$transition-duration:	0.1s;
+$transition-timing:		ease-out;
+$transition:			$transition-properties $transition-duration $transition-timing;

@@ -1,0 +1,37 @@
+<div appClickOutside (clickOutside)="onClickOutside()" class="searchbar">
+
+	<div class="search-container">
+
+		<i class="search-icon icon icon-magnifying-glass"></i>
+
+		<input
+		class="search-input"
+		type="text"
+		placeholder="{{translate('SEARCH_PLACEHOLDER')}}"
+		[(ngModel)]="searchInput"
+		(ngModelChange)="searchInput$.next()"
+		(focus)="searchInputFocused = true"
+		>
+
+		<i *ngIf="searchResultsLoading" class="loader icon icon-spin6"></i>
+
+	</div>
+
+	<ul *ngIf="searchResults.length > 0 && searchInputFocused" class="result-list">
+
+		<ng-container *ngFor="let result of searchResults">
+
+				<li
+					class="result-item"
+					title="{{result.name}}"
+					(click)="flyTo(result.bbox)"
+				>
+					<i class="icon icon-location-dot"></i>
+					{{result.name}}
+				</li>
+
+		</ng-container>
+
+	</ul>
+
+</div>
