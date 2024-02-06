@@ -1,6 +1,45 @@
 <app-map></app-map>
 <app-decor-selection></app-decor-selection>
 
+<!-- SEO -->
+<main class="map-content">
+	<header>
+		<h1>Pikmin Bloom Map</h1>
+		<p>This map helps you find the likely locations of decorations in the game Pikmin Bloom, sourced from Open
+			Street Map data.</p>
+		<p>Disclaimer: This application is not affiliated with Nintendo or Niantic Lab, and is currently developed and
+			maintained by <a href="https://pixelpirate.fr">pixelpirate</a>.</p>
+	</header>
+
+	<article>
+		<section>
+			<h2>How does it work?</h2>
+			<p>The game collects landscape, road, and building data from external databases. It primarily comes from
+				Open Street Map (OSM) and occasionally Foursquare.</p>
+			<p>This map utilizes OSM data exclusively. It retrieves objects with the <a
+				   href="https://wiki.openstreetmap.org/wiki/Key:amenity" itemprop="url">amenity=restaurant</a> tag to
+				display restaurant decorations.</p>
+			<p>OSM lacks a direct tag-based retrieval function, so this application employs the Overpass-Turbo tool.</p>
+		</section>
+	</article>
+
+	<aside>
+		<h2>Tips</h2>
+		<p>Pin this application to your phone screen for easy access:</p>
+		<ul>
+			<li>On Android: Open this link in your browser, tap the three dots at the top right, and select "Add to home
+				screen".</li>
+			<li>On iOS: Open this link in Safari, tap the share icon at the bottom, and select "Add to home screen".
+			</li>
+		</ul>
+		<p>Those steps may vary slightly across devices.</p>
+	</aside>
+
+	<footer>
+		<p>For more information, visit the <a routerLink="/about">about page</a></p>
+	</footer>
+</main>
+
 <a routerLink="/about" class="button-about" aria-label="Navigate about page">
 	<i class="icon icon-info"></i>
 </a>
