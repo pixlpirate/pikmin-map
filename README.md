@@ -4,6 +4,8 @@
 
 This map provides clues to the likely locations of decorations in the game Pikmin Bloom. Data displayed on this map is sourced from OSM and may not fully reflect what is displayed in the game.
 
+Live version : [pikmin-map.pixelpirate.fr](https://pikmin-map.pixelpirate.fr)
+
 ## Contribute
 
 You can contribute to the application, submit corrections or improvements by creating a pull request. For example:
