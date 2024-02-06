@@ -23,7 +23,7 @@ Wie stellt das Spiel nun fest, dass es an diesem Ort ein Restaurant gibt? Es sch
 
 ### Funktionsweise dieser Karte
 
-Diese Karte stützt sich ausschließlich auf Daten, die auf OSM verfügbar sind, es fehlen also die Foursquare-Daten. In unserem Beispiel scheinen Restaurants mit dem OSM-Tag "Namenity=Restaurant" verbunden zu sein.
+Diese Karte stützt sich ausschließlich auf Daten, die auf OSM verfügbar sind, es fehlen also die Foursquare-Daten. In unserem Beispiel scheinen Restaurants mit dem OSM-Tag `amenity=restaurant` verbunden zu sein.
 Wenn die Deko **Restaurant** ausgewählt wird, bittet die Anwendung OSM, ihr die Objekte zu geben, die das Tag [`amenity=restaurant`](https://wiki.openstreetmap.org/wiki/Key:amenity) enthalten, und sie auf der Karte anzuzeigen.
 OSM verfügt nicht über eine Funktion zum direkten Abrufen von Objekten für ein bestimmtes Tag. Diese Anwendung verwendet das Overpass-Turbo-Tool, um diese Daten abzurufen.
 
