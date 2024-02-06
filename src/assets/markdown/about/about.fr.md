@@ -4,7 +4,7 @@ Cette carte donne des indices sur les emplacements probables des décorations du
 
 Cette application n’est pas affiliée à Nintendo ou Niantic Lab. Les icônes de catégorie de déco et l’illustration de fleur rouge proviennent du jeu. Cette application est développée et maintenue par [pixelpirate](https://pixelpirate.fr).
 
-## Comment ça marche ?
+## Comment ça marche&nbsp;?
 
 Pour comprendre comment cette application fonctionne, il faut comprendre comment le jeu détermine l’emplacement des décos.
 
@@ -16,10 +16,10 @@ Par exemple, si le joueur se trouve proche d’un restaurant, le jeu affichera l
 
 ### Sources des données du jeu
 
-Maintenant, comment est-ce que le jeu détermine qu’il y a un restaurant à cet emplacement ? Il semble que le jeu utilise au moins deux sources de données :
+Maintenant, comment est-ce que le jeu détermine qu’il y a un restaurant à cet emplacement&nbsp;? Il semble que le jeu utilise au moins deux sources de données&nbsp;:
 
-- Open Street Map (OSM) : Pour les fonds de carte et la majorité des données géolocalisées.
-- Foursquare : Pour certaines données géolocalisées.
+- Open Street Map (OSM)&nbsp;: Pour les fonds de carte et la majorité des données géolocalisées.
+- Foursquare&nbsp;: Pour certaines données géolocalisées.
 
 ### Fonctionnement de cette carte
 
@@ -29,9 +29,9 @@ OSM ne dispose pas d’une fonction permettant de récupérer directement des ob
 
 ### Astuces
 
-Cette application est conçue pour pouvoir être épinglée à l'écran de votre téléphone ! Pour cela :
-- Sur Android : Ouvrez votre navigateur sur votre téléphone Android -> Rendez vous à l'adresse de cette application -> Appuyez sur l'icône avec trois points en haut à droite de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
-- Sur iOS : Ouvrez Safari sur votre iPhone -> Rendez vous à l'adresse de cette application -> Appuyez sur l'icône de partage en bas de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
+Cette application est conçue pour pouvoir être épinglée à l'écran de votre téléphone&nbsp;! Pour cela&nbsp;:
+- Sur Android&nbsp;: Ouvrez votre navigateur sur votre téléphone Android -> Rendez vous à l'adresse de cette application -> Appuyez sur l'icône avec trois points en haut à droite de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
+- Sur iOS&nbsp;: Ouvrez Safari sur votre iPhone -> Rendez vous à l'adresse de cette application -> Appuyez sur l'icône de partage en bas de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
 
 Ces manipulations peuvent sensiblement varier d'un téléphone à l'autre.
 

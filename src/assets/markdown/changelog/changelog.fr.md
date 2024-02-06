@@ -3,7 +3,7 @@
 ### v1.0.0 <time>2024-02-06</time>
 
 - Refonte complète du code
-- Maintenant disponible en open source !
+- Maintenant disponible en open source&nbsp;!
 
 ### v0.10.1 <time>2023-11-14</time>
 
@@ -16,7 +16,7 @@
 ### v0.9.0 <time>2023-10-24</time>
 
 - Ajout de la catégorie **Sanctuaires et Temples**
-- Les requêtes ont évolué pour permettre des combinaisons plus complexes tags OSM :<br> `building=temple` ET (`religion=shinto` OU `religion=buddhist`)
+- Les requêtes ont évolué pour permettre des combinaisons plus complexes tags OSM&nbsp;:<br> `building=temple` ET (`religion=shinto` OU `religion=buddhist`)
 - Amélioration des requêtes en introduisant des contraintes de pays
 
 ### v0.8.1 <time>2023-09-27</time>
@@ -24,7 +24,7 @@
 - Ajout de `cuisine=chinese` à la catégorie **Restaurant de ramen**
 - Ajout de `shop=department_store` à la catégorie **Boutique de cosmétiques**
 - Suppression de `cuisine=mediterranean` de la catégorie **Restaurant italien**
-- Merci à _GhaztliousMoths_ et _Helix_ pour les indices !
+- Merci à _GhaztliousMoths_ et _Helix_ pour les indices&nbsp;!
 - Clarification du texte de la barre de recherche
 
 ### v0.8.0 <time>2023-09-14</time>
@@ -69,4 +69,4 @@
 
 ### v0.1.0 <time>2022-12-16</time>
 
-- Première version !
+- Première version&nbsp;!
