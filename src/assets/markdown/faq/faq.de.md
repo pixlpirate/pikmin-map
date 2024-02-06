@@ -1,7 +1,5 @@
 ## FAQ
 
-Stellen Sie sicher, dass Sie verstehen, [wie diese Karte funktioniert](#about)
-
 ### Diese Karte zeigt eine Dekoration an, die nicht auf meinem Detektor erscheint
 
 - OSM könnte einen Ort zurückgeben, der beim letzten Abrufen der Daten durch die Spielserver nicht existierte.

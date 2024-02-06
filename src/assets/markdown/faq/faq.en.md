@@ -1,7 +1,5 @@
 ## FAQ
 
-Make sure to understand [how this map works](#about)
-
 ### This map displays a decoration that does not appear on my detector
 
 - OSM may be returning a location that didn't exist the last time the data was retrieved by the game servers.

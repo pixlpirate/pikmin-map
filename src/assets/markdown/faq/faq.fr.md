@@ -1,7 +1,5 @@
 ## FAQ
 
-Assurez-vous de bien comprendre [comment fonctionne cette carte](#about)
-
 ### Cette carte affiche un déco qui n’apparait pas sur mon détecteur
 
 - OSM renseigne peut-être un emplacement qui n’existait pas la dernière fois que les données ont été récupérées par le jeu.

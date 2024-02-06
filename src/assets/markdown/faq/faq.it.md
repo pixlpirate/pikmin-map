@@ -1,7 +1,5 @@
 ## FAQ
 
-Assicuratevi di capire [come funziona questa mappa](#circa)
-
 ### Questa mappa mostra una decorazione che non appare sul mio rilevatore
 
 - È possibile che OSM restituisca una posizione che non esisteva l'ultima volta che i dati sono stati recuperati dai server del gioco.

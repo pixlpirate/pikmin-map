@@ -1,7 +1,5 @@
 ## FAQ
 
-Asegúrese de entender [cómo funciona este mapa](#acerca de)
-
 ### Este mapa muestra una decoración que no aparece en mi detector
 
 - OSM puede estar devolviendo una localización que no existía la última vez que los datos fueron recuperados por los servidores del juego.
