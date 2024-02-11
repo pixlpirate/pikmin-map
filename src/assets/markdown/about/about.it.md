@@ -30,7 +30,7 @@ OSM non dispone di una funzione per recuperare direttamente gli oggetti per un p
 ### Suggerimenti
 
 Questa applicazione è stata progettata per essere appuntata sullo schermo del telefono! Per farlo
-- Su Android: Aprire il browser sul telefono Android -> Andare all'indirizzo di questa applicazione -> Premere l'icona con tre punti in alto a destra dello schermo e selezionare "Aggiungi alla schermata iniziale".
-- Su iOS: Aprire Safari sull'iPhone -> Andare all'indirizzo di questa applicazione -> Premere l'icona di condivisione nella parte inferiore dello schermo e selezionare "Aggiungi alla schermata iniziale".
+- Su Android: Aprire il browser sul telefono Android 🠖 Andare all'indirizzo di questa applicazione 🠖 Premere l'icona con tre punti in alto a destra dello schermo e selezionare "Aggiungi alla schermata iniziale".
+- Su iOS: Aprire Safari sull'iPhone 🠖 Andare all'indirizzo di questa applicazione 🠖 Premere l'icona di condivisione nella parte inferiore dello schermo e selezionare "Aggiungi alla schermata iniziale".
 
 Questi passaggi possono variare leggermente da un telefono all'altro.

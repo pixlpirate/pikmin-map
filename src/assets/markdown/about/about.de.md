@@ -30,7 +30,7 @@ OSM verfügt nicht über eine Funktion zum direkten Abrufen von Objekten für ei
 ### Tipps
 
 Diese Anwendung ist so konzipiert, dass sie an den Bildschirm Ihres Telefons angeheftet werden kann! Um dies zu tun
-- Auf Android: Öffnen Sie Ihren Browser auf Ihrem Android-Telefon -> Gehen Sie zur Adresse dieser Anwendung -> Drücken Sie das Symbol mit den drei Punkten oben rechts auf dem Bildschirm und wählen Sie "Zum Startbildschirm hinzufügen".
-- Unter iOS: Öffnen Sie Safari auf Ihrem iPhone -> Gehen Sie zur Adresse dieser Anwendung -> Drücken Sie auf das Freigabesymbol am unteren Rand des Bildschirms und wählen Sie "Zum Startbildschirm hinzufügen".
+- Auf Android: Öffnen Sie Ihren Browser auf Ihrem Android-Telefon 🠖 Gehen Sie zur Adresse dieser Anwendung 🠖 Drücken Sie das Symbol mit den drei Punkten oben rechts auf dem Bildschirm und wählen Sie "Zum Startbildschirm hinzufügen".
+- Unter iOS: Öffnen Sie Safari auf Ihrem iPhone 🠖 Gehen Sie zur Adresse dieser Anwendung 🠖 Drücken Sie auf das Freigabesymbol am unteren Rand des Bildschirms und wählen Sie "Zum Startbildschirm hinzufügen".
 
 Diese Schritte können von einem Telefon zum anderen leicht variieren.

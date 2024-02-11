@@ -30,7 +30,7 @@ OSM does not have a function for directly retrieving objects for a particular ta
 ### Tips
 
 This application is designed to be pinned to your phone screen! To do this
-- On Android: Open your browser on your Android phone -> Go to the address of this application -> Press the icon with three dots at the top right of the screen and select "Add to home screen".
-- On iOS: Open Safari on your iPhone -> Go to the address of this application -> Press the share icon at the bottom of the screen and select "Add to home screen".
+- On Android: Open your browser on your Android phone 🠖 Go to the address of this application 🠖 Press the icon with three dots at the top right of the screen and select "Add to home screen".
+- On iOS: Open Safari on your iPhone 🠖 Go to the address of this application 🠖 Press the share icon at the bottom of the screen and select "Add to home screen".
 
 These steps may sligthly vary from one phone to another.

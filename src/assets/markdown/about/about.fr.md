@@ -30,8 +30,8 @@ OSM ne dispose pas d’une fonction permettant de récupérer directement des ob
 ### Astuces
 
 Cette application est conçue pour pouvoir être épinglée à l'écran de votre téléphone&nbsp;! Pour cela&nbsp;:
-- Sur Android&nbsp;: Ouvrez votre navigateur sur votre téléphone Android -> Rendez vous à l'adresse de cette application -> Appuyez sur l'icône avec trois points en haut à droite de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
-- Sur iOS&nbsp;: Ouvrez Safari sur votre iPhone -> Rendez vous à l'adresse de cette application -> Appuyez sur l'icône de partage en bas de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
+- Sur Android&nbsp;: Ouvrez votre navigateur sur votre téléphone Android 🠖 Rendez vous à l'adresse de cette application 🠖 Appuyez sur l'icône avec trois points en haut à droite de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
+- Sur iOS&nbsp;: Ouvrez Safari sur votre iPhone 🠖 Rendez vous à l'adresse de cette application 🠖 Appuyez sur l'icône de partage en bas de l'écran et sélectionnez "Ajouter à l'écran d'accueil"
 
 Ces manipulations peuvent sensiblement varier d'un téléphone à l'autre.
 

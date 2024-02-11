@@ -30,7 +30,7 @@ OSM no tiene una función para recuperar directamente objetos para una etiqueta 
 ### Consejos
 
 Esta aplicación está diseñada para ser fijada a la pantalla de tu teléfono. Para ello
-- En Android: Abra su navegador en su teléfono Android -> Vaya a la dirección de esta aplicación -> Pulse el icono con tres puntos en la parte superior derecha de la pantalla y seleccione "Añadir a la pantalla de inicio".
-- En iOS: Abra Safari en su iPhone -> Vaya a la dirección de esta aplicación -> Pulse el icono de compartir en la parte inferior de la pantalla y seleccione "Añadir a la pantalla de inicio".
+- En Android: Abra su navegador en su teléfono Android 🠖 Vaya a la dirección de esta aplicación 🠖 Pulse el icono con tres puntos en la parte superior derecha de la pantalla y seleccione "Añadir a la pantalla de inicio".
+- En iOS: Abra Safari en su iPhone 🠖 Vaya a la dirección de esta aplicación 🠖 Pulse el icono de compartir en la parte inferior de la pantalla y seleccione "Añadir a la pantalla de inicio".
 
 Estos pasos pueden variar ligeramente de un teléfono a otro.

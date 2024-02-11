@@ -1,5 +1,10 @@
 ## Journal des modifications
 
+### v1.0.1 <time>2024-02-11</time>
+
+- Ajout de la table de mapping des tags
+- Corrections mineures
+
 ### v1.0.0 <time>2024-02-06</time>
 
 - Refonte complète du code

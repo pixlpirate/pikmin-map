@@ -1,5 +1,10 @@
 ## Registro de Alterações
 
+### v1.0.1 <time>2024-02-11</time>
+
+- Adição da tabela de mapeamento de tags
+- Correções menores
+
 ### v1.0.0 <time>2024-02-06</time>
 
 - Refatoração completa do código

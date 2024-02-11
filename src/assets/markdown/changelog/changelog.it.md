@@ -1,5 +1,10 @@
 ## Registro delle modifiche
 
+### v1.0.1 <time>2024-02-11</time>
+
+- Aggiunta tabella di mappatura dei tag
+- Correzioni minori
+
 ### v1.0.0 <time>2024-02-06</time>
 
 - Refactoring completo del codice

@@ -1,5 +1,10 @@
 ## Änderungsprotokoll
 
+### v1.0.1 <time>2024-02-11</time>
+
+- Hinzufügen der Zuordnungstabelle für Tags
+- Kleine Korrekturen
+
 ### v1.0.0 <time>2024-02-06</time>
 
 - Komplette Code-Überarbeitung

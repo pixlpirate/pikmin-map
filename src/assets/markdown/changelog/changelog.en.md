@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.0.1 <time>2024-02-11</time>
+
+- Added mapping table for tags
+- Minor corrections
+
 ### v1.0.0 <time>2024-02-06</time>
 
 - Complete code refactoring

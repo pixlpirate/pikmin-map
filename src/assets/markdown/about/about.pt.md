@@ -30,7 +30,7 @@ O OSM não tem uma função para obter diretamente objectos para uma determinada
 ### Dicas
 
 Esta aplicação foi concebida para ser fixada no ecrã do seu telemóvel! Para o fazer
-- No Android: Abra o browser no seu telemóvel Android -> Vá para o endereço desta aplicação -> Prima o ícone com três pontos no canto superior direito do ecrã e seleccione "Adicionar ao ecrã inicial".
-- No iOS: Abra o Safari no seu iPhone -> Vá para o endereço desta aplicação -> Prima o ícone de partilha na parte inferior do ecrã e seleccione "Adicionar ao ecrã inicial".
+- No Android: Abra o browser no seu telemóvel Android 🠖 Vá para o endereço desta aplicação 🠖 Prima o ícone com três pontos no canto superior direito do ecrã e seleccione "Adicionar ao ecrã inicial".
+- No iOS: Abra o Safari no seu iPhone 🠖 Vá para o endereço desta aplicação 🠖 Prima o ícone de partilha na parte inferior do ecrã e seleccione "Adicionar ao ecrã inicial".
 
 Estes passos podem variar ligeiramente de um telemóvel para outro.
