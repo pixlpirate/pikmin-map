@@ -29,7 +29,8 @@ $orange:				#fc7137;
 $gold:					#d0b47f;
 
 $color-primary:			$green--dark;
-$color-primary--light:  lighten($green--dark, 5);
+$color-primary--light:	lighten($green--dark, 5);
+$color-primary--dark:	darken($green--dark, 5);
 
 /* Font color */
 $text-color:			$black;

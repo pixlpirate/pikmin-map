@@ -1,2 +1,6 @@
+// Those files affect properties that are not directly accessible to the components
+// Used ::ng-deep in the past, but it's deprecated
+
 @import
-	'./leaflet';
+	'./leaflet',
+	'./ngx-markdown';

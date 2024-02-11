@@ -1,0 +1,53 @@
+@import 'variables', 'responsive';
+
+/* Mapping Table
+------------------------------------------------- */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+
+	tr {
+		&:nth-child(even) {
+			td {
+				background-color: $grey--lightest;
+			}
+		}
+	}
+
+	th,
+	td {
+		padding: 1rem 1.5rem;
+		font-weight: $w-regular;
+	}
+
+	th {
+		background-color: $black;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+.table-head {
+	position: sticky;
+	top: 0;
+	color: $white;
+	text-align: left;
+	background-color: $white;
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}

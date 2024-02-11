@@ -1,0 +1,20 @@
+<table *ngIf="decors" class="table">
+	<thead class="table-head">
+		<tr>
+			<th>Decor</th>
+			<th>Tags</th>
+		</tr>
+	</thead>
+
+	<tbody class="table-body">
+		<tr *ngFor="let decor of decors">
+			<td>{{ decor.label | translate }}</td>
+			<td>
+				<ul>
+					<ng-container *ngFor="let tag of getDecorTags(decor.tags)">
+						<li [innerHTML]="tag"></li>
+					</ng-container>
+				</ul>
+			</td>
+		</tr>
+</table>

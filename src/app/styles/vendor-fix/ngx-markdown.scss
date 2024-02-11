@@ -1,0 +1,43 @@
+/* NgxMarkdown
+------------------------------------------------- */
+.anchor-title {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	line-height: 1.5em;
+
+	&:hover {
+		.anchor {
+			opacity: 1;
+		}
+	}
+
+	.anchor {
+		position: absolute;
+		right: calc(100%);
+		padding-right: $gap--small;
+		color: $grey--light;
+		font-size: 2.5rem;
+		line-height: inherit;
+		opacity: 0;
+		transition: $transition;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {}
+
+@include media-query(md) {}
+
+@include media-query(lg) {}
+
+@include media-query(xl) {}
+
+@include media-query(xxl) {}
