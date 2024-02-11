@@ -1,6 +1,6 @@
 <nav appClickOutside (clickOutside)="close()" class="language-picker" [ngClass]="{'language-picker--open': isOpen}">
 
-	<div class="language-active" (click)="open()">
+	<div class="language-active" (click)="isOpen = !isOpen">
 		<span>{{getFlag(currentLanguage)}}</span>
 
 		<span>{{getLabel(currentLanguage)}}</span>
