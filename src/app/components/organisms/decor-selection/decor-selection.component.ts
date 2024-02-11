@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { Subscription } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { DecorService, EventBusService, MapService, OverpassTurboService } from '../../../services';
 import { Decor } from '../../../models';
@@ -15,7 +15,7 @@ import { Decor } from '../../../models';
 @Component( {
 	selector: 'app-decor-selection',
 	standalone: true,
-	imports: [ CommonModule, ReactiveFormsModule ],
+	imports: [ CommonModule, ReactiveFormsModule, TranslateModule ],
 	templateUrl: './decor-selection.component.html',
 	styleUrl: './decor-selection.component.scss'
 } )
@@ -87,16 +87,5 @@ export class DecorSelectionComponent implements OnInit, OnDestroy
 		this.getDecorSubscription?.unsubscribe();
 		this.formChangeSubscription?.unsubscribe();
 		this.checkedDecorChangeSubscription?.unsubscribe();
-	}
-
-	/* Translation
-	--------------------------------------------- */
-	public translate( key: string, param?: string ): string
-	{
-		if ( param ) {
-			return this.translateService.instant( key, { param } );
-		} else {
-			return this.translateService.instant( key );
-		}
 	}
 }

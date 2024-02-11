@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
 import { AlertService } from '../../../services';
@@ -13,7 +13,7 @@ import { ClickOutsideDirective } from '../../../directives';
 @Component( {
 	selector: 'app-alert',
 	standalone: true,
-	imports: [ CommonModule, ClickOutsideDirective ],
+	imports: [ CommonModule, ClickOutsideDirective, TranslateModule ],
 	templateUrl: './alert.component.html',
 	styleUrl: './alert.component.scss'
 } )
@@ -29,8 +29,7 @@ export class AlertComponent implements OnInit, OnDestroy
 	private alertSubscription?: Subscription;
 
 	constructor (
-		private alertService: AlertService,
-		private translateService: TranslateService
+		private alertService: AlertService
 	) { }
 
 	/* Angular lifecycle
@@ -65,12 +64,5 @@ export class AlertComponent implements OnInit, OnDestroy
 	public close()
 	{
 		this.isVisible = false;
-	}
-
-	/* Translation
-	----------------------------------------- */
-	public translate( key: string )
-	{
-		return this.translateService.instant( key );
 	}
 }

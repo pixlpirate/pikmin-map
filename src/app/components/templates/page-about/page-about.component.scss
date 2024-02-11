@@ -28,6 +28,7 @@ app-language-picker {
 	display: flex;
 	gap: $gap--small;
 	justify-content: center;
+	padding: 0;
 	list-style: none;
 
 	a {

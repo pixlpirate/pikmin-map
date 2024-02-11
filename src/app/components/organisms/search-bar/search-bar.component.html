@@ -7,7 +7,7 @@
 		<input
 		class="search-input"
 		type="text"
-		placeholder="{{translate('SEARCH_PLACEHOLDER')}}"
+		placeholder="{{'SEARCH_PLACEHOLDER' | translate}}"
 		[(ngModel)]="searchInput"
 		(ngModelChange)="searchInput$.next()"
 		(focus)="searchInputFocused = true"

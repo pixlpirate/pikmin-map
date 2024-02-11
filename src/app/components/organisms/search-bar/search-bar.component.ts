@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { Subject, Subscription, debounceTime, mergeMap } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { LatLngBounds } from 'leaflet';
 
 import { MapService, NominatimService } from '../../../services';
@@ -16,7 +16,7 @@ import { ClickOutsideDirective } from '../../../directives';
 @Component( {
 	selector: 'app-search-bar',
 	standalone: true,
-	imports: [ CommonModule, FormsModule, ClickOutsideDirective ],
+	imports: [ CommonModule, FormsModule, ClickOutsideDirective, TranslateModule ],
 	templateUrl: './search-bar.component.html',
 	styleUrls: [ './search-bar.component.scss' ]
 } )
@@ -32,8 +32,7 @@ export class SearchBarComponent implements OnInit, OnDestroy
 
 	constructor (
 		private nominatimService: NominatimService,
-		private mapService: MapService,
-		private translateService: TranslateService
+		private mapService: MapService
 	) { }
 
 	/* Angular Lifecycle
@@ -78,19 +77,5 @@ export class SearchBarComponent implements OnInit, OnDestroy
 	{
 		this.mapService.flyToBounds( boundingbox );
 		this.searchInputFocused = false;
-	}
-
-	/* Translation
-	--------------------------------------------- */
-	/**
-	 * Translate a key
-	 *
-	 * @param {string} key - The key to translate
-	 *
-	 * @returns {string} - The plain text translation associated with the key
-	 */
-	public translate( key: string ): string
-	{
-		return this.translateService.instant( key );
 	}
 }

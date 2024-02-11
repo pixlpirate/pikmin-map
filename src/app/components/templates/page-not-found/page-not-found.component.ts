@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { Subscription } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 /**
  * The page not found component used to display a 404 error.
@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Component( {
 	selector: 'app-page-not-found',
 	standalone: true,
-	imports: [ CommonModule, RouterLink ],
+	imports: [ CommonModule, RouterLink, TranslateModule ],
 	templateUrl: './page-not-found.component.html',
 	styleUrl: './page-not-found.component.scss'
 } )
@@ -38,19 +38,5 @@ export class PageNotFoundComponent implements OnInit, OnDestroy
 	public ngOnDestroy()
 	{
 		this.languageSubscription?.unsubscribe();
-	}
-
-	/* Translation
-	--------------------------------------------- */
-	/**
-	 * Translate a key
-	 *
-	 * @param {string} key - The key to translate
-	 *
-	 * @returns {string} - The plain text translation associated with the key
-	 */
-	public translate( key: string ): string
-	{
-		return this.translateService.instant( key );
 	}
 }
