@@ -42,6 +42,7 @@
 .table-head {
 	position: sticky;
 	top: 0;
+	z-index: 10;
 	color: $white;
 	text-align: left;
 	background-color: $white;

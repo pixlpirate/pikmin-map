@@ -2,6 +2,11 @@
 
 /* Language Picker
 ------------------------------------------------- */
+:host {
+	position: relative;
+	z-index: 10;
+}
+
 .language-picker {
 	z-index: 1;
 	display: flex;
