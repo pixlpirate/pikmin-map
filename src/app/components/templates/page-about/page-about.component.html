@@ -13,36 +13,48 @@
 		</ul>
 	</nav>
 
-	<div *ngIf="!aboutLoaded || !faqLoaded || !changelogLoaded" class="loader-container">
-		<i>{{translate("LOADING_CONTENT")}}</i>
+	<div *ngIf="!allContentLoaded()" class="loader-container">
+		<i>{{"LOADING_CONTENT" | translate}}</i>
 		<i class="loader icon icon-spin6"></i>
 	</div>
 
-	<markdown
-		id="about"
-		class="markdown"
-		[src]="'./assets/markdown/about/about.' + currentLanguage + '.md'"
-		(load)="aboutLoaded = true"
-		[ngClass]="aboutLoaded ? 'markdown--loaded' : ''"
-	></markdown>
+	<div class="markdown-container">
 
-	<markdown
-		id="faq"
-		class="markdown"
-		[src]="'./assets/markdown/faq/faq.' + currentLanguage + '.md'"
-		(load)="faqLoaded = true"
-		[ngClass]="faqLoaded ? 'markdown--loaded' : ''"
-	></markdown>
+		<markdown
+			class="markdown"
+			[disableSanitizer]="true"
+			[src]="'./assets/markdown/about/about.' + currentLanguage + '.md'"
+			(load)="content['about'] = true"
+			[ngClass]="content['about'] ? 'markdown--loaded' : ''"
+		></markdown>
 
-	<markdown
-		id="changelog"
-		class="markdown"
-		[src]="'./assets/markdown/changelog/changelog.' + currentLanguage + '.md'"
-		(load)="changelogLoaded = true"
-		[ngClass]="changelogLoaded ? 'markdown--loaded' : ''"
-	></markdown>
+		<h2 [id]="generateId('DECOR_LIST' | translate)" class="anchor-title">
+			<a class="anchor" [href]="'/about#'+generateId('DECOR_LIST' | translate)">
+				<i class="icon icon-link"></i>
+			</a>
+			{{"DECOR_LIST" | translate}}
+		</h2>
+		<app-mapping-table></app-mapping-table>
+
+		<markdown
+			class="markdown"
+			[disableSanitizer]="true"
+			[src]="'./assets/markdown/faq/faq.' + currentLanguage + '.md'"
+			(load)="content['faq'] = true"
+			[ngClass]="content['faq'] ? 'markdown--loaded' : ''"
+		></markdown>
+
+		<markdown
+			class="markdown"
+			[disableSanitizer]="true"
+			[src]="'./assets/markdown/changelog/changelog.' + currentLanguage + '.md'"
+			(load)="content['changelog'] = true"
+			[ngClass]="content['changelog'] ? 'markdown--loaded' : ''"
+		></markdown>
+
+	</div>
 </div>
 
-<a class="button-map" routerLink="/" aria-label="Navigate to homepage">
+<a class="button-map" (click)="navigateTo('/')" aria-label="Navigate to homepage">
 	<i class="icon icon-map-location-dot"></i>
 </a>
