@@ -20,7 +20,7 @@ body {
 	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: $gap--large $gap;
+	padding: $gap--large $gap--small;
 
 	&--full-height {
 		min-height: 100vh;
@@ -65,6 +65,10 @@ body {
 @include media-query(lg) {
 	html {
 		font-size: 62.5%;
+	}
+
+	.content {
+		padding: $gap--large $gap;
 	}
 }
 

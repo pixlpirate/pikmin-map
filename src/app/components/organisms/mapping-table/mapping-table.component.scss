@@ -16,8 +16,12 @@
 
 	th,
 	td {
-		padding: 1rem 1.5rem;
+		padding: 1rem 0.5rem;
+		overflow: hidden;
 		font-weight: $w-regular;
+		font-size: $t-s--small;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	th {
@@ -28,6 +32,10 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+	}
+
+	li {
+		white-space: wrap;
 	}
 }
 
@@ -46,7 +54,16 @@
 
 @include media-query(md) {}
 
-@include media-query(lg) {}
+@include media-query(lg) {
+	.table {
+
+		th,
+		td {
+			padding: 1rem 1.5rem;
+			font-size: $t-s;
+		}
+	}
+}
 
 @include media-query(xl) {}
 
