@@ -44,7 +44,7 @@ export class MappingTableComponent
 
 		return ( tags as string[][] ).map( ( tag: string[] ) =>
 		{
-			return tag.join( this.translateService.instant( ' <b>AND</b> ' ) );
+			return tag.join( this.translateService.instant( ' <b>' + this.translateService.instant( 'AND' ) + '</b> ' ) );
 		} );
 	}
 }
