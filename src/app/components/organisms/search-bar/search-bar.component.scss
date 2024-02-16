@@ -30,6 +30,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	margin-top: 1rem;
 }
 
 .search-icon {
@@ -81,7 +82,11 @@
 	}
 }
 
-@include media-query(md) {}
+@include media-query(md) {
+	.search-container {
+		margin-top: 0;
+	}
+}
 
 @include media-query(lg) {}
 
