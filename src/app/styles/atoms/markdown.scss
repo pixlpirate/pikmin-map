@@ -6,8 +6,11 @@
 markdown {
 	h3 {
 		time {
-			color: $color-primary;
-			font-size: 0.5em;
+			color: $grey;
+			font-style: italic;
+			font-size: 0.75em;
+			margin-left: 1ch;
+			line-height: 1.5em;
 		}
 	}
 }
@@ -19,7 +22,14 @@ markdown {
 
 @include media-query(md) {}
 
-@include media-query(lg) {}
+@include media-query(lg) {
+	h3 {
+		time {
+			font-size: 0.5em;
+			line-height: 1.75em;
+		}
+	}
+}
 
 @include media-query(xl) {}
 

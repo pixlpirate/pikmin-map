@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Anchor to",
+	"AND": "AND",
 	"CLOSE": "Close",
 	"DECOR_LIST": "Decor list",
 	"ERROR_TIMEOUT": "Query timed out, try to zoom in",
@@ -10,6 +11,7 @@
 	"LOADING_CONTENT": "Loading content…",
 	"LOADING_OVERPASS": "loading results…",
 	"MAY_ALSO_FIND": "You may also find:",
+	"OR": "OR",
 	"PAGE_NOT_FOUND_MESSAGE": "Sorry, the page you are looking for does not exist.",
 	"PAGE_NOT_FOUND": "Page not found",
 	"SEARCH_PLACEHOLDER": "Search for a location or address…",

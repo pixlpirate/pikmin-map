@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Âncora para",
+	"AND": "E",
 	"CLOSE": "Fechar",
 	"DECOR_LIST": "Lista de decoração",
 	"ERROR_TIMEOUT": "Tempo de consulta esgotado, tente dar zoom",
@@ -10,6 +11,7 @@
 	"LOADING_CONTENT": "Carregando conteúdo…",
 	"LOADING_OVERPASS": "Carregando resultados...",
 	"MAY_ALSO_FIND": "Você também pode encontrar:",
+	"OR": "OU",
 	"PAGE_NOT_FOUND_MESSAGE": "Desculpe, a página que você está procurando não existe.",
 	"PAGE_NOT_FOUND": "Página não encontrada",
 	"SEARCH_PLACEHOLDER": "Buscar por um local ou endereço...",

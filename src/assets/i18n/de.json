@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Anker zu",
+	"AND": "UND",
 	"CLOSE": "Schließen",
 	"DECOR_LIST": "Dekorliste",
 	"ERROR_TIMEOUT": "Abfragezeitüberschreitung, versuchen Sie hereinzuzoomen",
@@ -10,6 +11,7 @@
 	"LOADING_CONTENT": "Inhalt wird geladen…",
 	"LOADING_OVERPASS": "Ergebnisse werden geladen...",
 	"MAY_ALSO_FIND": "Sie könnten auch finden:",
+	"OR": "ODER",
 	"PAGE_NOT_FOUND_MESSAGE": "Entschuldigung, die Seite, die Sie suchen, existiert nicht.",
 	"PAGE_NOT_FOUND": "Seite nicht gefunden",
 	"SEARCH_PLACEHOLDER": "Suche nach einem Ort oder einer Adresse...",

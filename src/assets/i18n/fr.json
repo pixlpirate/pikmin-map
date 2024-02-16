@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Ancre vers",
+	"AND": "ET",
 	"CLOSE": "Fermer",
 	"DECOR_LIST": "Décorations",
 	"ERROR_TIMEOUT": "La recherche a pris trop de temps. Essayez de zoomer",
@@ -10,6 +11,7 @@
 	"LOADING_CONTENT": "Chargement du contenu…",
 	"LOADING_OVERPASS": "Chargement des résultats…",
 	"MAY_ALSO_FIND": "Vous pourriez aussi trouver&nbsp;:",
+	"OR": "OU",
 	"PAGE_NOT_FOUND_MESSAGE": "Désolé, la page que vous recherchez n'existe pas.",
 	"PAGE_NOT_FOUND": "Page introuvable",
 	"SEARCH_PLACEHOLDER": "Rechercher un lieu ou une adresse…",

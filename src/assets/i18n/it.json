@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Ancora a",
+	"AND": "E",
 	"CLOSE": "Chiudi",
 	"DECOR_LIST": "Lista decorazioni",
 	"ERROR_TIMEOUT": "La query è scaduta, prova a fare zoom",
@@ -10,6 +11,7 @@
 	"LOADING_CONTENT": "Caricamento del contenuto…",
 	"LOADING_OVERPASS": "Caricamento risultati...",
 	"MAY_ALSO_FIND": "Potresti trovare anche:",
+	"OR": "O",
 	"PAGE_NOT_FOUND_MESSAGE": "Spiacenti, la pagina che stai cercando non esiste.",
 	"PAGE_NOT_FOUND": "Pagina non trovata",
 	"SEARCH_PLACEHOLDER": "Cerca un luogo o un indirizzo...",
