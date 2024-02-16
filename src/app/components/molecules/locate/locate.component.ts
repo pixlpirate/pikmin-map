@@ -19,7 +19,7 @@ export class LocateComponent
 	private marker?: Marker;
 	private markerIcon: DivIcon = divIcon( {
 		className: "marker-location",
-		iconSize: undefined
+		iconSize: [ 25, 25 ],
 	} );
 
 	constructor (

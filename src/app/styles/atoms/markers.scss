@@ -2,7 +2,6 @@
 ------------------------------------------------- */
 .marker {
 	&-location {
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -10,8 +9,8 @@
 		&::before,
 		&:after {
 			position: absolute;
-			width: 2.5rem;
-			height: 2.5rem;
+			width: 100%;
+			height: 100%;
 			border: $border-size solid $white;
 			border-radius: 50%;
 			content: "";
