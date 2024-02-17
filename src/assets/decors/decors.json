@@ -18,8 +18,8 @@
 		"icon": "Desert",
 		"label": "Sweetshop",
 		"tags": [
-			"shop=pastry",
-			"shop=confectionery"
+			"shop=confectionery",
+			"shop=pastry"
 		]
 	},
 	{
@@ -47,8 +47,8 @@
 		"icon": "Forest",
 		"label": "Forest",
 		"tags": [
-			"natural=wood",
-			"landuse=forest"
+			"landuse=forest",
+			"natural=wood"
 		]
 	},
 	{
@@ -69,7 +69,8 @@
 		"icon": "Museum",
 		"label": "Art Gallery",
 		"tags": [
-			"shop=art"
+			"shop=art",
+			"tourism=museum"
 		]
 	},
 	{
@@ -84,8 +85,8 @@
 		"icon": "Station",
 		"label": "Station",
 		"tags": [
-			"railway=station",
-			"building=train_station"
+			"building=train_station",
+			"railway=station"
 		]
 	},
 	{
@@ -121,8 +122,8 @@
 		"icon": "Bakery",
 		"label": "Bakery",
 		"tags": [
-			"shop=bakery",
-			"cuisine=pretzel"
+			"cuisine=pretzel",
+			"shop=bakery"
 		]
 	},
 	{
@@ -194,8 +195,8 @@
 		"label": "Italian Restaurant",
 		"tags": [
 			"cuisine=italian",
-			"cuisine=pizza",
-			"cuisine=pasta"
+			"cuisine=pasta",
+			"cuisine=pizza"
 		]
 	},
 	{
@@ -205,16 +206,16 @@
 			"cuisine=chinese",
 			"cuisine=noodle",
 			"cuisine=ramen",
-			"cuisine=udon",
-			"cuisine=soba"
+			"cuisine=soba",
+			"cuisine=udon"
 		]
 	},
 	{
 		"icon": "Bridge",
 		"label": "Bridge",
 		"tags": [
-			"bridge=yes",
-			"bridge=viaduct"
+			"bridge=viaduct",
+			"bridge=yes"
 		]
 	},
 	{
@@ -228,8 +229,8 @@
 		"icon": "Cosme",
 		"label": "Cosmetic Shop",
 		"tags": [
-			"shop=cosmetics",
 			"amenity=pharmacy",
+			"shop=cosmetics",
 			"shop=department_store"
 		]
 	},
@@ -261,8 +262,8 @@
 		"label": "Appliance Stores",
 		"tags": [
 			"shop=appliance",
-			"shop=electronics",
-			"shop=computer"
+			"shop=computer",
+			"shop=electronics"
 		]
 	}
 ]
