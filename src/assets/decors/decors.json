@@ -270,7 +270,9 @@
 		"icon": "Curry",
 		"label": "Curry Restaurant",
 		"tags": [
-			"cuisine=curry"
+			"cuisine=curry",
+			"cuisine=indian",
+			"cuisine=nepalese"
 		]
 	}
 ]
