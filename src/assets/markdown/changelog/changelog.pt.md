@@ -1,5 +1,9 @@
 ## Registro de Alterações
 
+### v1.0.2 <time>2024-03-28</time>
+
+- Adição da categoria de **Restaurante de Curry**
+
 ### v1.0.1 <time>2024-02-11</time>
 
 - Adição da tabela de mapeamento de tags

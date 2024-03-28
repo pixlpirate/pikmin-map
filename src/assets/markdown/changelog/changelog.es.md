@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.2 <time>2024-03-28</time>
+
+- Adición de la categoría de **Restaurante de curry**
+
 ### v1.0.1 <time>2024-02-11</time>
 
 - Agregada tabla de mapeo de etiquetas

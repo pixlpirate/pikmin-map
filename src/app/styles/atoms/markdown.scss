@@ -6,10 +6,10 @@
 markdown {
 	h3 {
 		time {
-			color: $grey;
-			font-style: italic;
-			font-size: 0.75em;
 			margin-left: 1ch;
+			color: $color-primary;
+			font-size: 0.75em;
+			font-style: italic;
 			line-height: 1.5em;
 		}
 	}

@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.2 <time>2024-03-28</time>
+
+- Hinzufügung der Kategorie **Curry-Restaurant**
+
 ### v1.0.1 <time>2024-02-11</time>
 
 - Hinzufügen der Zuordnungstabelle für Tags

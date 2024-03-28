@@ -1,5 +1,13 @@
 ## Changelog
 
+### v1.0.2 <time>2024-03-28</time>
+
+- Addition of the **Curry Restaurant** category
+
+### v0.10.0 <time>2023-11-16</time>
+
+- Addition of the **Appliance Stores** category
+
 ### v1.0.1 <time>2024-02-11</time>
 
 - Added mapping table for tags

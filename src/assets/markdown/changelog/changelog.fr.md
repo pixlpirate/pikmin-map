@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.2 <time>2024-03-28</time>
+
+- Ajout de la catégorie **Restaurant de curry**
+
 ### v1.0.1 <time>2024-02-11</time>
 
 - Ajout de la table de mapping des tags

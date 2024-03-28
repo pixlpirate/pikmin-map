@@ -265,5 +265,12 @@
 			"shop=computer",
 			"shop=electronics"
 		]
+	},
+	{
+		"icon": "Curry",
+		"label": "Curry Restaurant",
+		"tags": [
+			"cuisine=curry"
+		]
 	}
 ]
