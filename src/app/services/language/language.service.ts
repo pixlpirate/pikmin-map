@@ -40,6 +40,16 @@ export class LanguageService
 			locale: 'pt',
 			label: 'português',
 			icon: '🇵🇹'
+		},
+		{
+			locale: 'zh-CN',
+			label: '简体中文',
+			icon: '🇨🇳'
+		},
+		{
+			locale: 'zh-TW',
+			label: '繁體中文',
+			icon: '🇹🇼'
 		}
 	];
 
@@ -48,7 +58,7 @@ export class LanguageService
 	/**
 	 * Get the flag of a language
 	 *
-	 * @param {string} language code (en, fr, de, it, es, pt)
+	 * @param {string} language code (en, fr, de, it, es, pt, zh-CN, zh-TW)
 	 *
 	 * @returns {string} the emoji flag
 	 */
@@ -61,7 +71,7 @@ export class LanguageService
 	/**
 	 * Get the label of a language
 	 *
-	 * @param {string} language code (en, fr, de, it, es, pt)
+	 * @param {string} language code (en, fr, de, it, es, pt,  zh-CN, zh-TW)
 	 *
 	 * @returns {string} the label of the language
 	 */
