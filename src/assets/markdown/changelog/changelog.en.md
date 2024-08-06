@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.3 <time>2024-08-06</time>
+
+- Addition of category translations in Simplified Chinese and Traditional Chinese by @tommylung
+
 ### v1.0.2 <time>2024-03-28</time>
 
 - Addition of the **Curry Restaurant** category

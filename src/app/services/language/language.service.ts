@@ -2,11 +2,10 @@ import { Injectable } from '@angular/core';
 
 import { Language } from '../../models';
 
-@Injectable( {
-	providedIn: 'root'
-} )
-export class LanguageService
-{
+@Injectable({
+	providedIn: 'root',
+})
+export class LanguageService {
 	/**
 	 * List of available languages
 	 */
@@ -14,46 +13,46 @@ export class LanguageService
 		{
 			locale: 'en',
 			label: 'english',
-			icon: '🇬🇧'
+			icon: '🇬🇧',
 		},
 		{
 			locale: 'fr',
 			label: 'français',
-			icon: '🇫🇷'
+			icon: '🇫🇷',
 		},
 		{
 			locale: 'de',
 			label: 'deutsch',
-			icon: '🇩🇪'
+			icon: '🇩🇪',
 		},
 		{
 			locale: 'it',
 			label: 'italiano',
-			icon: '🇮🇹'
+			icon: '🇮🇹',
 		},
 		{
 			locale: 'es',
 			label: 'español',
-			icon: '🇪🇸'
+			icon: '🇪🇸',
 		},
 		{
 			locale: 'pt',
 			label: 'português',
-			icon: '🇵🇹'
+			icon: '🇵🇹',
 		},
 		{
 			locale: 'zh-CN',
 			label: '简体中文',
-			icon: '🇨🇳'
+			icon: '🇨🇳',
 		},
 		{
 			locale: 'zh-TW',
 			label: '繁體中文',
-			icon: '🇹🇼'
-		}
+			icon: '🇹🇼',
+		},
 	];
 
-	constructor () { }
+	constructor() {}
 
 	/**
 	 * Get the flag of a language
@@ -62,9 +61,10 @@ export class LanguageService
 	 *
 	 * @returns {string} the emoji flag
 	 */
-	public getFlag( locale: string ): string
-	{
-		const lang = this.languages.find( ( lang: Language ) => lang.locale === locale );
+	public getFlag(locale: string): string {
+		const lang = this.languages.find(
+			(lang: Language) => lang.locale === locale
+		);
 		return lang ? lang.icon : '';
 	}
 
@@ -75,9 +75,19 @@ export class LanguageService
 	 *
 	 * @returns {string} the label of the language
 	 */
-	public getLabel( locale: string )
-	{
-		const lang = this.languages.find( ( lang: Language ) => lang.locale === locale );
+	public getLabel(locale: string) {
+		const lang = this.languages.find(
+			(lang: Language) => lang.locale === locale
+		);
 		return lang ? lang.label : '';
+	}
+
+	/**
+	 * Get the list of available languages
+	 *
+	 * @returns {string[]} the list of available languages
+	 */
+	public getLocales(): string[] {
+		return this.languages.map((lang: Language) => lang.locale);
 	}
 }

@@ -10,75 +10,66 @@ import { ClickOutsideDirective } from '../../../directives';
 /**
  * The language picker component used to display a dropdown of available languages.
  */
-@Component( {
+@Component({
 	selector: 'app-language-picker',
 	standalone: true,
-	imports: [ CommonModule, ClickOutsideDirective ],
+	imports: [CommonModule, ClickOutsideDirective],
 	templateUrl: './language-picker.component.html',
-	styleUrl: './language-picker.component.scss'
-} )
-export class LanguagePickerComponent
-{
+	styleUrl: './language-picker.component.scss',
+})
+export class LanguagePickerComponent {
 	public isOpen: boolean = false;
 	public currentLanguage: string = 'en';
 
 	private languageSubscription?: Subscription;
 
-	constructor (
+	constructor(
 		private translateService: TranslateService,
 		private languageService: LanguageService
-	) { }
+	) {}
 
 	/* Angular lifecycle
 	--------------------------------------------- */
-	public ngOnInit()
-	{
+	public ngOnInit() {
 		this.currentLanguage = this.translateService.currentLang;
-		this.languageSubscription = this.translateService.onLangChange.subscribe( ( event ) =>
-		{
-			this.currentLanguage = event.lang;
-		} );
+		this.languageSubscription =
+			this.translateService.onLangChange.subscribe((event) => {
+				this.currentLanguage = event.lang;
+			});
 	}
 
-	public ngOnDestroy()
-	{
+	public ngOnDestroy() {
 		this.languageSubscription?.unsubscribe();
 	}
 
 	/* Picker
 	--------------------------------------------- */
-	open(): void
-	{
+	open(): void {
 		this.isOpen = true;
 	}
 
-	close(): void
-	{
+	close(): void {
 		this.isOpen = false;
 	}
 
 	/* Languages
 	--------------------------------------------- */
-	public getAvailableLanguages(): string[]
-	{
+	public getAvailableLanguages(): string[] {
 		return this.translateService.getLangs();
 	}
 
-	public changeLanguage( lang: string ): void
-	{
-		this.translateService.use( lang );
+	public changeLanguage(lang: string): void {
+		this.translateService.use(lang);
 		this.currentLanguage = lang;
 
 		this.close();
 	}
 
-	public getLabel( locale: string ): string
-	{
-		return this.languageService.getLabel( locale );
+	public getLabel(locale: string): string {
+		return this.languageService.getLabel(locale);
 	}
 
-	public getFlag( locale: string ): string
-	{
-		return this.languageService.getFlag( locale );
+	public getFlag(locale: string): string {
+		return this.languageService.getFlag(locale);
 	}
 }

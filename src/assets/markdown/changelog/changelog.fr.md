@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.3 <time>2024-08-06</time>
+
+- Ajout des traductions de catégories en chinois simplifié et chinois traditionnel par @tommylung
+
 ### v1.0.2 <time>2024-03-28</time>
 
 - Ajout de la catégorie **Restaurant de curry**

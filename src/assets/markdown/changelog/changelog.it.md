@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.3 <time>2024-08-06</time>
+
+- Aggiunta delle traduzioni delle categorie in cinese semplificato e cinese tradizionale da @tommylung
+
 ### v1.0.2 <time>2024-03-28</time>
 
 - Aggiunta della categoria **Ristorante di curry**

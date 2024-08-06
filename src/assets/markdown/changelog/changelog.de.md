@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.3 <time>2024-08-06</time>
+
+- Hinzufügung der Übersetzungen der Kategorien auf Chinesisch (vereinfacht) und Chinesisch (traditionell) durch @tommylung
+
 ### v1.0.2 <time>2024-03-28</time>
 
 - Hinzufügung der Kategorie **Curry-Restaurant**

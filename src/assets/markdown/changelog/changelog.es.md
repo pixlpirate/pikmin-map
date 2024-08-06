@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.3 <time>2024-08-06</time>
+
+- Adición de las traducciones de categorías al chino simplificado y chino tradicional por @tommylung
+
 ### v1.0.2 <time>2024-03-28</time>
 
 - Adición de la categoría de **Restaurante de curry**
