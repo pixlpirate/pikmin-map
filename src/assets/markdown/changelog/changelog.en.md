@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.4 <time>2024-09-12</time>
+
+- Addition of the **Hardware Store** category
+
 ### v1.0.3 <time>2024-08-06</time>
 
 - Addition of category translations in Simplified Chinese and Traditional Chinese by @tommylung
@@ -7,10 +11,6 @@
 ### v1.0.2 <time>2024-03-28</time>
 
 - Addition of the **Curry Restaurant** category
-
-### v0.10.0 <time>2023-11-16</time>
-
-- Addition of the **Appliance Stores** category
 
 ### v1.0.1 <time>2024-02-11</time>
 
@@ -28,7 +28,7 @@
 
 ### v0.10.0 <time>2023-11-16</time>
 
-- Addition of the **Appliance Stores** category
+- Addition of the **Appliance Store** category
 
 ### v0.9.0 <time>2023-10-24</time>
 

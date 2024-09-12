@@ -53,6 +53,7 @@
 	"Hotel": "Hotel",
 	"Cosmetic Shop": "Cosmetic Shop",
 	"Shrines and Temples": "Shrines and Temples",
-	"Appliance Stores": "Appliance Stores",
-	"Curry Restaurant": "Curry Restaurant"
+	"Appliance Stores": "Appliance Store",
+	"Curry Restaurant": "Curry Restaurant",
+  "Hardware Store": "Hardware Store"
 }

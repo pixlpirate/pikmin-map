@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.4 <time>2024-09-12</time>
+
+- Aggiunta della categoria **Negozio di Ferramenta**
+
 ### v1.0.3 <time>2024-08-06</time>
 
 - Aggiunta delle traduzioni delle categorie in cinese semplificato e cinese tradizionale da @tommylung
@@ -20,11 +24,11 @@
 
 ### v0.10.1 <time>2023-11-14</time>
 
-- Aggiunto `shop=computer` alla categoria **Negozi di Elettrodomestici**
+- Aggiunto `shop=computer` alla categoria **Negozio di Elettrodomestici**
 
 ### v0.10.0 <time>2023-11-16</time>
 
-- Aggiunta della categoria **Negozi di Elettrodomestici**
+- Aggiunta della categoria **Negozio di Elettrodomestici**
 
 ### v0.9.0 <time>2023-10-24</time>
 

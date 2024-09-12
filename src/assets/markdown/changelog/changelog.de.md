@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.4 <time>2024-09-12</time>
+
+- Hinzufügen der Kategorie **Baumarkt**
+
 ### v1.0.3 <time>2024-08-06</time>
 
 - Hinzufügung der Übersetzungen der Kategorien auf Chinesisch (vereinfacht) und Chinesisch (traditionell) durch @tommylung

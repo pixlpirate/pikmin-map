@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.4 <time>2024-09-12</time>
+
+- Adición de la categoría **Tienda de Ferretería**
+
 ### v1.0.3 <time>2024-08-06</time>
 
 - Adición de las traducciones de categorías al chino simplificado y chino tradicional por @tommylung
@@ -20,11 +24,11 @@
 
 ### v0.10.1 <time>2023-11-14</time>
 
-- Agregado `shop=computer` a la categoría de **Tiendas de Electrodomésticos**
+- Agregado `shop=computer` a la categoría de **Tienda de Electrodomésticos**
 
 ### v0.10.0 <time>2023-11-16</time>
 
-- Adición de la categoría de **Tiendas de Electrodomésticos**
+- Adición de la categoría de **Tienda de Electrodomésticos**
 
 ### v0.9.0 <time>2023-10-24</time>
 

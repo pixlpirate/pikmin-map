@@ -1,5 +1,9 @@
 ## Registro de Alterações
 
+### v1.0.4 <time>2024-09-12</time>
+
+- Adição da categoria **Loja de Ferragens**
+
 ### v1.0.3 <time>2024-08-06</time>
 
 - Adição das traduções de categorias para chinês simplificado e chinês tradicional por @tommylung
@@ -20,11 +24,11 @@
 
 ### v0.10.1 <time>2023-11-14</time>
 
-- Adicionado `shop=computer` à categoria de **Lojas de Eletrodomésticos**
+- Adicionado `shop=computer` à categoria de **Loja de Eletrodomésticos**
 
 ### v0.10.0 <time>2023-11-16</time>
 
-- Adição da categoria de **Lojas de Eletrodomésticos**
+- Adição da categoria de **Loja de Eletrodomésticos**
 
 ### v0.9.0 <time>2023-10-24</time>
 

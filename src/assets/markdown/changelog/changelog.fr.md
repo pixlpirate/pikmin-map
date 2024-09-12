@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.4 <time>2024-09-12</time>
+
+- Ajout de la catégorie **Quincaillerie**
+
 ### v1.0.3 <time>2024-08-06</time>
 
 - Ajout des traductions de catégories en chinois simplifié et chinois traditionnel par @tommylung
@@ -20,11 +24,11 @@
 
 ### v0.10.1 <time>2023-11-14</time>
 
-- Ajout de `shop=computer` à la catégorie **Boutique d'électroménagers**
+- Ajout de `shop=computer` à la catégorie **Boutique d'électroménager**
 
 ### v0.10.0 <time>2023-11-16</time>
 
-- Ajout de la catégorie **Boutique d'électroménagers**
+- Ajout de la catégorie **Boutique d'électroménager**
 
 ### v0.9.0 <time>2023-10-24</time>
 

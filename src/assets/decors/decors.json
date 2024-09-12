@@ -274,5 +274,13 @@
 			"cuisine=indian",
 			"cuisine=nepalese"
 		]
+	},
+  {
+		"icon": "HardwareStore",
+		"label": "Hardware Store",
+		"tags": [
+			"shop=doityourself",
+			"shop=hardware"
+		]
 	}
 ]
