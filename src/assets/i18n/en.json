@@ -26,7 +26,7 @@
   "HIDE_NODES": "Hide nodes",
   "DISPLAY_DECOR_RADIUS": "Display decor radius",
   "DECOR_RADIUS_SIZE": "Decor radius size",
-  "DECOR_RADIUS_WARNING": "Please note that this radius does not represent the actual area where the decor will be found, but a very vague indication of where it might be found. <a href='https://www.pikminwiki.com/Detector'>More info</a>",
+  "DECOR_RADIUS_WARNING": "Please note that this radius does not represent the actual area where the decor will be found, but a very vague indication of where it might be found.",
   "MORE_INFO": "More info",
 
 	"Restaurant": "Restaurant",
