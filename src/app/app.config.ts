@@ -1,4 +1,8 @@
-import { ApplicationConfig, importProvidersFrom, isDevMode } from '@angular/core';
+import {
+	ApplicationConfig,
+	importProvidersFrom,
+	isDevMode,
+} from '@angular/core';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -14,20 +18,22 @@ import { provideServiceWorker } from '@angular/service-worker';
 export const appConfig: ApplicationConfig = {
 	providers: [
 		provideHttpClient(),
-		provideRouter( routes ),
+		provideRouter(routes),
 		provideAnimations(),
 		provideMarkdown(),
-		importProvidersFrom( TranslateModule.forRoot( {
-			defaultLanguage: 'en',
-			loader: {
-				provide: TranslateLoader,
-				useFactory: translateLoaderFactory,
-				deps: [ HttpClient ],
-			},
-		} ) ),
-		provideServiceWorker( 'ngsw-worker.js', {
+		importProvidersFrom(
+			TranslateModule.forRoot({
+				defaultLanguage: 'en',
+				loader: {
+					provide: TranslateLoader,
+					useFactory: translateLoaderFactory,
+					deps: [HttpClient],
+				},
+			})
+		),
+		provideServiceWorker('ngsw-worker.js', {
 			enabled: !isDevMode(),
-			registrationStrategy: 'registerWhenStable:30000'
-		} )
-	]
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+	],
 };

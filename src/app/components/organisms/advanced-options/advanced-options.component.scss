@@ -1,21 +1,7 @@
-@import 'variables', 'responsive', 'mixins';
+@import 'variables', 'responsive';
 
-/* Locate
+/*
 ------------------------------------------------- */
-:host {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: $gap--small;
-}
-
-.locate-button {
-	@include ui-btn(4rem);
-
-	&:hover {
-		background-color: $color-primary--light;
-	}
-}
 
 /* Responsive
 ------------------------------------------------- */

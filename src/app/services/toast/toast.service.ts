@@ -2,17 +2,16 @@ import { Injectable } from '@angular/core';
 
 import { Subject } from 'rxjs';
 
-import { NewToast, Toast } from '../../models';
+import { NewToast, Toast } from '@interfaces';
 
-@Injectable( {
-	providedIn: 'root'
-} )
-export class ToastService
-{
+@Injectable({
+	providedIn: 'root',
+})
+export class ToastService {
 	private toasts: Toast[] = [];
 	private toasts$ = new Subject<Toast[]>();
 
-	constructor () { }
+	constructor() {}
 
 	/**
 	 * Create new toast(s) and add it to the currently active toasts
@@ -21,22 +20,20 @@ export class ToastService
 	 *
 	 * @returns void
 	 */
-	public add( toast: NewToast | NewToast[] ): void
-	{
-		if ( Array.isArray( toast ) ) {
-			toast.forEach( t =>
-			{
+	public add(toast: NewToast | NewToast[]): void {
+		if (Array.isArray(toast)) {
+			toast.forEach((t) => {
 				t.duration = t.duration || 4000;
 				t.id = t.id ? t.id : this.generateId();
-				this.toasts.push( t as Toast );
-			} );
+				this.toasts.push(t as Toast);
+			});
 		} else {
 			toast.duration = toast.duration || 4000;
 			toast.id = toast.id ? toast.id : this.generateId();
-			this.toasts.push( toast as Toast );
+			this.toasts.push(toast as Toast);
 		}
 
-		this.toasts$.next( [ ...this.toasts ] );
+		this.toasts$.next([...this.toasts]);
 	}
 
 	/**
@@ -46,10 +43,9 @@ export class ToastService
 	 *
 	 * @returns void
 	 */
-	public remove( id: Number ): void
-	{
-		this.toasts = this.toasts.filter( t => t.id !== id );
-		this.toasts$.next( [ ...this.toasts ] );
+	public remove(id: Number): void {
+		this.toasts = this.toasts.filter((t) => t.id !== id);
+		this.toasts$.next([...this.toasts]);
 	}
 
 	/**
@@ -57,10 +53,9 @@ export class ToastService
 	 *
 	 * @returns void
 	 */
-	public removeAll(): void
-	{
+	public removeAll(): void {
 		this.toasts = [];
-		this.toasts$.next( [ ...this.toasts ] );
+		this.toasts$.next([...this.toasts]);
 	}
 
 	/**
@@ -68,9 +63,8 @@ export class ToastService
 	 *
 	 * @returns Toast[] - An array of currently active toasts
 	 */
-	public get(): Toast[]
-	{
-		return [ ...this.toasts ];
+	public get(): Toast[] {
+		return [...this.toasts];
 	}
 
 	/**
@@ -78,8 +72,7 @@ export class ToastService
 	 *
 	 * @returns Subject<Toast[]> - An observable of the currently active toasts
 	 */
-	public listen(): Subject<Toast[]>
-	{
+	public listen(): Subject<Toast[]> {
 		return this.toasts$;
 	}
 
@@ -88,9 +81,8 @@ export class ToastService
 	 *
 	 * @returns number - A random id
 	 */
-	private generateId(): number
-	{
-		const id: number = Math.floor( Math.random() * 256 );
-		return this.toasts.find( t => t.id === id ) ? this.generateId() : id;
+	private generateId(): number {
+		const id: number = Math.floor(Math.random() * 256);
+		return this.toasts.find((t) => t.id === id) ? this.generateId() : id;
 	}
 }

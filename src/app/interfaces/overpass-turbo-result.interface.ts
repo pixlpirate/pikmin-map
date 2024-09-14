@@ -1,5 +1,5 @@
 import { LatLng } from "leaflet";
-import { Decor } from "./decor";
+import { Decor } from "./decor.interface";
 
 export interface OverpassTurboResult
 {

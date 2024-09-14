@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@components": [
+        "app/components/index.ts"
+      ],
+      "@directives": [
+        "app/directives/index.ts"
+      ],
+      "@factories": [
+        "app/factories/index.ts"
+      ],
+      "@guards": [
+        "app/guards/index.ts"
+      ],
+      "@interfaces": [
+        "app/interfaces/index.ts"
+      ],
+      "@pipes": [
+        "app/pipes/index.ts"
+      ],
+      "@services": [
+        "app/services/index.ts"
+      ],
+      "@environments": [
+        "environments/index.ts"
+      ]
+    }
+  }
+}

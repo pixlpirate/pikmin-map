@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 
-import { LanguageService } from '../../../services';
-import { ClickOutsideDirective } from '../../../directives';
+import { LanguageService } from '@services';
+import { ClickOutsideDirective } from '@directives';
 
 /**
  * The language picker component used to display a dropdown of available languages.

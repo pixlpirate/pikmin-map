@@ -1,24 +1,32 @@
 import { Injectable } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
-import { divIcon, LatLng, LatLngBounds, LayerGroup, Map, Marker, Polyline, tileLayer } from 'leaflet';
+import {
+	divIcon,
+	LatLng,
+	LatLngBounds,
+	LayerGroup,
+	Map,
+	Marker,
+	Polyline,
+	tileLayer,
+} from 'leaflet';
 
-import { EventBusService, LocalStorageService } from '../../services';
-import { Decor, LocalMapData, OverpassTurboResult } from '../../models';
+import { EventBusService, LocalStorageService } from '@services';
+import { Decor, LocalMapData, OverpassTurboResult } from '@interfaces';
 
-@Injectable( {
-	providedIn: 'root'
-} )
-export class MapService
-{
+@Injectable({
+	providedIn: 'root',
+})
+export class MapService {
 	private map!: Map;
 	private decorLayer: LayerGroup = new LayerGroup();
 
-	constructor (
+	constructor(
 		private localStorageService: LocalStorageService,
 		private eventBusService: EventBusService,
 		private translateService: TranslateService
-	) { }
+	) {}
 
 	/**
 	 * Initializes the map, controls, and marker layer. Sets the initial view and binds events.
@@ -26,45 +34,41 @@ export class MapService
 	 * @param element - The HTML element where the map will be rendered.
 	 * @returns void
 	 */
-	public init( element: HTMLElement ): void
-	{
+	public init(element: HTMLElement): void {
 		/* Creation */
-		this.map = new Map( element, {
-			zoomControl: false
-		} );
+		this.map = new Map(element, {
+			zoomControl: false,
+		});
 
 		// ! Must be set before setView
-		this.map.on( 'load', () =>
-		{
-			this.decorLayer.addTo( this.map ); // Add the decor layer to the map
-		} );
+		this.map.on('load', () => {
+			this.decorLayer.addTo(this.map); // Add the decor layer to the map
+		});
 
 		/* Config */
-		tileLayer( 'https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" aria-label="navigate to OSM copyright">OpenStreetMap</a>'
-		} ).addTo( this.map );
+		tileLayer('https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+			attribution:
+				'&copy; <a href="http://www.openstreetmap.org/copyright" aria-label="navigate to OSM copyright">OpenStreetMap</a>',
+		}).addTo(this.map);
 
-		if ( this.hasUrlParams() ) {
+		if (this.hasUrlParams()) {
 			// If URL has lat/lng/zoom params, update map view from URL parameters
 			this.updateFromUrl();
 		} else {
 			// Otherwise, set map view from local storage
 			const localMapData: LocalMapData = this.getLocalMapData();
-			this.map.setView( localMapData.pos, localMapData.zoom );
+			this.map.setView(localMapData.pos, localMapData.zoom);
 		}
 
 		/* Events */
-		this.map.on( 'zoomend', () =>
-		{
+		this.map.on('zoomend', () => {
 			this.eventBusService.setMapChange();
-		} );
+		});
 
-		this.map.on( 'moveend', () =>
-		{
+		this.map.on('moveend', () => {
 			this.eventBusService.setMapChange();
-		} );
+		});
 	}
-
 
 	/* Map
 	--------------------------------------------- */
@@ -73,8 +77,7 @@ export class MapService
 	 *
 	 * @returns {Map} The current map instance.
 	 */
-	public getMap(): Map
-	{
+	public getMap(): Map {
 		return this.map;
 	}
 
@@ -83,8 +86,7 @@ export class MapService
 	 *
 	 * @returns {LatLngBounds} The current viewport map bounds.
 	 */
-	public getBounds(): LatLngBounds
-	{
+	public getBounds(): LatLngBounds {
 		return this.map.getBounds();
 	}
 
@@ -94,11 +96,10 @@ export class MapService
 	 * @param bounds - The bounds to fly to.
 	 * @returns void
 	 */
-	public flyToBounds( bounds: LatLngBounds ): void
-	{
-		this.map.flyToBounds( bounds, {
-			duration: 1.5
-		} );
+	public flyToBounds(bounds: LatLngBounds): void {
+		this.map.flyToBounds(bounds, {
+			duration: 1.5,
+		});
 	}
 
 	/**
@@ -108,13 +109,11 @@ export class MapService
 	 * @param zoom - The zoom level.
 	 * @returns void
 	 */
-	public flyTo( pos: LatLng, zoom: number ): void
-	{
-		this.map.flyTo( pos, zoom, {
-			duration: 1.5
-		} );
+	public flyTo(pos: LatLng, zoom: number): void {
+		this.map.flyTo(pos, zoom, {
+			duration: 1.5,
+		});
 	}
-
 
 	/* Markers
 	--------------------------------------------- */
@@ -125,19 +124,24 @@ export class MapService
 	 * @param lng - The longitude where the marker will be placed.
 	 * @returns void
 	 */
-	public addMarker( lat: number, lng: number, item: OverpassTurboResult ): void
-	{
-		const icon = divIcon( {
+	public addMarker(
+		lat: number,
+		lng: number,
+		item: OverpassTurboResult
+	): void {
+		const icon = divIcon({
 			className: 'marker',
-			html: `<div class="marker-pin">${this.getMarkerIcon( item.decors )}</div>`,
-			iconSize: [ 38, 50 ]
-		} );
+			html: `<div class="marker-pin">${this.getMarkerIcon(
+				item.decors
+			)}</div>`,
+			iconSize: [38, 50],
+		});
 
-		const marker: Marker = new Marker( [ lat, lng ], { icon: icon } );
+		const marker: Marker = new Marker([lat, lng], { icon: icon });
 
-		marker.bindPopup( this.getMarkerPopup( item ) );
+		marker.bindPopup(this.getMarkerPopup(item));
 
-		this.decorLayer.addLayer( marker );
+		this.decorLayer.addLayer(marker);
 	}
 
 	/**
@@ -146,36 +150,49 @@ export class MapService
 	 * @param decors - An array of Decor objects matching the marker.
 	 * @returns A string representing the HTML for the marker icon.
 	 */
-	private getMarkerIcon( decors: Decor[] ): string
-	{
+	private getMarkerIcon(decors: Decor[]): string {
 		// Get last checked decor matching decors
-		const decor = this.eventBusService.getCheckedDecors().find( ( checkedDecor: Decor ) => decors.some( ( decor: Decor ) => decor.label === checkedDecor.label ) );
-		let icon = `<img src="assets/icons/map/${decor?.icon}.png" alt="${this.translate( "ICON_NAME", this.translate( decor?.label ?? "UNKNOWN" ) )}" />`;
+		const decor = this.eventBusService
+			.getCheckedDecors()
+			.find((checkedDecor: Decor) =>
+				decors.some(
+					(decor: Decor) => decor.label === checkedDecor.label
+				)
+			);
+		let icon = `<img src="assets/icons/map/${
+			decor?.icon
+		}.png" alt="${this.translate(
+			'ICON_NAME',
+			this.translate(decor?.label ?? 'UNKNOWN')
+		)}" />`;
 
-		if ( decors.length > 1 ) {
+		if (decors.length > 1) {
 			icon += `<span>+${decors.length - 1}</span>`;
 		}
 
 		return icon;
 	}
 
-	private getMarkerPopup( item: OverpassTurboResult ): string
-	{
+	private getMarkerPopup(item: OverpassTurboResult): string {
 		let popup = `<div class="popup-content">`;
 		popup += `<a href="https://www.openstreetmap.org/${item.type}/${item.id}" target="_blank" aria-label="Navigate to ${item.name} on OSM">`;
 		popup += `<i class="icon icon-link"></i> `;
 		popup += item.name;
 		popup += `</a>`;
 
-		if ( item.decors.length > 1 ) {
-			popup += `<span>${this.translate( 'MAY_ALSO_FIND' )}</span>`;
+		if (item.decors.length > 1) {
+			popup += `<span>${this.translate('MAY_ALSO_FIND')}</span>`;
 			popup += `<ul class="popup-decor-list">`;
-			item.decors.forEach( ( decor: Decor ) =>
-			{
+			item.decors.forEach((decor: Decor) => {
 				popup += `<li class="popup-decor-list-item">`;
-				popup += `<img class="popup-decor" src="assets/icons/map/${decor.icon}.png" alt="${this.translate( "ICON_NAME", this.translate( decor.label ) )}" />`;
+				popup += `<img class="popup-decor" src="assets/icons/map/${
+					decor.icon
+				}.png" alt="${this.translate(
+					'ICON_NAME',
+					this.translate(decor.label)
+				)}" />`;
 				popup += `</li>`;
-			} );
+			});
 			popup += `</ul>`;
 		}
 
@@ -189,8 +206,7 @@ export class MapService
 	 *
 	 * @returns void
 	 */
-	public clearMarkers(): void
-	{
+	public clearMarkers(): void {
 		this.decorLayer.clearLayers();
 	}
 
@@ -202,21 +218,24 @@ export class MapService
 	 *
 	 * @param latlngs
 	 */
-	public addPolyline( latlngs: LatLng[], item: OverpassTurboResult ): void
-	{
+	public addPolyline(latlngs: LatLng[], item: OverpassTurboResult): void {
 		// Only fill if distance between first and last point < 0.1m
 		// This avoid filling polylines that are lines instead of areas (e.g. roads)
-		const fill = this.getDistanceBetweenLatLngs( latlngs[ 0 ], latlngs[ latlngs.length - 1 ] ) < 0.1;
+		const fill =
+			this.getDistanceBetweenLatLngs(
+				latlngs[0],
+				latlngs[latlngs.length - 1]
+			) < 0.1;
 
-		const polyline: Polyline = new Polyline( latlngs, {
+		const polyline: Polyline = new Polyline(latlngs, {
 			color: '#e76761',
 			fill: fill,
-			fillOpacity: 0.5
-		} );
-		this.decorLayer.addLayer( polyline );
+			fillOpacity: 0.5,
+		});
+		this.decorLayer.addLayer(polyline);
 
-		const polylineCenter: LatLng = this.getPolylineCenter( latlngs );
-		this.addMarker( polylineCenter.lat, polylineCenter.lng, item );
+		const polylineCenter: LatLng = this.getPolylineCenter(latlngs);
+		this.addMarker(polylineCenter.lat, polylineCenter.lng, item);
 	}
 
 	/**
@@ -226,12 +245,11 @@ export class MapService
 	 * @param latLngs - An array of LatLng objects representing the vertices of the polyline.
 	 * @returns {LatLng} The geographical center of the polyline.
 	 */
-	private getPolylineCenter( latLngs: LatLng[] ): LatLng
-	{
+	private getPolylineCenter(latLngs: LatLng[]): LatLng {
 		let sumLat = 0;
 		let sumLng = 0;
 
-		for ( const latlng of latLngs ) {
+		for (const latlng of latLngs) {
 			sumLat += latlng.lat;
 			sumLng += latlng.lng;
 		}
@@ -239,7 +257,7 @@ export class MapService
 		const centerLat = sumLat / latLngs.length;
 		const centerLng = sumLng / latLngs.length;
 
-		return new LatLng( centerLat, centerLng );
+		return new LatLng(centerLat, centerLng);
 	}
 
 	/* Utils
@@ -252,14 +270,12 @@ export class MapService
 	 * @param pos2 - The second lat/lng point.
 	 * @returns {number} The distance between the two points in meters.
 	 */
-	private getDistanceBetweenLatLngs( pos1: LatLng, pos2: LatLng ): number
-	{
+	private getDistanceBetweenLatLngs(pos1: LatLng, pos2: LatLng): number {
 		const R = 6371000; // in meters
-		const x = ( pos2.lng - pos1.lng ) * Math.cos( ( pos1.lat + pos2.lat ) / 2 );
-		const y = ( pos2.lat - pos1.lat );
-		return Math.sqrt( x * x + y * y ) * R;
+		const x = (pos2.lng - pos1.lng) * Math.cos((pos1.lat + pos2.lat) / 2);
+		const y = pos2.lat - pos1.lat;
+		return Math.sqrt(x * x + y * y) * R;
 	}
-
 
 	/* Local storage
 	--------------------------------------------- */
@@ -267,15 +283,14 @@ export class MapService
 	 * Saves the current map position and zoom level to local storage.
 	 * @returns void
 	 */
-	public setLocalMapData(): void
-	{
+	public setLocalMapData(): void {
 		const pos: LatLng = this.map.getCenter();
 		const zoom: number = this.map.getZoom();
 
-		this.localStorageService.setItem( "map", {
+		this.localStorageService.setItem('map', {
 			pos: pos,
-			zoom: zoom
-		} );
+			zoom: zoom,
+		});
 	}
 
 	/**
@@ -284,17 +299,15 @@ export class MapService
 	 *
 	 * @returns {LocalMapData} The map data retrieved from local storage or default values.
 	 */
-	private getLocalMapData(): LocalMapData
-	{
-		const storedMap = this.localStorageService.getItem( "map" );
+	private getLocalMapData(): LocalMapData {
+		const storedMap = this.localStorageService.getItem('map');
 		const defaultMap = {
-			pos: new LatLng( 64.175044, -51.735778 ),
-			zoom: 14
+			pos: new LatLng(64.175044, -51.735778),
+			zoom: 14,
 		};
 
 		return storedMap !== null ? storedMap : defaultMap;
 	}
-
 
 	/* URL
 	--------------------------------------------- */
@@ -302,51 +315,50 @@ export class MapService
 	 * Updates the URL with the current map position and zoom level.
 	 * @returns void
 	 */
-	public updateUrl(): void
-	{
+	public updateUrl(): void {
 		const pos: LatLng = this.map.getCenter();
 		const zoom: number = this.map.getZoom();
 
-		const url = new URL( window.location.href );
-		url.searchParams.set( "lat", pos.lat.toString() );
-		url.searchParams.set( "lng", pos.lng.toString() );
-		url.searchParams.set( "zoom", zoom.toString() );
+		const url = new URL(window.location.href);
+		url.searchParams.set('lat', pos.lat.toString());
+		url.searchParams.set('lng', pos.lng.toString());
+		url.searchParams.set('zoom', zoom.toString());
 
-		window.history.replaceState( {}, "", url.toString() );
+		window.history.replaceState({}, '', url.toString());
 	}
 
-	private hasUrlParams(): boolean
-	{
-		const url = new URL( window.location.href );
-		return url.searchParams.has( "lat" ) && url.searchParams.has( "lng" );
+	private hasUrlParams(): boolean {
+		const url = new URL(window.location.href);
+		return url.searchParams.has('lat') && url.searchParams.has('lng');
 	}
 
 	/**
 	 * Updates the map position and zoom level from the URL.
 	 * @returns void
 	 */
-	private updateFromUrl(): void
-	{
-		const url = new URL( window.location.href );
-		const lat = url.searchParams.get( "lat" );
-		const lng = url.searchParams.get( "lng" );
-		const zoom = url.searchParams.get( "zoom" );
+	private updateFromUrl(): void {
+		const url = new URL(window.location.href);
+		const lat = url.searchParams.get('lat');
+		const lng = url.searchParams.get('lng');
+		const zoom = url.searchParams.get('zoom');
 
-		if ( lat && lng && zoom ) {
-			this.map.setView( new LatLng( parseFloat( lat ), parseFloat( lng ) ), parseInt( zoom ) );
-		} else if ( lat && lng ) {
-			this.map.setView( new LatLng( parseFloat( lat ), parseFloat( lng ) ), 18 );
+		if (lat && lng && zoom) {
+			this.map.setView(
+				new LatLng(parseFloat(lat), parseFloat(lng)),
+				parseInt(zoom)
+			);
+		} else if (lat && lng) {
+			this.map.setView(new LatLng(parseFloat(lat), parseFloat(lng)), 18);
 		}
 	}
 
 	/* Translation
 	--------------------------------------------- */
-	public translate( key: string, param?: string ): string
-	{
-		if ( param ) {
-			return this.translateService.instant( key, { param } );
+	public translate(key: string, param?: string): string {
+		if (param) {
+			return this.translateService.instant(key, { param });
 		} else {
-			return this.translateService.instant( key );
+			return this.translateService.instant(key);
 		}
 	}
 }

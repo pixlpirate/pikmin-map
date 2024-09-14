@@ -4,21 +4,20 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { AlertService } from '../../../services';
-import { ClickOutsideDirective } from '../../../directives';
+import { AlertService } from '@services';
+import { ClickOutsideDirective } from '@directives';
 
 /**
  * The alert popup used to display messages to the user (e.g. update warnings).
  */
-@Component( {
+@Component({
 	selector: 'app-alert',
 	standalone: true,
-	imports: [ CommonModule, ClickOutsideDirective, TranslateModule ],
+	imports: [CommonModule, ClickOutsideDirective, TranslateModule],
 	templateUrl: './alert.component.html',
-	styleUrl: './alert.component.scss'
-} )
-export class AlertComponent implements OnInit, OnDestroy
-{
+	styleUrl: './alert.component.scss',
+})
+export class AlertComponent implements OnInit, OnDestroy {
 	@Input() header?: string;
 	@Input() message?: string;
 	@Input() action?: Function;
@@ -28,41 +27,34 @@ export class AlertComponent implements OnInit, OnDestroy
 
 	private alertSubscription?: Subscription;
 
-	constructor (
-		private alertService: AlertService
-	) { }
+	constructor(private alertService: AlertService) {}
 
 	/* Angular lifecycle
 	----------------------------------------- */
-	public ngOnInit()
-	{
-		this.alertService.listen().subscribe( alert =>
-		{
+	public ngOnInit() {
+		this.alertService.listen().subscribe((alert) => {
 			this.header = alert.header;
 			this.message = alert.message;
 			this.action = alert.action;
 			this.caller = alert.caller;
 
 			this.isVisible = true;
-		} );
+		});
 	}
 
-	public ngOnDestroy()
-	{
+	public ngOnDestroy() {
 		this.alertSubscription?.unsubscribe();
 	}
 
 	/* Alert
 	----------------------------------------- */
-	public doAction()
-	{
-		if ( this.action ) {
-			this.action.call( this.caller );
+	public doAction() {
+		if (this.action) {
+			this.action.call(this.caller);
 		}
 	}
 
-	public close()
-	{
+	public close() {
 		this.isVisible = false;
 	}
 }

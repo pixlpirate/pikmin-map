@@ -8,35 +8,30 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 /**
  * The page not found component used to display a 404 error.
  */
-@Component( {
+@Component({
 	selector: 'app-page-not-found',
 	standalone: true,
-	imports: [ CommonModule, RouterLink, TranslateModule ],
+	imports: [CommonModule, RouterLink, TranslateModule],
 	templateUrl: './page-not-found.component.html',
-	styleUrl: './page-not-found.component.scss'
-} )
-export class PageNotFoundComponent implements OnInit, OnDestroy
-{
+	styleUrl: './page-not-found.component.scss',
+})
+export class PageNotFoundComponent implements OnInit, OnDestroy {
 	public currentLanguage: string = 'en';
 	private languageSubscription?: Subscription;
 
-	constructor (
-		private translateService: TranslateService
-	) { }
+	constructor(private translateService: TranslateService) {}
 
 	/* Angular Lifecycle
 	--------------------------------------------- */
-	public ngOnInit()
-	{
+	public ngOnInit() {
 		this.currentLanguage = this.translateService.currentLang;
-		this.languageSubscription = this.translateService.onLangChange.subscribe( ( event ) =>
-		{
-			this.currentLanguage = event.lang;
-		} );
+		this.languageSubscription =
+			this.translateService.onLangChange.subscribe((event) => {
+				this.currentLanguage = event.lang;
+			});
 	}
 
-	public ngOnDestroy()
-	{
+	public ngOnDestroy() {
 		this.languageSubscription?.unsubscribe();
 	}
 }

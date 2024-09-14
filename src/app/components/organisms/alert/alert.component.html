@@ -5,8 +5,13 @@
 		<p *ngIf="message" class="alert-message" [innerHTML]="message"></p>
 
 		<div class="alert-buttons">
-			<button class="button button--secondary" aria-label="Close the modal" (click)="close()">{{'CLOSE' | translate}}</button>
-			<button class="button" aria-label="Confirm the action" (click)="doAction()">OK</button>
+			<button class="button button--secondary" aria-label="Close the modal" (click)="close()">
+				{{'CLOSE' | translate}}
+			</button>
+
+			<button class="button" aria-label="Confirm the action" (click)="doAction()">
+				OK
+			</button>
 		</div>
 	</div>
 </div>

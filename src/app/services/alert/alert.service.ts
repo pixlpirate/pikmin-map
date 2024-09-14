@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 
-import { Alert } from '../../models';
 import { Subject } from 'rxjs';
 
-@Injectable( {
-	providedIn: 'root'
-} )
-export class AlertService
-{
+import { Alert } from '@interfaces';
+
+@Injectable({
+	providedIn: 'root',
+})
+export class AlertService {
 	private alert: Alert | null = null;
 	private alert$ = new Subject<Alert>();
 
-	constructor () { }
+	constructor() {}
 
 	/**
 	 * Set a new alert
@@ -20,10 +20,9 @@ export class AlertService
 	 *
 	 * @returns void
 	 */
-	public set( alert: Alert ): void
-	{
+	public set(alert: Alert): void {
 		this.alert = alert;
-		this.alert$.next( this.alert );
+		this.alert$.next(this.alert);
 	}
 
 	/**
@@ -31,8 +30,7 @@ export class AlertService
 	 *
 	 * @returns void
 	 */
-	public unset(): void
-	{
+	public unset(): void {
 		this.alert = null;
 	}
 
@@ -41,8 +39,7 @@ export class AlertService
 	 *
 	 * @returns Alert - The currently set alert
 	 */
-	public get(): Alert | null
-	{
+	public get(): Alert | null {
 		return this.alert;
 	}
 
@@ -51,8 +48,7 @@ export class AlertService
 	 *
 	 * @returns Subject<Alert[]> - An observable of the currently active alerts
 	 */
-	public listen(): Subject<Alert>
-	{
+	public listen(): Subject<Alert> {
 		return this.alert$;
 	}
 }

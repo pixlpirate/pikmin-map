@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Language } from '../../models';
+import { Language } from '@interfaces';
 
 @Injectable({
 	providedIn: 'root',

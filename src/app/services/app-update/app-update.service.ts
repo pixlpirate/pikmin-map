@@ -3,26 +3,23 @@ import { SwUpdate, VersionEvent } from '@angular/service-worker';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { AlertService } from '../../services';
+import { AlertService } from '@services';
 
-@Injectable( {
-	providedIn: 'root'
-} )
-export class AppUpdateService
-{
-	constructor (
+@Injectable({
+	providedIn: 'root',
+})
+export class AppUpdateService {
+	constructor(
 		private readonly updates: SwUpdate,
 		private translateService: TranslateService,
-		private alertService: AlertService,
-	)
-	{
+		private alertService: AlertService
+	) {
 		// Check for updates as soon as the service is instantiated by AppComponent
-		this.updates.versionUpdates.subscribe( ( event: VersionEvent ) =>
-		{
-			if ( event.type === "VERSION_READY" ) {
+		this.updates.versionUpdates.subscribe((event: VersionEvent) => {
+			if (event.type === 'VERSION_READY') {
 				this.showAlert();
 			}
-		} );
+		});
 	}
 
 	/**
@@ -30,14 +27,13 @@ export class AppUpdateService
 	 *
 	 * @returns void
 	 */
-	public showAlert(): void
-	{
-		this.alertService.set( {
-			header: this.translateService.instant( 'UPDATE_AVAILABLE' ),
-			message: this.translateService.instant( 'UPDATE_AVAILABLE_DETAILS' ),
+	public showAlert(): void {
+		this.alertService.set({
+			header: this.translateService.instant('UPDATE_AVAILABLE'),
+			message: this.translateService.instant('UPDATE_AVAILABLE_DETAILS'),
 			action: this.doAppUpdate,
-			caller: this
-		} );
+			caller: this,
+		});
 	}
 
 	/**
@@ -45,8 +41,7 @@ export class AppUpdateService
 	 *
 	 * @returns void
 	 */
-	public doAppUpdate(): void
-	{
-		this.updates.activateUpdate().then( () => document.location.reload() );
+	public doAppUpdate(): void {
+		this.updates.activateUpdate().then(() => document.location.reload());
 	}
 }

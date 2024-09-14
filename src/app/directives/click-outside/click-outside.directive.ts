@@ -1,4 +1,10 @@
-import { Directive, ElementRef, HostListener, Output, EventEmitter } from '@angular/core';
+import {
+	Directive,
+	ElementRef,
+	HostListener,
+	Output,
+	EventEmitter,
+} from '@angular/core';
 
 /**
  * Attached to a component, this directive will emit an event when a click occurs outside of the component.
@@ -6,23 +12,20 @@ import { Directive, ElementRef, HostListener, Output, EventEmitter } from '@angu
  *
  * @example <div appClickOutside (clickOutside)="onClickedOutside()"></div>
  */
-@Directive( {
+@Directive({
 	selector: '[appClickOutside]',
-	standalone: true
-} )
-export class ClickOutsideDirective
-{
+	standalone: true,
+})
+export class ClickOutsideDirective {
 	@Output() clickOutside = new EventEmitter<void>();
 
-	constructor ( private elementRef: ElementRef ) { }
+	constructor(private elementRef: ElementRef) {}
 
-	@HostListener( 'document:click', [ '$event.target' ] )
+	@HostListener('document:click', ['$event.target'])
+	private onClick(target: any): void {
+		const clickedInside = this.elementRef.nativeElement.contains(target);
 
-	private onClick( target: any ): void
-	{
-		const clickedInside = this.elementRef.nativeElement.contains( target );
-
-		if ( !clickedInside ) {
+		if (!clickedInside) {
 			this.clickOutside.emit();
 		}
 	}

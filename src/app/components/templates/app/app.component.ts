@@ -4,12 +4,12 @@ import { RouterOutlet } from '@angular/router';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-import { AlertComponent, ToastContainerComponent } from '../../../components';
+import { AlertComponent, ToastContainerComponent } from '@components';
 import {
 	AppUpdateService,
 	LanguageService,
 	LocalStorageService,
-} from '../../../services';
+} from '@services';
 
 /**
  * The main app component. Displayed components are handled by the router outlet.

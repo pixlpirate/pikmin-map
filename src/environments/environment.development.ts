@@ -1,4 +1,4 @@
 export const environment = {
 	production: false,
-	toastDuration: 3500
+	toastDuration: 3500,
 };

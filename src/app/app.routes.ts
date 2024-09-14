@@ -1,18 +1,23 @@
 import { Routes } from '@angular/router';
 
-import { PageAboutComponent, PageMapComponent, PageNotFoundComponent } from './components';
+import {
+	PageAboutComponent,
+	PageMapComponent,
+	PageNotFoundComponent,
+} from './components';
 
 export const routes: Routes = [
 	{
 		path: '',
-		component: PageMapComponent
+		component: PageMapComponent,
 	},
 	{
 		path: 'about',
-		component: PageAboutComponent
+		component: PageAboutComponent,
 	},
 	{
-		path: '**', pathMatch: 'full',
-		component: PageNotFoundComponent
-	}
+		path: '**',
+		pathMatch: 'full',
+		component: PageNotFoundComponent,
+	},
 ];

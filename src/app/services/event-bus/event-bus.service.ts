@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject } from 'rxjs';
 
-import { Decor, OverpassTurboResult } from '../../models';
+import { Decor, OverpassTurboResult } from '@interfaces';
 
 @Injectable( {
 	providedIn: 'root'
