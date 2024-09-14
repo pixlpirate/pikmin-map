@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "錨點到",
+  "ADVANCED_OPTIONS": "高級選項",
 	"AND": "和",
 	"CLOSE": "關閉",
 	"DECOR_LIST": "飾品一覽",
@@ -21,6 +22,13 @@
 	"UPDATE_AVAILABLE": "可用更新",
 	"WARNING_NO_RESULTS": "找不到結果，請嘗試放大",
 	"WARNING_TOO_MANY_RESULTS": "太多搜尋結果，只能顯示首1000項",
+  "HIDE_WAYS": "隱藏路徑",
+  "HIDE_NODES": "隱藏標記",
+  "DISPLAY_DECOR_RADIUS": "顯示裝飾半徑",
+  "DECOR_RADIUS_SIZE": "裝飾半徑大小",
+  "DECOR_RADIUS_WARNING": "請注意，此半徑並不代表實際裝飾物品所在的區域，而只是一個可能找到的非常模糊的指示。",
+  "MORE_INFO": "更多信息",
+
 	"Restaurant": "餐廳",
 	"Café": "咖啡廳",
 	"Sweetshop": "甜點店",

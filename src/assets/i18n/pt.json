@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Âncora para",
+  "ADVANCED_OPTIONS": "Opções avançadas",
 	"AND": "E",
 	"CLOSE": "Fechar",
 	"DECOR_LIST": "Lista de decoração",
@@ -21,6 +22,13 @@
 	"UPDATE_AVAILABLE": "Atualização disponível",
 	"WARNING_NO_RESULTS": "Nenhum resultado encontrado, tente dar zoom para fora",
 	"WARNING_TOO_MANY_RESULTS": "Muitos resultados, apenas os primeiros 1000 são exibidos",
+  "HIDE_WAYS": "Ocultar caminhos",
+  "HIDE_NODES": "Ocultar nós",
+  "DISPLAY_DECOR_RADIUS": "Exibir raio de decoração",
+  "DECOR_RADIUS_SIZE": "Tamanho do raio de decoração",
+  "DECOR_RADIUS_WARNING": "Por favor, note que este raio não representa a área real onde a decoração será encontrada, mas uma indicação muito vaga de onde ela poderia ser encontrada.",
+  "MORE_INFO": "Mais informações",
+
 	"Restaurant": "Restaurante",
 	"Café": "Café",
 	"Sweetshop": "Doceria",

@@ -1,3 +1,6 @@
+$radio-size: 20px;
+$checkbox-size: $radio-size;
+
 /* Inputs
 ------------------------------------------------- */
 .input-group {
@@ -7,19 +10,81 @@
 input {
 	font-size: $t-s--small;
 
-	&[type=text] {
-		padding: 1rem;
-		font-size: $t-s--small;
-		border: $border-size solid transparent;
-		border-radius: 5rem;
-
-		&::placeholder {
-			color: rgba($black, 0.5);
-		}
+	&[type=text],
+	&[type=number] {
+		padding: 0.5rem 1rem;
+		border: $border-size solid $grey;
+		border-radius: $border-radius--small;
 
 		&:focus {
 			border-color: $color-primary;
 			outline: none;
+		}
+	}
+
+	&[type=checkbox],
+	&[type=radio] {
+		position: relative;
+		display: inline-block;
+		width: $radio-size;
+		height: $radio-size;
+		margin: 0;
+		vertical-align: middle;
+		background-color: $white;
+		border: $border-size solid $grey;
+		border-radius: $border-radius--small;
+		cursor: pointer;
+		appearance: none;
+
+		&:checked {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+
+		&:hover {
+			border-color: $color-primary;
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: calc($radio-size / 2);
+			height: calc($radio-size / 2);
+			background-color: $color-primary;
+			border-radius: $border-radius--small;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			content: '';
+		}
+
+		&:checked::before {
+			opacity: 1;
+		}
+	}
+
+	&[type=radio] {
+		border-radius: 50%;
+
+		&::before {
+			border-radius: 50%;
+		}
+
+		&:checked::before {
+			background-color: $color-primary;
+		}
+	}
+
+	&[type=checkbox] {
+		&:checked {
+			&:before {
+				position: absolute;
+				top: calc($radio-size / 4);
+				left: calc($radio-size / 3);
+				color: $white;
+				font-family: 'fontello';
+				content: '\E924';
+			}
 		}
 	}
 }

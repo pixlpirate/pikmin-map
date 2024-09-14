@@ -1,1 +1,27 @@
-<p>advanced-options works!</p>
+<div *ngIf="form" [formGroup]="form">
+	<table>
+		<tr>
+			<td><label for="showDecorRadius">{{'DISPLAY_DECOR_RADIUS' | translate}}</label></td>
+			<td><input id="showDecorRadius" type="checkbox" formControlName="showDecorRadius" /></td>
+		</tr>
+		<tr>
+			<td><label for="decorRadiusSize">{{'DECOR_RADIUS_SIZE' | translate}}</label></td>
+			<td><input id="decorRadiusSize" type="number" formControlName="decorRadiusSize" /></td>
+		</tr>
+		<tr>
+			<td><label for="hideMarkers">{{'HIDE_NODES' | translate}}</label></td>
+			<td><input id="hideMarkers" type="checkbox" formControlName="hideMarkers" /></td>
+		</tr>
+		<tr>
+			<td><label for="hidePaths">{{'HIDE_WAYS' | translate}}</label></td>
+			<td><input id="hidePaths" type="checkbox" formControlName="hidePaths" /></td>
+		</tr>
+	</table>
+
+	<em class="warning">
+		{{'DECOR_RADIUS_WARNING' | translate}}
+		<a href="https://www.pikminwiki.com/Detector" target="_blank">
+			{{'MORE_INFO' | translate}}
+		</a>
+	</em>
+</div>

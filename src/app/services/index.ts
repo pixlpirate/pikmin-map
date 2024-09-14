@@ -8,3 +8,4 @@ export * from './map/map.service';
 export * from './nominatim/nominatim.service';
 export * from './overpass-turbo/overpass-turbo.service';
 export * from './toast/toast.service';
+export * from './advanced-options/advanced-options.service';

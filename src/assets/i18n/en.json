@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Anchor to",
+  "ADVANCED_OPTIONS": "Advanced options",
 	"AND": "AND",
 	"CLOSE": "Close",
 	"DECOR_LIST": "Decor list",
@@ -21,6 +22,13 @@
 	"UPDATE_AVAILABLE": "Update available",
 	"WARNING_NO_RESULTS": "No results found, try to zoom out",
 	"WARNING_TOO_MANY_RESULTS": "Too many results, only first 1000 displayed",
+  "HIDE_WAYS": "Hide ways",
+  "HIDE_NODES": "Hide nodes",
+  "DISPLAY_DECOR_RADIUS": "Display decor radius",
+  "DECOR_RADIUS_SIZE": "Decor radius size",
+  "DECOR_RADIUS_WARNING": "Please note that this radius does not represent the actual area where the decor will be found, but a very vague indication of where it might be found. <a href='https://www.pikminwiki.com/Detector'>More info</a>",
+  "MORE_INFO": "More info",
+
 	"Restaurant": "Restaurant",
 	"Café": "Café",
 	"Sweetshop": "Sweetshop",

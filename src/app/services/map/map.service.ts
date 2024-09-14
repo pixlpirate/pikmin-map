@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 import {
+	circle,
 	divIcon,
 	LatLng,
 	LatLngBounds,
@@ -12,7 +13,11 @@ import {
 	tileLayer,
 } from 'leaflet';
 
-import { EventBusService, LocalStorageService } from '@services';
+import {
+	AdvancedOptionsService,
+	EventBusService,
+	LocalStorageService,
+} from '@services';
 import { Decor, LocalMapData, OverpassTurboResult } from '@interfaces';
 
 @Injectable({
@@ -25,7 +30,8 @@ export class MapService {
 	constructor(
 		private localStorageService: LocalStorageService,
 		private eventBusService: EventBusService,
-		private translateService: TranslateService
+		private translateService: TranslateService,
+		private advancedOptionsService: AdvancedOptionsService
 	) {}
 
 	/**
@@ -129,6 +135,8 @@ export class MapService {
 		lng: number,
 		item: OverpassTurboResult
 	): void {
+		if (this.advancedOptionsService.hideMarkers) return;
+
 		const icon = divIcon({
 			className: 'marker',
 			html: `<div class="marker-pin">${this.getMarkerIcon(
@@ -142,6 +150,30 @@ export class MapService {
 		marker.bindPopup(this.getMarkerPopup(item));
 
 		this.decorLayer.addLayer(marker);
+
+		if (this.advancedOptionsService.showDecorRadius) {
+			this.addMarkerRadius(lat, lng);
+		}
+	}
+
+	/**
+	 * Adds a circle around the marker for a visual representation help of the overlaping decors.
+	 *
+	 * @param lat - The latitude where the marker will be placed.
+	 * @param lng - The longitude where the marker will be placed.
+	 * @returns void
+	 */
+	public addMarkerRadius(lat: number, lng: number): void {
+		const radius = this.advancedOptionsService.decorRadiusSize;
+		const c = circle([lat, lng], {
+			color: '#e76761',
+			fillColor: '#e76761',
+			fillOpacity: 0.2,
+			radius: radius,
+		});
+
+		console.log('radius', radius);
+		this.decorLayer.addLayer(c);
 	}
 
 	/**
@@ -219,6 +251,8 @@ export class MapService {
 	 * @param latlngs
 	 */
 	public addPolyline(latlngs: LatLng[], item: OverpassTurboResult): void {
+		if (this.advancedOptionsService.hidePaths) return;
+
 		// Only fill if distance between first and last point < 0.1m
 		// This avoid filling polylines that are lines instead of areas (e.g. roads)
 		const fill =

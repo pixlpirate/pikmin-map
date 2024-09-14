@@ -42,7 +42,20 @@
 
 .search-input {
 	width: 100%;
+	padding: 1rem;
 	padding-left: calc($gap--small * 2 + 1.5rem);
+	font-size: $t-s--small;
+	border: $border-size solid transparent;
+	border-radius: 5rem;
+
+	&::placeholder {
+		color: rgba($black, 0.5);
+	}
+
+	&:focus {
+		border-color: $color-primary;
+		outline: none;
+	}
 }
 
 /* Results

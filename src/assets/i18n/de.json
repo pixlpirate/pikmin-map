@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Anker zu",
+  "ADVANCED_OPTIONS": "Erweiterte Optionen",
 	"AND": "UND",
 	"CLOSE": "Schließen",
 	"DECOR_LIST": "Dekorliste",
@@ -21,6 +22,13 @@
 	"UPDATE_AVAILABLE": "Update verfügbar",
 	"WARNING_NO_RESULTS": "Keine Ergebnisse gefunden, versuchen Sie herauszuzoomen",
 	"WARNING_TOO_MANY_RESULTS": "Zu viele Ergebnisse, nur die ersten 1000 werden angezeigt",
+  "HIDE_WAYS": "Wege ausblenden",
+  "HIDE_NODES": "Knoten ausblenden",
+  "DISPLAY_DECOR_RADIUS": "Dekorationsradius anzeigen",
+  "DECOR_RADIUS_SIZE": "Dekorationsradiusgröße",
+  "DECOR_RADIUS_WARNING": "Bitte beachten Sie, dass dieser Radius nicht den tatsächlichen Bereich darstellt, in dem das Dekor gefunden wird, sondern nur eine sehr vage Angabe, wo es gefunden werden könnte.",
+  "MORE_INFO": "Mehr Informationen",
+
 	"Restaurant": "Restaurant",
 	"Café": "Café",
 	"Sweetshop": "Süßwarenladen",

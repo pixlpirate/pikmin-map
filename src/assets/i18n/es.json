@@ -1,5 +1,6 @@
 {
 	"ANCHOR_TO": "Ancla hacia",
+  "ADVANCED_OPTIONS": "Opciones avanzadas",
 	"AND": "Y",
 	"CLOSE": "Cerrar",
 	"DECOR_LIST": "Lista de decoración",
@@ -21,6 +22,13 @@
 	"UPDATE_AVAILABLE": "Actualización disponible",
 	"WARNING_NO_RESULTS": "No se encontraron resultados, intenta hacer zoom hacia afuera",
 	"WARNING_TOO_MANY_RESULTS": "Demasiados resultados, solo se muestran los primeros 1000",
+  "HIDE_WAYS": "Ocultar caminos",
+  "HIDE_NODES": "Ocultar nodos",
+  "DISPLAY_DECOR_RADIUS": "Mostrar radio de decoración",
+  "DECOR_RADIUS_SIZE": "Tamaño del radio de decoración",
+  "DECOR_RADIUS_WARNING": "Por favor, tenga en cuenta que este radio no representa el área real donde se encontrará la decoración, sino una indicación muy vaga de dónde podría encontrarse.",
+  "MORE_INFO": "Más información",
+
 	"Restaurant": "Restaurante",
 	"Café": "Café",
 	"Sweetshop": "Tienda de dulces",

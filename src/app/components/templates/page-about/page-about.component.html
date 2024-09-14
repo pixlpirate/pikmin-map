@@ -5,10 +5,12 @@
 	<nav class="social">
 		<ul class="social-list">
 			<li>
-				<a href="https://github.com/pixlpirate/pikmin-map" target="_blank" aria-label="Github"><i class="icon icon-github"></i></a>
+				<a href="https://github.com/pixlpirate/pikmin-map" target="_blank" aria-label="Github"><i
+					   class="icon icon-github"></i></a>
 			</li>
 			<li>
-				<a href="https://pixelpirate.fr/contact" target="_blank" aria-label="Contact"><i class="icon icon-envelope"></i></a>
+				<a href="https://pixelpirate.fr/contact" target="_blank" aria-label="Contact"><i
+					   class="icon icon-envelope"></i></a>
 			</li>
 		</ul>
 	</nav>
@@ -20,13 +22,9 @@
 
 	<div class="markdown-container">
 
-		<markdown
-			class="markdown"
-			[disableSanitizer]="true"
-			[src]="'./assets/markdown/about/about.' + currentLanguage + '.md'"
-			(load)="content['about'] = true"
-			[ngClass]="content['about'] ? 'markdown--loaded' : ''"
-		></markdown>
+		<markdown class="markdown" [disableSanitizer]="true"
+				  [src]="'./assets/markdown/about/about.' + currentLanguage + '.md'" (load)="content['about'] = true"
+				  [ngClass]="content['about'] ? 'markdown--loaded' : ''"></markdown>
 
 		<h2 [id]="generateId('DECOR_LIST' | translate)" class="anchor-title">
 			<a class="anchor" [href]="'/about#'+generateId('DECOR_LIST' | translate)">
@@ -36,23 +34,24 @@
 		</h2>
 		<app-mapping-table></app-mapping-table>
 
-		<markdown
-			class="markdown"
-			[disableSanitizer]="true"
-			[src]="'./assets/markdown/faq/faq.' + currentLanguage + '.md'"
-			(load)="content['faq'] = true"
-			[ngClass]="content['faq'] ? 'markdown--loaded' : ''"
-		></markdown>
+		<markdown class="markdown" [disableSanitizer]="true"
+				  [src]="'./assets/markdown/faq/faq.' + currentLanguage + '.md'" (load)="content['faq'] = true"
+				  [ngClass]="content['faq'] ? 'markdown--loaded' : ''"></markdown>
 
-		<markdown
-			class="markdown"
-			[disableSanitizer]="true"
-			[src]="'./assets/markdown/changelog/changelog.' + currentLanguage + '.md'"
-			(load)="content['changelog'] = true"
-			[ngClass]="content['changelog'] ? 'markdown--loaded' : ''"
-		></markdown>
+		<markdown class="markdown" [disableSanitizer]="true"
+				  [src]="'./assets/markdown/changelog/changelog.' + currentLanguage + '.md'"
+				  (load)="content['changelog'] = true" [ngClass]="content['changelog'] ? 'markdown--loaded' : ''">
+		</markdown>
 
-		<app-advanced-options></app-advanced-options>
+		<div class="advanced-options-container">
+			<h2 [id]="generateId('ADVANCED_OPTIONS' | translate)" class="anchor-title">
+				<a class="anchor" [href]="'/about#'+generateId('ADVANCED_OPTIONS' | translate)">
+					<i class="icon icon-link"></i>
+				</a>
+				{{"ADVANCED_OPTIONS" | translate}}
+			</h2>
+			<app-advanced-options></app-advanced-options>
+		</div>
 	</div>
 </div>
 
