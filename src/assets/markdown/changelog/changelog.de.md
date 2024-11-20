@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.5 <time>2024-11-20</time>
+
+- Hinzufügen der Kategorie **Universität**
+
 ### v1.0.4 <time>2024-09-12</time>
 
 - Hinzufügen der Kategorie **Baumarkt**

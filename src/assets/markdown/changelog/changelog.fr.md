@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.5 <time>2024-11-20</time>
+
+- Ajout de la catégorie **Université**
+
 ### v1.0.4 <time>2024-09-12</time>
 
 - Ajout de la catégorie **Quincaillerie**

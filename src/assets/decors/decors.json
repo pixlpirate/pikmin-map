@@ -282,5 +282,13 @@
 			"shop=doityourself",
 			"shop=hardware"
 		]
-	}
+	},
+  {
+    "icon": "University",
+    "label": "University",
+    "tags": [
+      "amenity=university",
+      "building=university"
+    ]
+  }
 ]
