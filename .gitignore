@@ -43,3 +43,4 @@ Thumbs.db
 
 # Exception: _Background.png
 !/src/assets/icons/map/_Background.png
+!/src/assets/icons/picture-book/_Background.png
