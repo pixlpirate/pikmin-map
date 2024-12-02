@@ -31,7 +31,7 @@
 
   "Restaurant": "Restaurant",
   "Café": "Café",
-  "Sweetshop": "Sweetshop",
+  "Sweetshop": "Sweet Shop",
   "Movie Theater": "Movie Theater",
   "Pharmacy": "Pharmacy",
   "Zoo": "Zoo",
@@ -49,7 +49,7 @@
   "Hair Salon": "Hair Salon",
   "Clothes Store": "Clothes Store",
   "Park": "Park",
-  "Library/bookstore": "Library/bookstore",
+  "Library/bookstore": "Library & Bookstore",
   "Sushi Restaurant": "Sushi Restaurant",
   "Mountain": "Mountain",
   "Stadium": "Stadium",
@@ -59,10 +59,10 @@
   "Ramen Restaurant": "Ramen Restaurant",
   "Bridge": "Bridge",
   "Hotel": "Hotel",
-  "Cosmetic Shop": "Cosmetic Shop",
-  "Shrines and Temples": "Shrines and Temples",
-  "Appliance Stores": "Appliance Store",
+  "Cosmetic Shop": "Makeup Store",
+  "Shrines and Temples": "Shrine & Temple",
+  "Appliance Stores": "Appliances Store",
   "Curry Restaurant": "Curry Restaurant",
-  "Hardware Store": "Hardware Store",
-  "University": "University"
+  "Hardware Store": "DIY Store",
+  "University": "University & College"
 }
