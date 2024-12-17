@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.6 <time>2024-12-17</time>
+
+- Aggiunta della categoria **Ristorante messicano**
+
 ### v1.0.5 <time>2024-11-20</time>
 
 - Aggiunta della categoria **Università**

@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.6 <time>2024-12-17</time>
+
+- Ajout de la catégorie **Restaurant mexicain**
+
 ### v1.0.5 <time>2024-11-20</time>
 
 - Ajout de la catégorie **Université**

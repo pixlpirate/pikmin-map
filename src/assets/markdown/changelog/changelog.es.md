@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.6 <time>2024-12-17</time>
+
+- Adición de la categoría **Restaurante mexicano**
+
 ### v1.0.5 <time>2024-11-20</time>
 
 - Adición de la categoría **Universidad**

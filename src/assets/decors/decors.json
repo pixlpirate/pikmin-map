@@ -291,5 +291,12 @@
       "amenity=university",
       "building=university"
     ]
+  },
+  {
+    "icon": "MexicanRestaurant",
+    "label": "Mexican Restaurant",
+    "tags": [
+      "cuisine=mexican"
+    ]
   }
 ]

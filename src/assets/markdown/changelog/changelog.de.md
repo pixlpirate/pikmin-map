@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.6 <time>2024-12-17</time>
+
+- Hinzufügen der Kategorie **Mexikanisches Restaurant**
+
 ### v1.0.5 <time>2024-11-20</time>
 
 - Hinzufügen der Kategorie **Universität**

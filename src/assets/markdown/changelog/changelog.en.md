@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.6 <time>2024-12-17</time>
+
+- Addition of the **Mexican Restaurant** category
+
 ### v1.0.5 <time>2024-11-20</time>
 
 - Addition of the **University** category
