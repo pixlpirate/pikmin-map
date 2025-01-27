@@ -296,7 +296,8 @@
     "icon": "MexicanRestaurant",
     "label": "Mexican Restaurant",
     "tags": [
-      "cuisine=mexican"
+      "cuisine=mexican",
+	  "cuisine=tex-mex"
     ]
   }
 ]

@@ -1,5 +1,10 @@
 ## Journal des modifications
 
+### v1.0.7 <time>2024-01-27</time>
+
+- Ajout du tag `cuisine=tex-mex` la catégorie **Restaurant mexicain**
+- Correction d'une coquille dans la page "À propos".
+
 ### v1.0.6 <time>2024-12-17</time>
 
 - Ajout de la catégorie **Restaurant mexicain**

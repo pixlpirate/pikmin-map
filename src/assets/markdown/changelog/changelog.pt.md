@@ -1,5 +1,10 @@
 ## Registro de Alterações
 
+### v1.0.7 <time>2024-01-27</time>
+
+- Adicionado o tag `cuisine=tex-mex` à categoria **Restaurante mexicano**
+- Correção de um erro de digitação na página "Sobre".
+
 ### v1.0.6 <time>2024-12-17</time>
 
 - Adição da categoria **Restaurante Mexicano**

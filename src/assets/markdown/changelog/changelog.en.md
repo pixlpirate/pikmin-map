@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.0.7 <time>2024-01-27</time>
+
+- Added the tag `cuisine=tex-mex` to the category **Mexican Restaurant**
+- Fixed a typo on the "About" page.
+
 ### v1.0.6 <time>2024-12-17</time>
 
 - Addition of the **Mexican Restaurant** category

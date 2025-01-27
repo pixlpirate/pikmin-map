@@ -1,5 +1,10 @@
 ## Änderungsprotokoll
 
+### v1.0.7 <time>2024-01-27</time>
+
+- Hinzufügen des Tags `cuisine=tex-mex` zur Kategorie **Mexikanisches Restaurant**
+- Korrektur eines Tippfehlers auf der Seite "Über uns".
+
 ### v1.0.6 <time>2024-12-17</time>
 
 - Hinzufügen der Kategorie **Mexikanisches Restaurant**
