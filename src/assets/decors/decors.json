@@ -1,288 +1,288 @@
 [
-	{
-		"icon": "Restaurant",
-		"label": "Restaurant",
-		"tags": [
-			"amenity=restaurant"
-		]
-	},
-	{
-		"icon": "Cafe",
-		"label": "Café",
-		"tags": [
-			"amenity=cafe",
-			"cuisine=coffee_shop"
-		]
-	},
-	{
-		"icon": "Desert",
-		"label": "Sweetshop",
-		"tags": [
-			"shop=confectionery",
-			"shop=pastry"
-		]
-	},
-	{
-		"icon": "Theatre",
-		"label": "Movie Theater",
-		"tags": [
-			"amenity=cinema"
-		]
-	},
-	{
-		"icon": "Pharmacy",
-		"label": "Pharmacy",
-		"tags": [
-			"amenity=pharmacy"
-		]
-	},
-	{
-		"icon": "Zoo",
-		"label": "Zoo",
-		"tags": [
-			"tourism=zoo"
-		]
-	},
-	{
-		"icon": "Forest",
-		"label": "Forest",
-		"tags": [
-			"landuse=forest",
-			"natural=wood"
-		]
-	},
-	{
-		"icon": "Water",
-		"label": "Waterside",
-		"tags": [
-			"natural=water"
-		]
-	},
-	{
-		"icon": "Posts",
-		"label": "Post Office ",
-		"tags": [
-			"amenity=post_office"
-		]
-	},
-	{
-		"icon": "Museum",
-		"label": "Art Gallery",
-		"tags": [
-			"shop=art",
-			"tourism=museum"
-		]
-	},
-	{
-		"icon": "AirPort",
-		"label": "Airport",
-		"tags": [
-			"aeroway=aerodrome",
-			"aeroway=heliport"
-		]
-	},
-	{
-		"icon": "Station",
-		"label": "Station",
-		"tags": [
-			"building=train_station",
-			"railway=station"
-		]
-	},
-	{
-		"icon": "Beach",
-		"label": "Beach",
-		"tags": [
-			"natural=beach"
-		]
-	},
-	{
-		"icon": "Hamburger",
-		"label": "Burger Place",
-		"tags": [
-			"amenity=fast_food",
-			"cuisine=burger"
-		]
-	},
-	{
-		"icon": "ConvenienceStore",
-		"label": "Corner Store",
-		"tags": [
-			"shop=convenience"
-		]
-	},
-	{
-		"icon": "Supermarket",
-		"label": "Supermarket",
-		"tags": [
-			"shop=supermarket"
-		]
-	},
-	{
-		"icon": "Bakery",
-		"label": "Bakery",
-		"tags": [
-			"cuisine=pretzel",
-			"shop=bakery"
-		]
-	},
-	{
-		"icon": "Salon",
-		"label": "Hair Salon",
-		"tags": [
-			"shop=hairdresser"
-		]
-	},
-	{
-		"icon": "ClosthingStore",
-		"label": "Clothes Store",
-		"tags": [
-			"shop=clothes",
-			"shop=shoes"
-		]
-	},
-	{
-		"icon": "Park",
-		"label": "Park",
-		"tags": [
-			"leisure=park"
-		]
-	},
-	{
-		"icon": "Library",
-		"label": "Library/bookstore",
-		"tags": [
-			"amenity=library"
-		]
-	},
-	{
-		"icon": "SushiRestaurant",
-		"label": "Sushi Restaurant",
-		"tags": [
-			"cuisine=sushi"
-		]
-	},
-	{
-		"icon": "Mountain",
-		"label": "Mountain",
-		"tags": [
-			"natural=peak"
-		]
-	},
-	{
-		"icon": "Stadium",
-		"label": "Stadium",
-		"tags": [
-			"leisure=stadium"
-		]
-	},
-	{
-		"icon": "AmusementPark",
-		"label": "Theme Park",
-		"tags": [
-			"tourism=theme_park"
-		]
-	},
-	{
-		"icon": "BusStop",
-		"label": "Bus Stop",
-		"tags": [
-			"highway=bus_stop"
-		]
-	},
-	{
-		"icon": "ItalianRestaurant",
-		"label": "Italian Restaurant",
-		"tags": [
-			"cuisine=italian",
-			"cuisine=pasta",
-			"cuisine=pizza"
-		]
-	},
-	{
-		"icon": "RamenRestaurant",
-		"label": "Ramen Restaurant",
-		"tags": [
-			"cuisine=chinese",
-			"cuisine=noodle",
-			"cuisine=ramen",
-			"cuisine=soba",
-			"cuisine=udon"
-		]
-	},
-	{
-		"icon": "Bridge",
-		"label": "Bridge",
-		"tags": [
-			"bridge=viaduct",
-			"bridge=yes"
-		]
-	},
-	{
-		"icon": "Hotel",
-		"label": "Hotel",
-		"tags": [
-			"tourism=hotel"
-		]
-	},
-	{
-		"icon": "Cosme",
-		"label": "Cosmetic Shop",
-		"tags": [
-			"amenity=pharmacy",
-			"shop=cosmetics",
-			"shop=department_store"
-		]
-	},
-	{
-		"icon": "Omikuji",
-		"label": "Shrines and Temples",
-		"area": "JP",
-		"tags": [
-			[
-				"building=shrine",
-				"religion=shinto"
-			],
-			[
-				"building=shrine",
-				"religion=buddhist"
-			],
-			[
-				"building=temple",
-				"religion=shinto"
-			],
-			[
-				"building=temple",
-				"religion=buddhist"
-			]
-		]
-	},
-	{
-		"icon": "Electronics",
-		"label": "Appliance Stores",
-		"tags": [
-			"shop=appliance",
-			"shop=computer",
-			"shop=electronics"
-		]
-	},
-	{
-		"icon": "Curry",
-		"label": "Curry Restaurant",
-		"tags": [
-			"cuisine=curry",
-			"cuisine=indian",
-			"cuisine=nepalese"
-		]
-	},
   {
-		"icon": "HardwareStore",
-		"label": "Hardware Store",
-		"tags": [
-			"shop=doityourself",
-			"shop=hardware"
-		]
-	},
+    "icon": "Restaurant",
+    "label": "Restaurant",
+    "tags": [
+      "amenity=restaurant"
+    ]
+  },
+  {
+    "icon": "Cafe",
+    "label": "Café",
+    "tags": [
+      "amenity=cafe",
+      "cuisine=coffee_shop"
+    ]
+  },
+  {
+    "icon": "Desert",
+    "label": "Sweetshop",
+    "tags": [
+      "shop=confectionery",
+      "shop=pastry"
+    ]
+  },
+  {
+    "icon": "Theatre",
+    "label": "Movie Theater",
+    "tags": [
+      "amenity=cinema"
+    ]
+  },
+  {
+    "icon": "Pharmacy",
+    "label": "Pharmacy",
+    "tags": [
+      "amenity=pharmacy"
+    ]
+  },
+  {
+    "icon": "Zoo",
+    "label": "Zoo",
+    "tags": [
+      "tourism=zoo"
+    ]
+  },
+  {
+    "icon": "Forest",
+    "label": "Forest",
+    "tags": [
+      "landuse=forest",
+      "natural=wood"
+    ]
+  },
+  {
+    "icon": "Water",
+    "label": "Waterside",
+    "tags": [
+      "natural=water"
+    ]
+  },
+  {
+    "icon": "Posts",
+    "label": "Post Office ",
+    "tags": [
+      "amenity=post_office"
+    ]
+  },
+  {
+    "icon": "Museum",
+    "label": "Art Gallery",
+    "tags": [
+      "shop=art",
+      "tourism=museum"
+    ]
+  },
+  {
+    "icon": "AirPort",
+    "label": "Airport",
+    "tags": [
+      "aeroway=aerodrome",
+      "aeroway=heliport"
+    ]
+  },
+  {
+    "icon": "Station",
+    "label": "Station",
+    "tags": [
+      "building=train_station",
+      "railway=station"
+    ]
+  },
+  {
+    "icon": "Beach",
+    "label": "Beach",
+    "tags": [
+      "natural=beach"
+    ]
+  },
+  {
+    "icon": "Hamburger",
+    "label": "Burger Place",
+    "tags": [
+      "amenity=fast_food",
+      "cuisine=burger"
+    ]
+  },
+  {
+    "icon": "ConvenienceStore",
+    "label": "Corner Store",
+    "tags": [
+      "shop=convenience"
+    ]
+  },
+  {
+    "icon": "Supermarket",
+    "label": "Supermarket",
+    "tags": [
+      "shop=supermarket"
+    ]
+  },
+  {
+    "icon": "Bakery",
+    "label": "Bakery",
+    "tags": [
+      "cuisine=pretzel",
+      "shop=bakery"
+    ]
+  },
+  {
+    "icon": "Salon",
+    "label": "Hair Salon",
+    "tags": [
+      "shop=hairdresser"
+    ]
+  },
+  {
+    "icon": "ClosthingStore",
+    "label": "Clothes Store",
+    "tags": [
+      "shop=clothes",
+      "shop=shoes"
+    ]
+  },
+  {
+    "icon": "Park",
+    "label": "Park",
+    "tags": [
+      "leisure=park"
+    ]
+  },
+  {
+    "icon": "Library",
+    "label": "Library/bookstore",
+    "tags": [
+      "amenity=library"
+    ]
+  },
+  {
+    "icon": "SushiRestaurant",
+    "label": "Sushi Restaurant",
+    "tags": [
+      "cuisine=sushi"
+    ]
+  },
+  {
+    "icon": "Mountain",
+    "label": "Mountain",
+    "tags": [
+      "natural=peak"
+    ]
+  },
+  {
+    "icon": "Stadium",
+    "label": "Stadium",
+    "tags": [
+      "leisure=stadium"
+    ]
+  },
+  {
+    "icon": "AmusementPark",
+    "label": "Theme Park",
+    "tags": [
+      "tourism=theme_park"
+    ]
+  },
+  {
+    "icon": "BusStop",
+    "label": "Bus Stop",
+    "tags": [
+      "highway=bus_stop"
+    ]
+  },
+  {
+    "icon": "ItalianRestaurant",
+    "label": "Italian Restaurant",
+    "tags": [
+      "cuisine=italian",
+      "cuisine=pasta",
+      "cuisine=pizza"
+    ]
+  },
+  {
+    "icon": "RamenRestaurant",
+    "label": "Ramen Restaurant",
+    "tags": [
+      "cuisine=chinese",
+      "cuisine=noodle",
+      "cuisine=ramen",
+      "cuisine=soba",
+      "cuisine=udon"
+    ]
+  },
+  {
+    "icon": "Bridge",
+    "label": "Bridge",
+    "tags": [
+      "bridge=viaduct",
+      "bridge=yes"
+    ]
+  },
+  {
+    "icon": "Hotel",
+    "label": "Hotel",
+    "tags": [
+      "tourism=hotel"
+    ]
+  },
+  {
+    "icon": "Cosme",
+    "label": "Cosmetic Shop",
+    "tags": [
+      "amenity=pharmacy",
+      "shop=cosmetics",
+      "shop=department_store"
+    ]
+  },
+  {
+    "icon": "Omikuji",
+    "label": "Shrines and Temples",
+    "area": "JP",
+    "tags": [
+      [
+        "building=shrine",
+        "religion=shinto"
+      ],
+      [
+        "building=shrine",
+        "religion=buddhist"
+      ],
+      [
+        "building=temple",
+        "religion=shinto"
+      ],
+      [
+        "building=temple",
+        "religion=buddhist"
+      ]
+    ]
+  },
+  {
+    "icon": "Electronics",
+    "label": "Appliance Stores",
+    "tags": [
+      "shop=appliance",
+      "shop=computer",
+      "shop=electronics"
+    ]
+  },
+  {
+    "icon": "Curry",
+    "label": "Curry Restaurant",
+    "tags": [
+      "cuisine=curry",
+      "cuisine=indian",
+      "cuisine=nepalese"
+    ]
+  },
+  {
+    "icon": "HardwareStore",
+    "label": "Hardware Store",
+    "tags": [
+      "shop=doityourself",
+      "shop=hardware"
+    ]
+  },
   {
     "icon": "University",
     "label": "University",
@@ -297,7 +297,7 @@
     "label": "Mexican Restaurant",
     "tags": [
       "cuisine=mexican",
-	  "cuisine=tex-mex"
+      "cuisine='tex-mex'"
     ]
   }
 ]
