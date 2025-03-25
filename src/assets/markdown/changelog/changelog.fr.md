@@ -1,5 +1,8 @@
 ## Journal des modifications
 
+### v1.0.8 <time>2024-03-21</time>
+- Ajout de la catégorie **Laveries automatiques & pressings**
+
 ### v1.0.7 <time>2024-01-27</time>
 
 - Ajout du tag `cuisine=tex-mex` la catégorie **Restaurant mexicain**

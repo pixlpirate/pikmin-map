@@ -1,5 +1,8 @@
 ## Änderungsprotokoll
 
+### v1.0.8 <time>2024-03-21</time>
+- Hinzufügung der **Kategorie Wäscherei**
+
 ### v1.0.7 <time>2024-01-27</time>
 
 - Hinzufügen des Tags `cuisine=tex-mex` zur Kategorie **Mexikanisches Restaurant**

@@ -1,5 +1,8 @@
 ## Changelog
 
+### v1.0.8 <time>2024-03-21</time>
+- Addition of the **Laundry** category
+
 ### v1.0.7 <time>2024-01-27</time>
 
 - Added the tag `cuisine=tex-mex` to the category **Mexican Restaurant**

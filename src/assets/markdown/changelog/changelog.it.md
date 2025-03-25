@@ -1,5 +1,8 @@
 ## Registro delle modifiche
 
+### v1.0.8 <time>2024-03-21</time>
+- Aggiunta della categoria **Lavanderia**
+
 ### v1.0.7 <time>2024-01-27</time>
 
 - Aggiunta del tag `cuisine=tex-mex` alla categoria **Ristorante messicano**

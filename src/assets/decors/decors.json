@@ -299,5 +299,13 @@
       "cuisine=mexican",
       "cuisine='tex-mex'"
     ]
+  },
+  {
+    "icon": "Laundry",
+    "label": "Laundry",
+    "tags": [
+      "shop=dry_cleaning",
+      "shop=laundry"
+    ]
   }
 ]

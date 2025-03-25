@@ -1,5 +1,8 @@
 ## Registro de cambios
 
+### v1.0.8 <time>2024-03-21</time>
+- Adición de la categoría **Lavandería**
+
 ### v1.0.7 <time>2024-01-27</time>
 
 - Se añadió la etiqueta `cuisine=tex-mex` a la categoría **Restaurante mexicano**
