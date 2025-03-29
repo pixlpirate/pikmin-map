@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
     "postbuild": "node ./scripts/sitemap-generator.js",
     "watch": "ng build --watch --configuration development",
