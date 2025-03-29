@@ -1,5 +1,8 @@
 ## Changelog
 
+### v1.0.9 <time>2024-03-29</time>
+- Updated the icon for the **Italian Restaurant** category
+
 ### v1.0.8 <time>2024-03-21</time>
 - Addition of the **Laundry** category
 

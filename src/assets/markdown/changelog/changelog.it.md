@@ -1,5 +1,8 @@
 ## Registro delle modifiche
 
+### v1.0.9 <time>2024-03-29</time>
+- Aggiornata l'icona per la categoria **Ristorante Italiano**
+
 ### v1.0.8 <time>2024-03-21</time>
 - Aggiunta della categoria **Lavanderia**
 

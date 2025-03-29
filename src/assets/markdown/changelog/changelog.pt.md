@@ -1,5 +1,8 @@
 ## Registro de Alterações
 
+### v1.0.9 <time>2024-03-29</time>
+- Atualizado o ícone para a categoria **Restaurante Italiano**
+
 ### v1.0.8 <time>2024-03-21</time>
 - Adição da categoria **Lavanderia**
 

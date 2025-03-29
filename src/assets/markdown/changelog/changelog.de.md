@@ -1,5 +1,8 @@
 ## Änderungsprotokoll
 
+### v1.0.9 <time>2024-03-29</time>
+- Aktualisierung des Symbols für die Kategorie **Italienisches Restaurant**
+
 ### v1.0.8 <time>2024-03-21</time>
 - Hinzufügung der **Kategorie Wäscherei**
 
