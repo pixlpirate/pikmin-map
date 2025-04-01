@@ -170,12 +170,19 @@ export class OverpassTurboService {
 			bounds.getNorthEast().lng,
 		].join(',');
 
-		let body: string = `[out:json][timeout:5];\n(\n`;
+		let body: string = `[out:json][timeout:5][bbox:${bbox}];\n(\n`;
+
+		// Stocker les zones définies
+		const areas = new Set<string>();
 
 		decors.forEach((decor: Decor) => {
-			body += decor.area
-				? `area["ISO3166-1"="${decor.area}"]->.${decor.area};\n`
-				: ``;
+			if (decor.area) {
+				areas.add(decor.area);
+			}
+		});
+
+		areas.forEach((area) => {
+			body += `area["ISO3166-1"="${area}"]->.${area};\n`;
 		});
 
 		decors.forEach((decor: Decor) => {
@@ -183,12 +190,13 @@ export class OverpassTurboService {
 				if (Array.isArray(tag)) {
 					body += `nwr[${tag.join('][')}]`;
 				} else {
-					body += `nwr[${tag}]`;
+					const [key, value] = tag.split('=');
+					if (key && value) {
+						body += `nwr["${key}"~"(^|;)?${value}($|;)"]`;
+					}
 				}
 
-				body += decor.area
-					? `(area.${decor.area})(${bbox});\n`
-					: `(${bbox});\n`;
+				body += decor.area ? `(area.${decor.area});\n` : `;\n`;
 			});
 		});
 
@@ -204,8 +212,10 @@ export class OverpassTurboService {
 	 * @returns {Decor[]} - The Decor objects that match the tags.
 	 */
 	private getDecors(tags: any): Decor[] {
-		const formattedTags = Object.keys(tags).map(
-			(key: string) => `${key}~${tags[key]}`
+		const formattedTags = Object.keys(tags).flatMap((key: string) =>
+			tags[key]
+				.split(';') // Split the value by ';' if it contains multiple values
+				.map((value: string) => `${key}=${value.trim()}`) // Trim and format each entry
 		);
 		let decors: Decor[] = [];
 
