@@ -1,9 +1,15 @@
 ## Changelog
 
+### v1.0.10 <time>2024-04-01</time>
+
+- Added support for multiple tags per OSM point of interest
+
 ### v1.0.9 <time>2024-03-29</time>
+
 - Updated the icon for the **Italian Restaurant** category
 
 ### v1.0.8 <time>2024-03-21</time>
+
 - Addition of the **Laundry** category
 
 ### v1.0.7 <time>2024-01-27</time>

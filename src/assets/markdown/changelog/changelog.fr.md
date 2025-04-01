@@ -1,9 +1,15 @@
 ## Journal des modifications
 
+### v1.0.10 <time>2024-04-01</time>
+
+- Ajout de la prise en charge de plusieurs tags par point d'intérêt OSM
+
 ### v1.0.9 <time>2024-03-29</time>
+
 - Mise à jour de l'icône pour la catégorie **Restaurant Italien**
 
 ### v1.0.8 <time>2024-03-21</time>
+
 - Ajout de la catégorie **Laveries automatiques & pressings**
 
 ### v1.0.7 <time>2024-01-27</time>

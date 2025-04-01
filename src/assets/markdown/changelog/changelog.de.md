@@ -1,9 +1,15 @@
 ## Änderungsprotokoll
 
+### v1.0.10 <time>2024-04-01</time>
+
+- Unterstützung für mehrere Tags pro OSM-Point of Interest hinzugefügt
+
 ### v1.0.9 <time>2024-03-29</time>
+
 - Aktualisierung des Symbols für die Kategorie **Italienisches Restaurant**
 
 ### v1.0.8 <time>2024-03-21</time>
+
 - Hinzufügung der **Kategorie Wäscherei**
 
 ### v1.0.7 <time>2024-01-27</time>

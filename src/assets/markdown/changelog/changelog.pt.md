@@ -1,9 +1,15 @@
 ## Registro de Alterações
 
+### v1.0.10 <time>2024-04-01</time>
+
+- Adicionado suporte para várias tags por ponto de interesse OSM
+
 ### v1.0.9 <time>2024-03-29</time>
+
 - Atualizado o ícone para a categoria **Restaurante Italiano**
 
 ### v1.0.8 <time>2024-03-21</time>
+
 - Adição da categoria **Lavanderia**
 
 ### v1.0.7 <time>2024-01-27</time>
