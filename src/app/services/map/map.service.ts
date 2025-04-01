@@ -172,7 +172,6 @@ export class MapService {
 			radius: radius,
 		});
 
-		console.log('radius', radius);
 		this.decorLayer.addLayer(c);
 	}
 
@@ -191,6 +190,7 @@ export class MapService {
 					(decor: Decor) => decor.label === checkedDecor.label
 				)
 			);
+
 		let icon = `<img src="assets/icons/map/${
 			decor?.icon
 		}.png" alt="${this.translate(

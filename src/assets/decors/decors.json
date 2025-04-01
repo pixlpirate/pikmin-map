@@ -3,235 +3,235 @@
     "icon": "Restaurant",
     "label": "Restaurant",
     "tags": [
-      "amenity=restaurant"
+      "amenity~restaurant"
     ]
   },
   {
     "icon": "Cafe",
     "label": "Café",
     "tags": [
-      "amenity=cafe",
-      "cuisine=coffee_shop"
+      "amenity~cafe",
+      "cuisine~coffee_shop"
     ]
   },
   {
     "icon": "Desert",
     "label": "Sweetshop",
     "tags": [
-      "shop=confectionery",
-      "shop=pastry"
+      "shop~confectionery",
+      "shop~pastry"
     ]
   },
   {
     "icon": "Theatre",
     "label": "Movie Theater",
     "tags": [
-      "amenity=cinema"
+      "amenity~cinema"
     ]
   },
   {
     "icon": "Pharmacy",
     "label": "Pharmacy",
     "tags": [
-      "amenity=pharmacy"
+      "amenity~pharmacy"
     ]
   },
   {
     "icon": "Zoo",
     "label": "Zoo",
     "tags": [
-      "tourism=zoo"
+      "tourism~zoo"
     ]
   },
   {
     "icon": "Forest",
     "label": "Forest",
     "tags": [
-      "landuse=forest",
-      "natural=wood"
+      "landuse~forest",
+      "natural~wood"
     ]
   },
   {
     "icon": "Water",
     "label": "Waterside",
     "tags": [
-      "natural=water"
+      "natural~water"
     ]
   },
   {
     "icon": "Posts",
     "label": "Post Office ",
     "tags": [
-      "amenity=post_office"
+      "amenity~post_office"
     ]
   },
   {
     "icon": "Museum",
     "label": "Art Gallery",
     "tags": [
-      "shop=art",
-      "tourism=museum"
+      "shop~art",
+      "tourism~museum"
     ]
   },
   {
     "icon": "AirPort",
     "label": "Airport",
     "tags": [
-      "aeroway=aerodrome",
-      "aeroway=heliport"
+      "aeroway~aerodrome",
+      "aeroway~heliport"
     ]
   },
   {
     "icon": "Station",
     "label": "Station",
     "tags": [
-      "building=train_station",
-      "railway=station"
+      "building~train_station",
+      "railway~station"
     ]
   },
   {
     "icon": "Beach",
     "label": "Beach",
     "tags": [
-      "natural=beach"
+      "natural~beach"
     ]
   },
   {
     "icon": "Hamburger",
     "label": "Burger Place",
     "tags": [
-      "amenity=fast_food",
-      "cuisine=burger"
+      "amenity~fast_food",
+      "cuisine~burger"
     ]
   },
   {
     "icon": "ConvenienceStore",
     "label": "Corner Store",
     "tags": [
-      "shop=convenience"
+      "shop~onvenience"
     ]
   },
   {
     "icon": "Supermarket",
     "label": "Supermarket",
     "tags": [
-      "shop=supermarket"
+      "shop~supermarket"
     ]
   },
   {
     "icon": "Bakery",
     "label": "Bakery",
     "tags": [
-      "cuisine=pretzel",
-      "shop=bakery"
+      "cuisine~pretzel",
+      "shop~bakery"
     ]
   },
   {
     "icon": "Salon",
     "label": "Hair Salon",
     "tags": [
-      "shop=hairdresser"
+      "shop~hairdresser"
     ]
   },
   {
     "icon": "ClosthingStore",
     "label": "Clothes Store",
     "tags": [
-      "shop=clothes",
-      "shop=shoes"
+      "shop~clothes",
+      "shop~shoes"
     ]
   },
   {
     "icon": "Park",
     "label": "Park",
     "tags": [
-      "leisure=park"
+      "leisure~park"
     ]
   },
   {
     "icon": "Library",
     "label": "Library/bookstore",
     "tags": [
-      "amenity=library"
+      "amenity~library"
     ]
   },
   {
     "icon": "SushiRestaurant",
     "label": "Sushi Restaurant",
     "tags": [
-      "cuisine=sushi"
+      "cuisine~sushi"
     ]
   },
   {
     "icon": "Mountain",
     "label": "Mountain",
     "tags": [
-      "natural=peak"
+      "natural~peak"
     ]
   },
   {
     "icon": "Stadium",
     "label": "Stadium",
     "tags": [
-      "leisure=stadium"
+      "leisure~stadium"
     ]
   },
   {
     "icon": "AmusementPark",
     "label": "Theme Park",
     "tags": [
-      "tourism=theme_park"
+      "tourism~theme_park"
     ]
   },
   {
     "icon": "BusStop",
     "label": "Bus Stop",
     "tags": [
-      "highway=bus_stop"
+      "highway~bus_stop"
     ]
   },
   {
     "icon": "ItalianRestaurant",
     "label": "Italian Restaurant",
     "tags": [
-      "cuisine=italian",
-      "cuisine=pasta",
-      "cuisine=pizza"
+      "cuisine~italian",
+      "cuisine~pasta",
+      "cuisine~pizza"
     ]
   },
   {
     "icon": "RamenRestaurant",
     "label": "Ramen Restaurant",
     "tags": [
-      "cuisine=chinese",
-      "cuisine=noodle",
-      "cuisine=ramen",
-      "cuisine=soba",
-      "cuisine=udon"
+      "cuisine~chinese",
+      "cuisine~noodle",
+      "cuisine~ramen",
+      "cuisine~soba",
+      "cuisine~udon"
     ]
   },
   {
     "icon": "Bridge",
     "label": "Bridge",
     "tags": [
-      "bridge=viaduct",
-      "bridge=yes"
+      "bridge~viaduct",
+      "bridge~yes"
     ]
   },
   {
     "icon": "Hotel",
     "label": "Hotel",
     "tags": [
-      "tourism=hotel"
+      "tourism~hotel"
     ]
   },
   {
     "icon": "Cosme",
     "label": "Cosmetic Shop",
     "tags": [
-      "amenity=pharmacy",
-      "shop=cosmetics",
-      "shop=department_store"
+      "amenity~pharmacy",
+      "shop~cosmetics",
+      "shop~department_store"
     ]
   },
   {
@@ -240,20 +240,20 @@
     "area": "JP",
     "tags": [
       [
-        "building=shrine",
-        "religion=shinto"
+        "building~shrine",
+        "religion~shinto"
       ],
       [
-        "building=shrine",
-        "religion=buddhist"
+        "building~shrine",
+        "religion~buddhist"
       ],
       [
-        "building=temple",
-        "religion=shinto"
+        "building~temple",
+        "religion~shinto"
       ],
       [
-        "building=temple",
-        "religion=buddhist"
+        "building~temple",
+        "religion~buddhist"
       ]
     ]
   },
@@ -261,51 +261,51 @@
     "icon": "Electronics",
     "label": "Appliance Stores",
     "tags": [
-      "shop=appliance",
-      "shop=computer",
-      "shop=electronics"
+      "shop~appliance",
+      "shop~computer",
+      "shop~electronics"
     ]
   },
   {
     "icon": "Curry",
     "label": "Curry Restaurant",
     "tags": [
-      "cuisine=curry",
-      "cuisine=indian",
-      "cuisine=nepalese"
+      "cuisine~curry",
+      "cuisine~indian",
+      "cuisine~nepalese"
     ]
   },
   {
     "icon": "HardwareStore",
     "label": "Hardware Store",
     "tags": [
-      "shop=doityourself",
-      "shop=hardware"
+      "shop~doityourself",
+      "shop~hardware"
     ]
   },
   {
     "icon": "University",
     "label": "University",
     "tags": [
-      "amenity=college",
-      "amenity=university",
-      "building=university"
+      "amenity~college",
+      "amenity~university",
+      "building~university"
     ]
   },
   {
     "icon": "MexicanRestaurant",
     "label": "Mexican Restaurant",
     "tags": [
-      "cuisine=mexican",
-      "cuisine='tex-mex'"
+      "cuisine~mexican",
+      "cuisine~'tex-mex'"
     ]
   },
   {
     "icon": "Laundry",
     "label": "Laundry",
     "tags": [
-      "shop=dry_cleaning",
-      "shop=laundry"
+      "shop~dry_cleaning",
+      "shop~laundry"
     ]
   }
 ]

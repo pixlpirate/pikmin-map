@@ -205,7 +205,7 @@ export class OverpassTurboService {
 	 */
 	private getDecors(tags: any): Decor[] {
 		const formattedTags = Object.keys(tags).map(
-			(key: string) => `${key}=${tags[key]}`
+			(key: string) => `${key}~${tags[key]}`
 		);
 		let decors: Decor[] = [];
 
