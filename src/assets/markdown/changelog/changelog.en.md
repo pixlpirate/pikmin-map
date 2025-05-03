@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.11 <time>2024-05-03</time>
+
+- Addition of the **Korean Restaurant** category
+
 ### v1.0.10 <time>2024-04-01</time>
 
 - Added support for multiple tags per OSM point of interest

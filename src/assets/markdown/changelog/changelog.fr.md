@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.11 <time>2024-05-03</time>
+
+- Ajout de la catégorie **Restaurant coréen**
+
 ### v1.0.10 <time>2024-04-01</time>
 
 - Ajout de la prise en charge de plusieurs tags par point d'intérêt OSM

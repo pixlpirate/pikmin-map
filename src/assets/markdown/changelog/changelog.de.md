@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.11 <time>2024-05-03</time>
+
+- Hinzufügen der Kategorie **Koreanisches Restaurant**
+
 ### v1.0.10 <time>2024-04-01</time>
 
 - Unterstützung für mehrere Tags pro OSM-Point of Interest hinzugefügt

@@ -307,5 +307,12 @@
       "shop=dry_cleaning",
       "shop=laundry"
     ]
+  },
+  {
+    "icon": "KoreanRestaurant",
+    "label": "Korean Restaurant",
+    "tags": [
+      "cuisine=korean"
+    ]
   }
 ]

@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.11 <time>2024-05-03</time>
+
+- Adición de la categoría **Restaurante Coreano**
+
 ### v1.0.10 <time>2024-04-01</time>
 
 - Se agregó compatibilidad con múltiples etiquetas por punto de interés de OSM

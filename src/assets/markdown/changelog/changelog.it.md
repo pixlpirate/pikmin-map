@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.11 <time>2024-05-03</time>
+
+- Aggiunta della categoria **Ristorante Coreano**
+
 ### v1.0.10 <time>2024-04-01</time>
 
 - Aggiunto il supporto per più tag per punto di interesse OSM
