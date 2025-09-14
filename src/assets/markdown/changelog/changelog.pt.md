@@ -1,22 +1,22 @@
 ## Registro de Alterações
 
-### v1.0.11 <time>2024-05-03</time>
+### v1.0.11 <time>2025-05-03</time>
 
 - Adição da categoria **Restaurante Coreano**
 
-### v1.0.10 <time>2024-04-01</time>
+### v1.0.10 <time>2025-04-01</time>
 
 - Adicionado suporte para várias tags por ponto de interesse OSM
 
-### v1.0.9 <time>2024-03-29</time>
+### v1.0.9 <time>2025-03-29</time>
 
 - Atualizado o ícone para a categoria **Restaurante Italiano**
 
-### v1.0.8 <time>2024-03-21</time>
+### v1.0.8 <time>2025-03-21</time>
 
 - Adição da categoria **Lavanderia**
 
-### v1.0.7 <time>2024-01-27</time>
+### v1.0.7 <time>2025-01-27</time>
 
 - Adicionado o tag `cuisine=tex-mex` à categoria **Restaurante mexicano**
 - Correção de um erro de digitação na página "Sobre".

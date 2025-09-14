@@ -1,22 +1,22 @@
 ## Changelog
 
-### v1.0.11 <time>2024-05-03</time>
+### v1.0.11 <time>2025-05-03</time>
 
 - Addition of the **Korean Restaurant** category
 
-### v1.0.10 <time>2024-04-01</time>
+### v1.0.10 <time>2025-04-01</time>
 
 - Added support for multiple tags per OSM point of interest
 
-### v1.0.9 <time>2024-03-29</time>
+### v1.0.9 <time>2025-03-29</time>
 
 - Updated the icon for the **Italian Restaurant** category
 
-### v1.0.8 <time>2024-03-21</time>
+### v1.0.8 <time>2025-03-21</time>
 
 - Addition of the **Laundry** category
 
-### v1.0.7 <time>2024-01-27</time>
+### v1.0.7 <time>2025-01-27</time>
 
 - Added the tag `cuisine=tex-mex` to the category **Mexican Restaurant**
 - Fixed a typo on the "About" page.

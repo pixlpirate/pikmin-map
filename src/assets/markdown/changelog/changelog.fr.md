@@ -1,22 +1,22 @@
 ## Journal des modifications
 
-### v1.0.11 <time>2024-05-03</time>
+### v1.0.11 <time>2025-05-03</time>
 
 - Ajout de la catégorie **Restaurant coréen**
 
-### v1.0.10 <time>2024-04-01</time>
+### v1.0.10 <time>2025-04-01</time>
 
 - Ajout de la prise en charge de plusieurs tags par point d'intérêt OSM
 
-### v1.0.9 <time>2024-03-29</time>
+### v1.0.9 <time>2025-03-29</time>
 
 - Mise à jour de l'icône pour la catégorie **Restaurant Italien**
 
-### v1.0.8 <time>2024-03-21</time>
+### v1.0.8 <time>2025-03-21</time>
 
 - Ajout de la catégorie **Laveries automatiques & pressings**
 
-### v1.0.7 <time>2024-01-27</time>
+### v1.0.7 <time>2025-01-27</time>
 
 - Ajout du tag `cuisine=tex-mex` la catégorie **Restaurant mexicain**
 - Correction d'une coquille dans la page "À propos".
