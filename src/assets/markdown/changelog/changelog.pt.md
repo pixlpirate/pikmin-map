@@ -1,5 +1,9 @@
 ## Registro de Alterações
 
+### v1.0.12 <time>2025-09-14</time>
+
+- Adicionado suporte para formas ocas de edifícios
+
 ### v1.0.11 <time>2025-05-03</time>
 
 - Adição da categoria **Restaurante Coreano**

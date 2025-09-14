@@ -28,7 +28,7 @@ export class OverpassTurboService {
 		private eventBusService: EventBusService,
 		private decorService: DecorService,
 		private toastService: ToastService,
-		private translateService: TranslateService
+		private translateService: TranslateService,
 	) {
 		if (!this.decorSubscription) {
 			this.decorSubscription = this.decorService.getDecors().subscribe({
@@ -39,7 +39,7 @@ export class OverpassTurboService {
 		// Prepare the Overpass Turbo subject
 		this.fetchOverpassTurboResultsSubject
 			.pipe(
-				switchMap((decors) => this.fetchOverpassTurboResults$(decors))
+				switchMap((decors) => this.fetchOverpassTurboResults$(decors)),
 			)
 			.subscribe();
 	}
@@ -67,7 +67,7 @@ export class OverpassTurboService {
 
 		this.toastService.add({
 			message: `<i class="loader icon icon-spin6"></i>${this.translate(
-				'LOADING_OVERPASS'
+				'LOADING_OVERPASS',
 			)}`,
 			duration: Infinity,
 			id: -1,
@@ -77,8 +77,8 @@ export class OverpassTurboService {
 		return this.http
 			.get(
 				`https://overpass-api.de/api/interpreter?data=${encodeURI(
-					body
-				)}`
+					body,
+				)}`,
 			)
 			.pipe(
 				tap((response: any) => {
@@ -105,11 +105,32 @@ export class OverpassTurboService {
 						return;
 					}
 
-					// Only keep nodes and ways
-					const elements = response.elements.filter(
+					// Direct node and way elements
+					const nodeWayElements = response.elements.filter(
 						(element: any) =>
-							element.type === 'node' || element.type === 'way'
+							element.type === 'node' || element.type === 'way',
 					);
+
+					// Relation members node and way elements
+					// (ex. areas with bool subtract operation)
+					const relationElements = response.elements
+						.filter((e: any) => e.type === 'relation')
+						.flatMap((relation: any) =>
+							(relation.members || [])
+								.filter(
+									(m: any) =>
+										m.type === 'node' || m.type === 'way',
+								)
+								.filter((m: any) => m.role !== 'inner') // Exclude inner members (boolean holes)
+								.map((m: any) => ({
+									...m,
+									id: m.ref ?? m.id,
+									type: m.type,
+									tags: relation.tags || {},
+								})),
+						);
+
+					const elements = [...nodeWayElements, ...relationElements];
 
 					// No results or too many results
 					if (elements.length === 0) {
@@ -142,14 +163,14 @@ export class OverpassTurboService {
 											(geo: {
 												lat: number;
 												lon: number;
-											}) => new LatLng(geo.lat, geo.lon)
-									  )
+											}) => new LatLng(geo.lat, geo.lon),
+										)
 									: [new LatLng(element.lat, element.lon)],
 								decors: this.getDecors(element.tags),
 							};
-						})
+						}),
 					);
-				})
+				}),
 			);
 	}
 
@@ -212,10 +233,11 @@ export class OverpassTurboService {
 	 * @returns {Decor[]} - The Decor objects that match the tags.
 	 */
 	private getDecors(tags: any): Decor[] {
-		const formattedTags = Object.keys(tags).flatMap((key: string) =>
-			tags[key]
-				.split(';') // Split the value by ';' if it contains multiple values
-				.map((value: string) => `${key}=${value.trim()}`) // Trim and format each entry
+		const formattedTags = Object.keys(tags).flatMap(
+			(key: string) =>
+				tags[key]
+					.split(';') // Split the value by ';' if it contains multiple values
+					.map((value: string) => `${key}=${value.trim()}`), // Trim and format each entry
 		);
 		let decors: Decor[] = [];
 

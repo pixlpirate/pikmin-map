@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.12 <time>2025-09-14</time>
+
+- Added support for hollow building shapes
+
 ### v1.0.11 <time>2025-05-03</time>
 
 - Addition of the **Korean Restaurant** category

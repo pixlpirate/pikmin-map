@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.12 <time>2025-09-14</time>
+
+- Ajout de la prise en charge des formes creuses de bâtiments
+
 ### v1.0.11 <time>2025-05-03</time>
 
 - Ajout de la catégorie **Restaurant coréen**

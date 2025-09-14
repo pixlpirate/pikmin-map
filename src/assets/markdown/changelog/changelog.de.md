@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.12 <time>2025-09-14</time>
+
+- Unterstützung für hohle Gebäudestrukturen hinzugefügt
+
 ### v1.0.11 <time>2025-05-03</time>
 
 - Hinzufügen der Kategorie **Koreanisches Restaurant**

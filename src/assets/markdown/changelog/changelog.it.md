@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.12 <time>2025-09-14</time>
+
+- Aggiunto il supporto per forme di edifici cave
+
 ### v1.0.11 <time>2025-05-03</time>
 
 - Aggiunta della categoria **Ristorante Coreano**

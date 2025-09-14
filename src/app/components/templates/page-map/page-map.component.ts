@@ -21,7 +21,7 @@ export class PageMapComponent implements OnInit, OnDestroy {
 
 	constructor(
 		private overpassTurboService: OverpassTurboService,
-		private eventBusService: EventBusService
+		private eventBusService: EventBusService,
 	) {}
 
 	/* Angular Lifecycle
@@ -33,7 +33,7 @@ export class PageMapComponent implements OnInit, OnDestroy {
 				const checkedDecors = this.eventBusService.getCheckedDecors();
 				if (checkedDecors.length > 0) {
 					this.overpassTurboService.fetchOverpassTurboResults(
-						checkedDecors
+						checkedDecors,
 					);
 				}
 			},
