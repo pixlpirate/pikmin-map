@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.13 <time>2025-12-16</time>
+
+- ¡Gracias a _cyanliu_ por corregir un error tipográfico en las tiendas de conveniencia que impedía que se mostrara el icono!
+
 ### v1.0.12 <time>2025-09-14</time>
 
 - Se añadió soporte para formas huecas de edificios

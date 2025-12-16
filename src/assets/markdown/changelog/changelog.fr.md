@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.13 <time>2025-12-16</time>
+
+- Merci à _cyanliu_ pour avoir corrigé une coquille dans les magasins de proximité qui empêchait l'affichage de l'icône&nbsp;!
+
 ### v1.0.12 <time>2025-09-14</time>
 
 - Ajout de la prise en charge des formes creuses de bâtiments

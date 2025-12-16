@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.13 <time>2025-12-16</time>
+
+- Dank an _cyanliu_ für die Korrektur eines Tippfehlers in Convenience Stores, der verhinderte, dass das Symbol angezeigt wurde!
+
 ### v1.0.12 <time>2025-09-14</time>
 
 - Unterstützung für hohle Gebäudestrukturen hinzugefügt

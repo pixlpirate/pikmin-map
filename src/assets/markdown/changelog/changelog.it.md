@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.13 <time>2025-12-16</time>
+
+- Grazie a _cyanliu_ per aver corretto un errore di battitura nei negozi di prossimità che impediva la visualizzazione dell'icona!
+
 ### v1.0.12 <time>2025-09-14</time>
 
 - Aggiunto il supporto per forme di edifici cave

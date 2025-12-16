@@ -1,5 +1,9 @@
 ## Registro de Alterações
 
+### v1.0.13 <time>2025-12-16</time>
+
+- Obrigado a _cyanliu_ por corrigir um erro de digitação nas lojas de conveniência que impedia a exibição do ícone!
+
 ### v1.0.12 <time>2025-09-14</time>
 
 - Adicionado suporte para formas ocas de edifícios
