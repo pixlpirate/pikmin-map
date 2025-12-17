@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.13 <time>2025-12-16</time>
+
+- Thanks to _cyanliu_ for correcting a typo in convenience stores that prevented the icon from displaying!
+
 ### v1.0.12 <time>2025-09-14</time>
 
 - Added support for hollow building shapes
