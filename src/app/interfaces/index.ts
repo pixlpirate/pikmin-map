@@ -1,5 +1,6 @@
 export * from './alert.interface';
 export * from './decor.interface';
+export * from './decor-query.interface';
 export * from './language.interface';
 export * from './local-map-data.interface';
 export * from './nominatim-result.interface';

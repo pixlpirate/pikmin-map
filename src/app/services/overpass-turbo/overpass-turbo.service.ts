@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, Subject, Subscription, switchMap, tap } from 'rxjs';
+import { Observable, Subject, Subscription, switchMap, tap, debounceTime, distinctUntilChanged } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { LatLng, LatLngBounds } from 'leaflet';
 
@@ -11,7 +11,7 @@ import {
 	MapService,
 	ToastService,
 } from '@services';
-import { Decor } from '@interfaces';
+import { Decor, DecorQuery } from '@interfaces';
 import { environment } from '@environments';
 
 @Injectable({
@@ -20,7 +20,7 @@ import { environment } from '@environments';
 export class OverpassTurboService {
 	private decors: Decor[] = [];
 	private decorSubscription?: Subscription;
-	private fetchOverpassTurboResultsSubject = new Subject<Decor[]>();
+	private fetchOverpassTurboResultsSubject = new Subject<DecorQuery>();
 
 	constructor(
 		private http: HttpClient,
@@ -39,7 +39,9 @@ export class OverpassTurboService {
 		// Prepare the Overpass Turbo subject
 		this.fetchOverpassTurboResultsSubject
 			.pipe(
-				switchMap((decors) => this.fetchOverpassTurboResults$(decors)),
+				debounceTime(300),
+				distinctUntilChanged((prev, curr) => JSON.stringify(prev) === JSON.stringify(curr)),
+				switchMap((decorQuery) => this.fetchOverpassTurboResults$(decorQuery)),
 			)
 			.subscribe();
 	}
@@ -52,16 +54,27 @@ export class OverpassTurboService {
 	 * It ensures a clear separation between components
 	 */
 	public fetchOverpassTurboResults(decors: Decor[]): void {
-		this.fetchOverpassTurboResultsSubject.next(decors);
+		const bounds: LatLngBounds = this.mapService.getBounds();
+		const decorQuery: DecorQuery = {
+			decors: decors,
+			bounds: [
+				bounds.getSouthWest().lat,
+				bounds.getSouthWest().lng,
+				bounds.getNorthEast().lat,
+				bounds.getNorthEast().lng,
+			],
+		};
+
+		this.fetchOverpassTurboResultsSubject.next(decorQuery);
 	}
 
 	/**
 	 * Cancelable subject. Emit the results of the Overpass Turbo API
 	 *
-	 * @param decors
+	 * @param decorQuery
 	 */
-	private fetchOverpassTurboResults$(decors: Decor[]): Observable<any> {
-		const body = this.prepareOverpassTurboQuery(decors);
+	private fetchOverpassTurboResults$(decorQuery: DecorQuery): Observable<any> {
+		const body = this.prepareOverpassTurboQuery(decorQuery);
 
 		this.toastService.removeAll();
 
@@ -179,18 +192,12 @@ export class OverpassTurboService {
 	/**
 	 * Prepares an Overpass Turbo query string based on the provided Decor objects.
 	 *
-	 * @param decors - An array of Decor objects to be included in the query.
+	 * @param decorQuery - An DecorQuery object to be extened in the query.
 	 * @returns {string} - The prepared Overpass Turbo query string.
 	 */
-	public prepareOverpassTurboQuery(decors: Decor[]): string {
-		const bounds: LatLngBounds = this.mapService.getBounds();
-		const bbox: string = [
-			bounds.getSouthWest().lat,
-			bounds.getSouthWest().lng,
-			bounds.getNorthEast().lat,
-			bounds.getNorthEast().lng,
-		].join(',');
-
+	public prepareOverpassTurboQuery(decorQuery: DecorQuery): string {
+		const decors = decorQuery.decors;
+		const bbox: string = decorQuery.bounds.join(',');
 		let body: string = `[out:json][timeout:5][bbox:${bbox}];\n(\n`;
 
 		// Stocker les zones définies
