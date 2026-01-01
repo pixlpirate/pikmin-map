@@ -14,26 +14,18 @@ export class ToastService {
 	constructor() {}
 
 	/**
-	 * Create new toast(s) and add it to the currently active toasts
+	 * Create new toast and add it to the currently active toasts
 	 *
-	 * @param toast - The toast object or an array of toast objects to be added
+	 * @param toast - The toast object to be added
 	 *
-	 * @returns void
+	 * @returns number - toast.id
 	 */
-	public add(toast: NewToast | NewToast[]): void {
-		if (Array.isArray(toast)) {
-			toast.forEach((t) => {
-				t.duration = t.duration || 4000;
-				t.id = t.id ? t.id : this.generateId();
-				this.toasts.push(t as Toast);
-			});
-		} else {
-			toast.duration = toast.duration || 4000;
-			toast.id = toast.id ? toast.id : this.generateId();
-			this.toasts.push(toast as Toast);
-		}
-
+	public add(toast: NewToast): number {
+		toast.duration = toast.duration || 4000;
+		toast.id = toast.id ? toast.id : this.generateId();
+		this.toasts.push(toast as Toast);
 		this.toasts$.next([...this.toasts]);
+		return toast.id;
 	}
 
 	/**
