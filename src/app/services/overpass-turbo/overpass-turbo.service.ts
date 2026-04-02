@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, Subject, Subscription, switchMap, tap } from 'rxjs';
+import { Observable, Subject, Subscription, switchMap, tap, catchError, of } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { LatLng, LatLngBounds } from 'leaflet';
 
@@ -74,6 +74,7 @@ export class OverpassTurboService {
 			type: 'success',
 		});
 
+		let toastId = -1;
 		return this.http
 			.get(
 				`https://overpass-api.de/api/interpreter?data=${encodeURI(
@@ -83,27 +84,6 @@ export class OverpassTurboService {
 			.pipe(
 				tap((response: any) => {
 					this.toastService.remove(-1);
-
-					// Check for errors, Overpass Turbo API does not return error codes
-					if (response.remark?.includes('Query timed out')) {
-						// Query timed out
-						this.toastService.add({
-							message: this.translate('ERROR_TIMEOUT'),
-							type: 'error',
-							duration: environment.toastDuration,
-						});
-
-						return;
-					} else if (response.remark?.includes('Too Many Requests')) {
-						// Too many requests
-						this.toastService.add({
-							message: this.translate('ERROR_TOO_MANY_REQUESTS'),
-							type: 'error',
-							duration: environment.toastDuration,
-						});
-
-						return;
-					}
 
 					// Direct node and way elements
 					const nodeWayElements = response.elements.filter(
@@ -134,7 +114,7 @@ export class OverpassTurboService {
 
 					// No results or too many results
 					if (elements.length === 0) {
-						this.toastService.add({
+						toastId = this.toastService.add({
 							message: this.translate('WARNING_NO_RESULTS'),
 							type: 'warning',
 							duration: environment.toastDuration,
@@ -142,7 +122,7 @@ export class OverpassTurboService {
 					} else if (elements.length > 1000) {
 						elements.splice(1000);
 
-						this.toastService.add({
+						toastId = this.toastService.add({
 							message: this.translate('WARNING_TOO_MANY_RESULTS'),
 							type: 'warning',
 							duration: environment.toastDuration,
@@ -170,6 +150,30 @@ export class OverpassTurboService {
 							};
 						}),
 					);
+				}),
+				catchError((response: any) => {
+					this.toastService.remove(toastId);
+
+					// Check for errors, Overpass Turbo API does not return error codes
+					if (response.status === 504) {
+						// Query timed out
+						this.toastService.add({
+							message: this.translate('ERROR_TIMEOUT'),
+							type: 'error',
+							duration: environment.toastDuration,
+						});
+					} else if (response.status === 429) {
+						// Too many requests
+						this.toastService.add({
+							message: this.translate('ERROR_TOO_MANY_REQUESTS'),
+							type: 'error',
+							duration: environment.toastDuration,
+						});
+					} else {
+						console.error('Unknown error occurred of Overpass Turbo request:', response);
+					}
+
+					return of(null);
 				}),
 			);
 	}
