@@ -3,6 +3,7 @@
 ### v1.0.14 <time>2026-04-02</time>
 
 - Merci à _Falldog_ pour avoir ajouté corrigé le problème qui gardait les messages affichés indéfiniment, et ajouté une fonctionalité pour diminuer le nombre de requêtes envoyées à Overpass Turbo&nbsp;!
+- Changement d'instance Overpass Turbo pour l'instance française, légèrement plus rapide que l'instance allemande.
 
 ### v1.0.13 <time>2025-12-16</time>
 

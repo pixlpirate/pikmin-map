@@ -3,6 +3,7 @@
 ### v1.0.14 <time>2026-04-02</time>
 
 - Thanks to _Falldog_ for fixing the issue that kept messages displayed indefinitely, and adding a feature to reduce the number of requests sent to Overpass Turbo&nbsp;!
+- Changed Overpass Turbo instance to the French instance, which is slightly faster than the German instance.
 
 ### v1.0.13 <time>2025-12-16</time>
 

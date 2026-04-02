@@ -3,6 +3,7 @@
 ### v1.0.14 <time>2026-04-02</time>
 
 - Dank an _Falldog_ für die Korrektur eines Problems, das dazu führte, dass Nachrichten unendlich angezeigt wurden, und für die Hinzufügung einer Funktion, um die Anzahl der Anfragen an Overpass Turbo zu reduzieren&nbsp;!
+- Wechsel der Overpass Turbo-Instanz zur französischen Instanz, die etwas schneller ist als die deutsche Instanz.
 
 ### v1.0.13 <time>2025-12-16</time>
 

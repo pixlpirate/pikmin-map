@@ -3,6 +3,7 @@
 ### v1.0.14 <time>2026-04-02</time>
 
 - Grazie a _Falldog_ per aver corretto un errore che manteneva i messaggi visualizzati indefinitamente, e per aver aggiunto una funzionalità per ridurre il numero di richieste inviate a Overpass Turbo&nbsp;!
+- Cambiato l'istanza di Overpass Turbo all'istanza francese, che è leggermente più veloce dell'istanza tedesca.
 
 ### v1.0.13 <time>2025-12-16</time>
 
