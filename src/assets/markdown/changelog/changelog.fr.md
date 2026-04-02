@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.14 <time>2026-04-02</time>
+
+- Merci à _Falldog_ pour avoir ajouté corrigé le problème qui gardait les messages affichés indéfiniment, et ajouté une fonctionalité pour diminuer le nombre de requêtes envoyées à Overpass Turbo&nbsp;!
+
 ### v1.0.13 <time>2025-12-16</time>
 
 - Merci à _cyanliu_ pour avoir corrigé une coquille dans les magasins de proximité qui empêchait l'affichage de l'icône&nbsp;!

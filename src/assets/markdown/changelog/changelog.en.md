@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.14 <time>2026-04-02</time>
+
+- Thanks to _Falldog_ for fixing the issue that kept messages displayed indefinitely, and adding a feature to reduce the number of requests sent to Overpass Turbo&nbsp;!
+
 ### v1.0.13 <time>2025-12-16</time>
 
 - Thanks to _cyanliu_ for correcting a typo in convenience stores that prevented the icon from displaying!

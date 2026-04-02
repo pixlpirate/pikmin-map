@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.14 <time>2026-04-02</time>
+
+- Gracias a _Falldog_ por corregir un error que mantenía los mensajes mostrados indefinidamente, y por agregar una función para reducir el número de solicitudes enviadas a Overpass Turbo&nbsp;!
+
 ### v1.0.13 <time>2025-12-16</time>
 
 - ¡Gracias a _cyanliu_ por corregir un error tipográfico en las tiendas de conveniencia que impedía que se mostrara el icono!
