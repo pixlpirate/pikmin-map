@@ -90,7 +90,7 @@ export class OverpassTurboService {
 		let toastId = -1;
 		return this.http
 			.get(
-				`https://overpass-api.de/api/interpreter?data=${encodeURI(
+				`${environment.overpassInstance}?data=${encodeURI(
 					body,
 				)}`,
 			)
