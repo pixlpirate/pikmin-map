@@ -10,52 +10,56 @@ $checkbox-size: $radio-size;
 input {
 	font-size: $t-s--small;
 
-	&[type=text],
-	&[type=number] {
-		padding: 0.5rem 1rem;
-		border: $border-size solid $grey;
+	&[type="text"],
+	&[type="number"] {
+		border: $border-size solid $grey--lighter;
 		border-radius: $border-radius--small;
+		padding: $gap--xsmall;
+
+		&:hover {
+			border-color: $grey--light;
+		}
 
 		&:focus {
-			border-color: $color-primary;
 			outline: none;
+			border-color: $color-primary;
 		}
 	}
 
-	&[type=checkbox],
-	&[type=radio] {
-		position: relative;
+	&[type="checkbox"],
+	&[type="radio"] {
 		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		appearance: none;
+		cursor: pointer;
+		margin: 0;
+		border: $border-size solid $grey--lighter;
+		border-radius: $border-radius--small;
+		background-color: $white;
 		width: $radio-size;
 		height: $radio-size;
-		margin: 0;
-		vertical-align: middle;
-		background-color: $white;
-		border: $border-size solid $grey;
-		border-radius: $border-radius--small;
-		cursor: pointer;
-		appearance: none;
-
-		&:checked {
-			background-color: $color-primary;
-			border-color: $color-primary;
-		}
 
 		&:hover {
+			border-color: $grey--light;
+		}
+
+		&:checked {
 			border-color: $color-primary;
+			background-color: $color-primary;
 		}
 
 		&::before {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			width: calc($radio-size / 2);
-			height: calc($radio-size / 2);
-			background-color: $color-primary;
-			border-radius: $border-radius--small;
 			transform: translate(-50%, -50%);
 			opacity: 0;
-			content: '';
+			border-radius: $border-radius--small;
+			background-color: $color-primary;
+			width: calc($radio-size / 2);
+			height: calc($radio-size / 2);
+			content: "";
 		}
 
 		&:checked::before {
@@ -63,7 +67,7 @@ input {
 		}
 	}
 
-	&[type=radio] {
+	&[type="radio"] {
 		border-radius: 50%;
 
 		&::before {
@@ -75,15 +79,15 @@ input {
 		}
 	}
 
-	&[type=checkbox] {
+	&[type="checkbox"] {
 		&:checked {
 			&:before {
 				position: absolute;
 				top: calc($radio-size / 4);
 				left: calc($radio-size / 3);
+				content: "\E924";
 				color: $white;
-				font-family: 'fontello';
-				content: '\E924';
+				font-family: "fontello";
 			}
 		}
 	}
@@ -92,12 +96,17 @@ input {
 /* Responsive
 ------------------------------------------------- */
 
-@include media-query(sm) {}
+@include media-query(sm) {
+}
 
-@include media-query(md) {}
+@include media-query(md) {
+}
 
-@include media-query(lg) {}
+@include media-query(lg) {
+}
 
-@include media-query(xl) {}
+@include media-query(xl) {
+}
 
-@include media-query(xxl) {}
+@include media-query(xxl) {
+}
