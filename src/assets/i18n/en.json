@@ -28,6 +28,12 @@
   "DECOR_RADIUS_SIZE": "Decor radius size",
   "DECOR_RADIUS_WARNING": "Please note that this radius does not represent the actual area where the decor will be found, but a very vague indication of where it might be found.",
   "MORE_INFO": "More info",
+  "OVERPASS_INSTANCE_LABEL": "Overpass instance",
+  "OVERPASS_INSTANCE_HELP": "If the default Overpass instance is slow, you can try another one.",
+  "OVERPASS_INSTANCE_OPTION_WORLDWIDE": "Worldwide",
+  "OVERPASS_INSTANCE_OPTION_BRITAIN_AND_IRELAND_ONLY": "Britain and Ireland only",
+  "OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY": "Switzerland only",
+  "OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY": "Ethiopia only",
 
   "Restaurant": "Restaurant",
   "Café": "Café",

@@ -28,6 +28,12 @@
   "DECOR_RADIUS_SIZE": "Tamanho do raio de decoração",
   "DECOR_RADIUS_WARNING": "Por favor, note que este raio não representa a área real onde a decoração será encontrada, mas uma indicação muito vaga de onde ela poderia ser encontrada.",
   "MORE_INFO": "Mais informações",
+  "OVERPASS_INSTANCE_LABEL": "Instância Overpass",
+  "OVERPASS_INSTANCE_HELP": "Se a instância Overpass padrão estiver lenta, você pode tentar outra.",
+  "OVERPASS_INSTANCE_OPTION_WORLDWIDE": "Global",
+  "OVERPASS_INSTANCE_OPTION_BRITAIN_AND_IRELAND_ONLY": "Somente Reino Unido e Irlanda",
+  "OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY": "Somente Suíça",
+  "OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY": "Somente Etiópia",
 
   "Restaurant": "Restaurante",
   "Café": "Café",

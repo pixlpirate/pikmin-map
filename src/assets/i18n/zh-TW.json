@@ -28,6 +28,12 @@
   "DECOR_RADIUS_SIZE": "裝飾半徑大小",
   "DECOR_RADIUS_WARNING": "請注意，此半徑並不代表實際裝飾物品所在的區域，而只是一個可能找到的非常模糊的指示。",
   "MORE_INFO": "更多信息",
+  "OVERPASS_INSTANCE_LABEL": "Overpass 實例",
+  "OVERPASS_INSTANCE_HELP": "如果預設的 Overpass 實例較慢，你可以嘗試其他實例。",
+  "OVERPASS_INSTANCE_OPTION_WORLDWIDE": "全球",
+  "OVERPASS_INSTANCE_OPTION_BRITAIN_AND_IRELAND_ONLY": "僅限英國和愛爾蘭",
+  "OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY": "僅限瑞士",
+  "OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY": "僅限埃塞俄比亞",
 
   "Restaurant": "餐廳",
   "Café": "咖啡廳",
@@ -68,4 +74,5 @@
   "MexicanRestaurant": "墨西哥餐廳",
   "Laundry": "洗衣店",
   "KoreanRestaurant": "韓式餐廳"
+
 }

@@ -20,6 +20,17 @@
 		<i class="loader icon icon-spin6"></i>
 	</div>
 
+	<div class="overpass-instance-container">
+		<strong>{{'OVERPASS_INSTANCE_LABEL' | translate}}</strong>
+		<p class="overpass-instance-message">{{'OVERPASS_INSTANCE_HELP' | translate}}</p>
+		<app-select
+			[ariaLabel]="'OVERPASS_INSTANCE_LABEL'"
+			[options]="overpassInstanceOptions"
+			[value]="selectedOverpassInstance"
+			(valueChange)="setOverpassInstance($event)"
+		></app-select>
+	</div>
+
 	<div class="markdown-container">
 
 		<markdown class="markdown" [disableSanitizer]="true"

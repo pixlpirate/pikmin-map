@@ -8,16 +8,56 @@ import { LatLng, LatLngBounds } from 'leaflet';
 import {
 	DecorService,
 	EventBusService,
+	LocalStorageService,
 	MapService,
 	ToastService,
 } from '@services';
-import { Decor, DecorQuery } from '@interfaces';
+import { Decor, DecorQuery, SelectOption } from '@interfaces';
 import { environment } from '@environments';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class OverpassTurboService {
+	private readonly storageKey = 'overpassInstance';
+	private readonly overpassInstances: SelectOption[] = [
+		{
+			label: 'overpass-api.de',
+			value: 'https://overpass-api.de/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
+		},
+		{
+			label: 'overpass.openstreetmap.fr - http',
+			value: 'http://overpass.openstreetmap.fr/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
+		},
+		{
+			label: 'overpass.openstreetmap.fr - https',
+			value: 'https://overpass.openstreetmap.fr/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
+		},
+		{
+			label: 'overpass.private.coffee',
+			value: 'https://overpass.private.coffee/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
+		},
+		{
+			label: 'overpass.atownsend.org.uk',
+			value: 'https://overpass.atownsend.org.uk/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_BRITAIN_AND_IRELAND_ONLY',
+		},
+		{
+			label: 'overpass.osm.ch',
+			value: 'https://overpass.osm.ch/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY',
+		},
+		{
+			label: 'ethiopia.overpass.openplaceguider.org',
+			value: 'https://ethiopia.overpass.openplaceguider.org/api/interpreter',
+			description: 'OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY',
+		}
+	];
+	private currentInstance: string;
 	private decors: Decor[] = [];
 	private decorSubscription?: Subscription;
 	private fetchOverpassTurboResultsSubject = new Subject<DecorQuery>();
@@ -27,9 +67,12 @@ export class OverpassTurboService {
 		private mapService: MapService,
 		private eventBusService: EventBusService,
 		private decorService: DecorService,
+		private localStorageService: LocalStorageService,
 		private toastService: ToastService,
 		private translateService: TranslateService,
 	) {
+		this.currentInstance = this.resolveStoredInstance();
+
 		if (!this.decorSubscription) {
 			this.decorSubscription = this.decorService.getDecors().subscribe({
 				next: (decors: Decor[]) => (this.decors = decors),
@@ -68,6 +111,23 @@ export class OverpassTurboService {
 		this.fetchOverpassTurboResultsSubject.next(decorQuery);
 	}
 
+	public getAvailableInstances(): SelectOption[] {
+		return this.overpassInstances;
+	}
+
+	public getCurrentInstance(): string {
+		return this.currentInstance;
+	}
+
+	public setCurrentInstance(instance: string): void {
+		const nextInstance = this.isKnownInstance(instance)
+			? instance
+			: environment.overpassInstance;
+
+		this.currentInstance = nextInstance;
+		this.localStorageService.setItem(this.storageKey, nextInstance);
+	}
+
 	/**
 	 * Cancelable subject. Emit the results of the Overpass Turbo API
 	 *
@@ -90,7 +150,7 @@ export class OverpassTurboService {
 		let toastId = -1;
 		return this.http
 			.get(
-				`${environment.overpassInstance}?data=${encodeURI(
+				`${this.currentInstance}?data=${encodeURI(
 					body,
 				)}`,
 			)
@@ -153,11 +213,11 @@ export class OverpassTurboService {
 								type: element.type,
 								geometry: element.geometry
 									? element.geometry.map(
-											(geo: {
-												lat: number;
-												lon: number;
-											}) => new LatLng(geo.lat, geo.lon),
-										)
+										(geo: {
+											lat: number;
+											lon: number;
+										}) => new LatLng(geo.lat, geo.lon),
+									)
 									: [new LatLng(element.lat, element.lon)],
 								decors: this.getDecors(element.tags),
 							};
@@ -280,5 +340,20 @@ export class OverpassTurboService {
 	 */
 	public translate(key: string): string {
 		return this.translateService.instant(key);
+	}
+
+	private resolveStoredInstance(): string {
+		const storedInstance = this.localStorageService.getItem(this.storageKey);
+
+		if (this.isKnownInstance(storedInstance)) {
+			return storedInstance;
+		}
+
+		return environment.overpassInstance;
+	}
+
+	private isKnownInstance(instance: unknown): instance is string {
+		return typeof instance === 'string'
+			&& this.overpassInstances.some((option) => option.value === instance);
 	}
 }

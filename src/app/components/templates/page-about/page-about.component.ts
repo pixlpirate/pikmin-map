@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { Subscription } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -10,7 +10,10 @@ import {
 	AdvancedOptionsComponent,
 	LanguagePickerComponent,
 	MappingTableComponent,
+	SelectComponent
 } from '@components';
+import { SelectOption } from '@interfaces';
+import { OverpassTurboService } from '@services';
 
 /**
  * The about page component used to display information about the project.
@@ -19,19 +22,21 @@ import {
 	selector: 'app-page-about',
 	standalone: true,
 	imports: [
-		RouterLink,
 		CommonModule,
 		TranslateModule,
 		AdvancedOptionsComponent,
 		LanguagePickerComponent,
 		MarkdownComponent,
 		MappingTableComponent,
+		SelectComponent,
 	],
 	templateUrl: './page-about.component.html',
 	styleUrl: './page-about.component.scss',
 })
 export class PageAboutComponent implements OnInit, OnDestroy {
 	public currentLanguage: string = 'en';
+	public overpassInstanceOptions: SelectOption[] = [];
+	public selectedOverpassInstance: string = '';
 	private languageSubscription?: Subscription;
 	private hasScrolledToAnchor = false;
 
@@ -44,13 +49,16 @@ export class PageAboutComponent implements OnInit, OnDestroy {
 	constructor(
 		private router: Router,
 		private markdownService: MarkdownService,
-		private translateService: TranslateService
-	) {}
+		private translateService: TranslateService,
+		private overpassTurboService: OverpassTurboService
+	) { }
 
 	/* Angular Lifecycle
 	--------------------------------------------- */
 	public ngOnInit() {
 		this.currentLanguage = this.translateService.currentLang;
+		this.overpassInstanceOptions = this.overpassTurboService.getAvailableInstances();
+		this.selectedOverpassInstance = this.overpassTurboService.getCurrentInstance();
 		this.languageSubscription =
 			this.translateService.onLangChange.subscribe((event) => {
 				// Reset the content
@@ -109,6 +117,11 @@ export class PageAboutComponent implements OnInit, OnDestroy {
 
 	public navigateTo(path: string) {
 		this.router.navigate([path], { replaceUrl: true });
+	}
+
+	public setOverpassInstance(instance: string): void {
+		this.overpassTurboService.setCurrentInstance(instance);
+		this.selectedOverpassInstance = this.overpassTurboService.getCurrentInstance();
 	}
 
 	/* Markdown

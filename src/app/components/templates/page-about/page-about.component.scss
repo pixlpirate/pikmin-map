@@ -16,6 +16,18 @@ app-language-picker {
 	bottom: $gap--small;
 }
 
+.overpass-instance-container {
+	padding: $gap--medium;
+	margin: $gap--medium auto 0 auto;
+	border: $border-size solid $grey--lighter;
+	border-radius: $border-radius;
+}
+
+.overpass-instance-message {
+	margin: 0 0 1rem;
+	color: $grey--dark;
+}
+
 .markdown {
 	display: none;
 

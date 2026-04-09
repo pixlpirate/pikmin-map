@@ -28,6 +28,12 @@
   "DECOR_RADIUS_SIZE": "Dimensione del raggio decorativo",
   "DECOR_RADIUS_WARNING": "Si prega di notare che questo raggio non rappresenta l'area effettiva in cui verrà trovata la decorazione, ma una indicazione molto vaga di dove potrebbe essere trovata.",
   "MORE_INFO": "Maggiori informazioni",
+  "OVERPASS_INSTANCE_LABEL": "Istanza Overpass",
+  "OVERPASS_INSTANCE_HELP": "Se l'istanza Overpass predefinita è lenta, puoi provarne un'altra.",
+  "OVERPASS_INSTANCE_OPTION_WORLDWIDE": "Globale",
+  "OVERPASS_INSTANCE_OPTION_BRITAIN_AND_IRELAND_ONLY": "Solo Regno Unito e Irlanda",
+  "OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY": "Solo Svizzera",
+  "OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY": "Solo Etiopia",
 
   "Restaurant": "Ristorante",
   "Café": "Café",
