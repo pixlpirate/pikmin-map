@@ -6,3 +6,4 @@ export * from './local-map-data.interface';
 export * from './nominatim-result.interface';
 export * from './overpass-turbo-result.interface';
 export * from './toast.interface';
+export * from './select.interface';

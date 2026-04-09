@@ -1,0 +1,43 @@
+<div appClickOutside
+	 (clickOutside)="close()"
+	 class="select"
+	 [ngClass]="{ 'select--open': isOpen }">
+
+	<button type="button"
+			class="select-trigger"
+			[attr.aria-expanded]="isOpen"
+			[attr.aria-label]="ariaLabel | translate"
+			(click)="toggle()">
+
+		<ng-container *ngIf="getSelectedOption() as selectedOption">
+			<span class="select-copy">
+				<span class="select-label">{{ selectedOption.label | translate }}</span>
+				<span *ngIf="selectedOption.description as description" class="select-description">
+					{{ description | translate }}
+				</span>
+			</span>
+		</ng-container>
+
+		<i class="icon icon-caret-down"></i>
+	</button>
+
+	<ul class="select-options" role="listbox">
+		<li *ngFor="let option of options" class="select-option">
+			<button type="button"
+					class="select-option-button"
+					[ngClass]="{ 'select-option-button--active': option.value === value }"
+					[attr.aria-selected]="option.value === value"
+					(click)="select(option.value)">
+
+				<span class="select-copy">
+						<span class="select-label">{{ option.label | translate }}</span>
+					<span *ngIf="option.description" class="select-description">
+						{{ option.description | translate }}
+					</span>
+				</span>
+
+				<i *ngIf="option.value === value" class="icon icon-check"></i>
+			</button>
+		</li>
+	</ul>
+</div>

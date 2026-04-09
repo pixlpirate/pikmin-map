@@ -1,0 +1,118 @@
+@import "variables", "responsive";
+
+:host {
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+.select {
+	position: relative;
+
+	&--open {
+		.select-trigger {
+			border-color: $color-primary;
+		}
+
+		.select-options {
+			display: flex;
+		}
+
+		.icon-caret-down {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.select-trigger,
+.select-option-button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: $gap--small;
+	cursor: pointer;
+	border: $border-size solid $grey--lighter;
+	border-radius: $border-radius--small;
+	background-color: $white;
+	padding: $gap--xsmall $gap--small;
+	width: 100%;
+	text-align: left;
+
+	&:hover {
+		border-color: $grey--light;
+	}
+}
+
+.select-copy {
+	display: flex;
+	flex-direction: column;
+}
+
+.select-label {
+	font-weight: $w-medium;
+	font-size: $t-s--small;
+}
+
+.select-description {
+	color: $grey;
+	font-size: 1em;
+}
+
+.select-options {
+	display: none;
+	position: absolute;
+	top: calc(100% + #{$gap--small});
+	left: 0;
+	flex-direction: column;
+	margin: 0;
+	box-shadow: $box-shadow;
+	border-radius: $border-radius--small;
+	background-color: $white;
+	padding: 0;
+	width: 100%;
+	max-height: 20rem;
+	overflow: hidden;
+	overflow-y: auto;
+	list-style: none;
+}
+
+.select-option-button {
+	box-shadow: none;
+	border: 0;
+	border-radius: 0;
+
+	&:hover {
+		background-color: $grey--lightest;
+	}
+
+	&--active {
+		background-color: $color-primary;
+		color: $white;
+
+		.select-description {
+			color: $white;
+		}
+
+		&:hover {
+			background-color: $color-primary--light;
+		}
+	}
+}
+
+/* Responsive
+------------------------------------------------- */
+
+@include media-query(sm) {
+}
+
+@include media-query(md) {
+}
+
+@include media-query(lg) {
+}
+
+@include media-query(xl) {
+}
+
+@include media-query(xxl) {
+}
