@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.15 <time>2026-04-09</time>
+
+- Hinzufügen eines benutzerdefinierten Overpass-Instanz-Selektors auf der Seite „Über“
+
 ### v1.0.14 <time>2026-04-02</time>
 
 - Dank an _Falldog_ für die Korrektur eines Problems, das dazu führte, dass Nachrichten unendlich angezeigt wurden, und für die Hinzufügung einer Funktion, um die Anzahl der Anfragen an Overpass Turbo zu reduzieren&nbsp;!

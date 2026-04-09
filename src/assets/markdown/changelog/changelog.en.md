@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.15 <time>2026-04-09</time>
+
+- Added a custom Overpass instance selector on the About page
+
 ### v1.0.14 <time>2026-04-02</time>
 
 - Thanks to _Falldog_ for fixing the issue that kept messages displayed indefinitely, and adding a feature to reduce the number of requests sent to Overpass Turbo&nbsp;!

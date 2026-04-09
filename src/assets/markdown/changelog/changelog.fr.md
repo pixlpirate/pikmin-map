@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.15 <time>2026-04-09</time>
+
+- Ajout d'un sélecteur personnalisé d'instance Overpass sur la page À propos
+
 ### v1.0.14 <time>2026-04-02</time>
 
 - Merci à _Falldog_ pour avoir ajouté corrigé le problème qui gardait les messages affichés indéfiniment, et ajouté une fonctionalité pour diminuer le nombre de requêtes envoyées à Overpass Turbo&nbsp;!

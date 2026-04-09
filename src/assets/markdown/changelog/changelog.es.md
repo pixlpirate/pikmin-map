@@ -1,5 +1,9 @@
 ## Registro de cambios
 
+### v1.0.15 <time>2026-04-09</time>
+
+- Se agregó un selector personalizado de instancia de Overpass en la página Sobre 
+
 ### v1.0.14 <time>2026-04-02</time>
 
 - Gracias a _Falldog_ por corregir un error que mantenía los mensajes mostrados indefinidamente, y por agregar una función para reducir el número de solicitudes enviadas a Overpass Turbo&nbsp;!
