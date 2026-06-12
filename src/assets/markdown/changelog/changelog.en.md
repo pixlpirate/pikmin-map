@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.16 <time>2026-06-12</time>
+
+- Addition of the **Stationery Store** category
+
 ### v1.0.15 <time>2026-04-09</time>
 
 - Added a custom Overpass instance selector on the About page

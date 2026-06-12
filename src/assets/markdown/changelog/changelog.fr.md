@@ -1,5 +1,9 @@
 ## Journal des modifications
 
+### v1.0.16 <time>2026-06-12</time>
+
+- Ajout de la catégorie **Papeterie**
+
 ### v1.0.15 <time>2026-04-09</time>
 
 - Ajout d'un sélecteur personnalisé d'instance Overpass sur la page À propos

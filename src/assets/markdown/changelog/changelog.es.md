@@ -1,8 +1,12 @@
 ## Registro de cambios
 
+### v1.0.16 <time>2026-06-12</time>
+
+- Adición de la categoría **Papelería**
+
 ### v1.0.15 <time>2026-04-09</time>
 
-- Se agregó un selector personalizado de instancia de Overpass en la página Sobre 
+- Se agregó un selector personalizado de instancia de Overpass en la página Sobre
 
 ### v1.0.14 <time>2026-04-02</time>
 

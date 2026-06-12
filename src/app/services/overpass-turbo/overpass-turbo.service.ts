@@ -27,12 +27,7 @@ export class OverpassTurboService {
 			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
 		},
 		{
-			label: 'overpass.openstreetmap.fr - http',
-			value: 'http://overpass.openstreetmap.fr/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
-		},
-		{
-			label: 'overpass.openstreetmap.fr - https',
+			label: 'overpass.openstreetmap.fr',
 			value: 'https://overpass.openstreetmap.fr/api/interpreter',
 			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
 		},
@@ -51,11 +46,12 @@ export class OverpassTurboService {
 			value: 'https://overpass.osm.ch/api/interpreter',
 			description: 'OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY',
 		},
-		{
+		// Ethiopia is down for a while now, might be back in future
+		/* {
 			label: 'ethiopia.overpass.openplaceguider.org',
 			value: 'https://ethiopia.overpass.openplaceguider.org/api/interpreter',
 			description: 'OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY',
-		}
+		} */
 	];
 	private currentInstance: string;
 	private decors: Decor[] = [];

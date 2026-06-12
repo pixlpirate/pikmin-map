@@ -1,5 +1,9 @@
 ## Registro de Alterações
 
+### v1.0.16 <time>2026-06-12</time>
+
+- Adição da categoria **Papelaria**
+
 ### v1.0.15 <time>2026-04-09</time>
 
 - Foi adicionado um seletor personalizado de instância do Overpass na página Sobre

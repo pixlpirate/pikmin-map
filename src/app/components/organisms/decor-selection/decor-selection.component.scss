@@ -12,7 +12,7 @@ $bullet-size: 1rem;
 	left: 0;
 	z-index: 1;
 	width: calc(100% - $btn-size * 2 - $gap--small * 4);
-	max-width: 800px;
+	max-width: 850px;
 	margin: $gap--small auto;
 }
 
@@ -90,7 +90,7 @@ $bullet-size: 1rem;
 .decor-list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: $gap--small;
+	gap: 5px;
 	justify-content: center;
 	margin: 0;
 	padding: 0;

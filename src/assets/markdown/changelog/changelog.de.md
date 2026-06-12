@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.16 <time>2026-06-12</time>
+
+- Hinzufügen der Kategorie **Papierwarenladen**
+
 ### v1.0.15 <time>2026-04-09</time>
 
 - Hinzufügen eines benutzerdefinierten Overpass-Instanz-Selektors auf der Seite „Über“

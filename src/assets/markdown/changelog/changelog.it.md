@@ -1,5 +1,9 @@
 ## Registro delle modifiche
 
+### v1.0.16 <time>2026-06-12</time>
+
+- Aggiunta della categoria **Cartoleria**
+
 ### v1.0.15 <time>2026-04-09</time>
 
 - Aggiunto un selettore personalizzato dell'istanza Overpass nella pagina Informazioni
