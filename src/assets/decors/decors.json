@@ -152,7 +152,8 @@
     "icon": "Library",
     "label": "Library/bookstore",
     "tags": [
-      "amenity=library"
+      "amenity=library",
+      "shop=books"
     ]
   },
   {
