@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /*?
 
 Sitemap: https://pikmin-map.pixelpirate.fr/sitemap.xml
