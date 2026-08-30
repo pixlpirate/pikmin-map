@@ -27,6 +27,13 @@ export class OverpassTurboService {
 			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
 		},
 		{
+			// Self-hosted SQLite mirror built by the pikmin-map-data repository.
+			// Fast, but may be outdated, and only cover the ~50 most active countries.
+			label: 'pixelpirate.fr',
+			value: environment.mirrorInstance,
+			description: 'OVERPASS_INSTANCE_OPTION_LIMITED_COVERAGE',
+		},
+		{
 			label: 'overpass.openstreetmap.fr',
 			value: 'https://overpass.openstreetmap.fr/api/interpreter',
 			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',

@@ -1,5 +1,9 @@
 ## Änderungsprotokoll
 
+### v1.0.17 <time>2026-08-30</time>
+
+- Hinzufügen eines selbst gehosteten Overpass-Spiegels im Instanz-Selektor, als Ausweichlösung, wenn die öffentlichen Instanzen überlastet sind
+
 ### v1.0.16 <time>2026-06-12</time>
 
 - Hinzufügen der Kategorie **Papierwarenladen**

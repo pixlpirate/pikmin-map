@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --open --proxy-config proxy.conf.json",
     "build": "ng build",
     "postbuild": "node ./scripts/sitemap-generator.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prestart": "node -e \"const f=require('fs');if(!f.existsSync('proxy.conf.json'))f.copyFileSync('proxy.conf.example.json','proxy.conf.json')\""
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.0.17 <time>2026-08-30</time>
+
+- Added a self-hosted Overpass mirror to the instance selector, as a fallback when the public instances are overloaded
+
 ### v1.0.16 <time>2026-06-12</time>
 
 - Addition of the **Stationery Store** category

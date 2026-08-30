@@ -42,7 +42,7 @@ Make sure you have the following installed:
    ```
 3. Run the development server:
    ```sh
-   ng serve
+   npm start
    ```
 4. Open `http://localhost:4200/` in your browser. The application will automatically reload if you change any of the source files.
 
@@ -51,6 +51,18 @@ Note: Game assets are not included in this repository. See [icons README](https:
 ### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Post-build scripts are located in the `./scripts` folder.
+
+### Self-hosted Overpass mirror (optional)
+
+The instance picker includes a `pixelpirate.fr` entry backed by
+[pikmin-map-data](https://github.com/pixlpirate/pikmin-map-data), a SQLite mirror
+of the OSM data this map queries. It is a fallback for when the public Overpass
+instances are overloaded.
+
+Set `mirrorInstance` in `src/environments/` to wherever you serve it. For local
+development, `npm start` creates `proxy.conf.json` from
+`proxy.conf.example.json` on first run — point its `pathRewrite` at your
+`pikmin-map-data` checkout so the dev server never has to execute PHP.
 
 ## License
 

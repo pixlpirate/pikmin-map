@@ -43,3 +43,6 @@ Thumbs.db
 
 # Exception: _Background.png
 !/src/assets/icons/map/_Background.png
+
+# Local dev proxy target (generated from proxy.conf.example.json on `npm start`)
+/proxy.conf.json

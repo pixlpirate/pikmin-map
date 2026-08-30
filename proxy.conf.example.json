@@ -1,0 +1,10 @@
+{
+    "/api": {
+        "target": "http://localhost",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api": "/path/to/pikmin-map-data/api"
+        }
+    }
+}
