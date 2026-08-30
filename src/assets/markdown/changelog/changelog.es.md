@@ -3,6 +3,7 @@
 ### v1.0.17 <time>2026-08-30</time>
 
 - Se agregó un espejo de Overpass autoalojado en el selector de instancia, como alternativa cuando las instancias públicas están sobrecargadas
+- Se corrigió que las decoraciones no volvieran a aparecer al seleccionarlas de nuevo tras haberlas deseleccionado
 
 ### v1.0.16 <time>2026-06-12</time>
 

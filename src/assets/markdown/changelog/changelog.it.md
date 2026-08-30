@@ -3,6 +3,7 @@
 ### v1.0.17 <time>2026-08-30</time>
 
 - Aggiunto un mirror Overpass self-hosted nel selettore dell'istanza, come alternativa quando le istanze pubbliche sono sovraccariche
+- Corretto il problema per cui le decorazioni non riapparivano quando venivano selezionate di nuovo dopo essere state deselezionate
 
 ### v1.0.16 <time>2026-06-12</time>
 

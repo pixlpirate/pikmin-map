@@ -3,6 +3,7 @@
 ### v1.0.17 <time>2026-08-30</time>
 
 - Ajout d'un miroir Overpass auto-hébergé dans le sélecteur d'instance, comme solution de repli lorsque les instances publiques sont surchargées
+- Correction des décorations qui ne réapparaissaient pas lorsqu'elles étaient sélectionnées à nouveau après avoir été désélectionnées
 
 ### v1.0.16 <time>2026-06-12</time>
 

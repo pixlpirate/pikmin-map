@@ -100,6 +100,14 @@ export class OverpassTurboService {
 	 * It ensures a clear separation between components
 	 */
 	public fetchOverpassTurboResults(decors: Decor[]): void {
+		// An empty selection needs no viewport, and asking for one before the
+		// map exists throws - this runs once on startup, before it is ready.
+		if (!decors.length) {
+			this.fetchOverpassTurboResultsSubject.next({ decors: [], bounds: [0, 0, 0, 0] });
+
+			return;
+		}
+
 		const bounds: LatLngBounds = this.mapService.getBounds();
 		const decorQuery: DecorQuery = {
 			decors: decors,
@@ -137,6 +145,15 @@ export class OverpassTurboService {
 	 * @param decorQuery
 	 */
 	private fetchOverpassTurboResults$(decorQuery: DecorQuery): Observable<any> {
+		// Nothing selected: clear the results without a request. The query would
+		// carry no nwr statement, which is not something to ask an instance.
+		if (!decorQuery.decors.length) {
+			this.toastService.removeAll();
+			this.eventBusService.setOverpassTurboResults([]);
+
+			return of(null);
+		}
+
 		const body = this.prepareOverpassTurboQuery(decorQuery);
 
 		this.toastService.removeAll();

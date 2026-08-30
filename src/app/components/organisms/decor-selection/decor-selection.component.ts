@@ -75,13 +75,16 @@ export class DecorSelectionComponent implements OnInit, OnDestroy {
 			.onCheckedDecorChange()
 			.subscribe({
 				next: (decors: Decor[]) => {
-					if (decors.length) {
-						this.overpassTurboService.fetchOverpassTurboResults(
-							decors
-						);
-					} else {
+					if (!decors.length) {
+						// Empty the map straight away rather than waiting out
+						// the service's debounce
 						this.mapService.clearMarkers();
 					}
+
+					// Always forward the selection, empty included: the service
+					// discards queries identical to the previous one, so
+					// skipping this made re-selecting the same decor a no-op
+					this.overpassTurboService.fetchOverpassTurboResults(decors);
 				},
 			});
 	}

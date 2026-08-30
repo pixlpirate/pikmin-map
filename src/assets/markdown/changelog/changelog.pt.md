@@ -3,6 +3,7 @@
 ### v1.0.17 <time>2026-08-30</time>
 
 - Foi adicionado um espelho do Overpass auto-hospedado no seletor de instância, como alternativa quando as instâncias públicas estão sobrecarregadas
+- Foi corrigido o problema em que as decorações não reapareciam ao serem selecionadas novamente após terem sido desmarcadas
 
 ### v1.0.16 <time>2026-06-12</time>
 
