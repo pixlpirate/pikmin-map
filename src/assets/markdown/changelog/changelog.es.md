@@ -4,6 +4,7 @@
 
 - Se agregó un espejo de Overpass autoalojado en el selector de instancia, como alternativa cuando las instancias públicas están sobrecargadas
 - Se corrigió que las decoraciones no volvieran a aparecer al seleccionarlas de nuevo tras haberlas deseleccionado
+- El mapa ahora recurre al espejo autoalojado cuando la instancia de Overpass elegida está sobrecargada, y sigue usando la que haya respondido
 
 ### v1.0.16 <time>2026-06-12</time>
 

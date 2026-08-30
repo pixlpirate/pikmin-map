@@ -4,6 +4,7 @@
 
 - Ajout d'un miroir Overpass auto-hébergé dans le sélecteur d'instance, comme solution de repli lorsque les instances publiques sont surchargées
 - Correction des décorations qui ne réapparaissaient pas lorsqu'elles étaient sélectionnées à nouveau après avoir été désélectionnées
+- La carte bascule désormais sur le miroir auto-hébergé lorsque l'instance Overpass choisie est surchargée, et conserve l'instance qui a répondu
 
 ### v1.0.16 <time>2026-06-12</time>
 

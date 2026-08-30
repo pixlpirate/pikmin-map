@@ -4,6 +4,7 @@
 
 - Hinzufügen eines selbst gehosteten Overpass-Spiegels im Instanz-Selektor, als Ausweichlösung, wenn die öffentlichen Instanzen überlastet sind
 - Behebung des Problems, dass Dekore nach dem Abwählen und erneuten Auswählen nicht wieder angezeigt wurden
+- Die Karte weicht jetzt auf den eigenen Spiegel aus, wenn die gewählte Overpass-Instanz überlastet ist, und behält die Instanz bei, die geantwortet hat
 
 ### v1.0.16 <time>2026-06-12</time>
 

@@ -61,6 +61,7 @@ export class OverpassTurboService {
 		} */
 	];
 	private currentInstance: string;
+	private activeInstance: string;
 	private decors: Decor[] = [];
 	private decorSubscription?: Subscription;
 	private fetchOverpassTurboResultsSubject = new Subject<DecorQuery>();
@@ -75,6 +76,7 @@ export class OverpassTurboService {
 		private translateService: TranslateService,
 	) {
 		this.currentInstance = this.resolveStoredInstance();
+		this.activeInstance = this.currentInstance;
 
 		if (!this.decorSubscription) {
 			this.decorSubscription = this.decorService.getDecors().subscribe({
@@ -136,6 +138,7 @@ export class OverpassTurboService {
 			: environment.overpassInstance;
 
 		this.currentInstance = nextInstance;
+		this.activeInstance = nextInstance;
 		this.localStorageService.setItem(this.storageKey, nextInstance);
 	}
 
@@ -167,16 +170,48 @@ export class OverpassTurboService {
 			type: 'success',
 		});
 
-		let toastId = -1;
+		return this.request$(this.activeInstance, body).pipe(
+			catchError((response: any) => {
+				const overloaded = response.status === 504 || response.status === 429;
+				const isMirror = this.activeInstance === environment.mirrorInstance;
+
+				if (!overloaded || isMirror) {
+					return this.handleRequestError(response);
+				}
+
+				return this.request$(environment.mirrorInstance, body).pipe(
+					tap(() =>
+						this.toastService.add({
+							message: this.translate('WARNING_FELL_BACK_TO_MIRROR'),
+							type: 'warning',
+							duration: environment.toastDuration,
+						}),
+					),
+					catchError((fallbackResponse: any) =>
+						this.handleRequestError(fallbackResponse),
+					),
+				);
+			}),
+		);
+	}
+
+	/**
+	 * Runs the query against one instance and publishes the formatted results.
+	 *
+	 * @param instance - Base URL of the Overpass instance to ask
+	 * @param body - The prepared Overpass QL query
+	 */
+	private request$(instance: string, body: string): Observable<any> {
 		return this.http
 			.get(
-				`${this.currentInstance}?data=${encodeURI(
+				`${instance}?data=${encodeURI(
 					body,
 				)}`,
 			)
 			.pipe(
 				tap((response: any) => {
 					this.toastService.remove(-1);
+					this.activeInstance = instance;
 
 					// Direct node and way elements
 					const nodeWayElements = response.elements.filter(
@@ -207,7 +242,7 @@ export class OverpassTurboService {
 
 					// No results or too many results
 					if (elements.length === 0) {
-						toastId = this.toastService.add({
+						this.toastService.add({
 							message: this.translate('WARNING_NO_RESULTS'),
 							type: 'warning',
 							duration: environment.toastDuration,
@@ -215,7 +250,7 @@ export class OverpassTurboService {
 					} else if (elements.length > 1000) {
 						elements.splice(1000);
 
-						toastId = this.toastService.add({
+						this.toastService.add({
 							message: this.translate('WARNING_TOO_MANY_RESULTS'),
 							type: 'warning',
 							duration: environment.toastDuration,
@@ -244,31 +279,35 @@ export class OverpassTurboService {
 						}),
 					);
 				}),
-				catchError((response: any) => {
-					this.toastService.remove(toastId);
-
-					// Check for errors, Overpass Turbo API does not return error codes
-					if (response.status === 504) {
-						// Query timed out
-						this.toastService.add({
-							message: this.translate('ERROR_TIMEOUT'),
-							type: 'error',
-							duration: environment.toastDuration,
-						});
-					} else if (response.status === 429) {
-						// Too many requests
-						this.toastService.add({
-							message: this.translate('ERROR_TOO_MANY_REQUESTS'),
-							type: 'error',
-							duration: environment.toastDuration,
-						});
-					} else {
-						console.error('Unknown error occurred of Overpass Turbo request:', response);
-					}
-
-					return of(null);
-				}),
 			);
+	}
+
+	/**
+	 * Turn failed request into a toast. Overpass does not use error codes in
+	 * its body, so the HTTP status is all there is to go on.
+	 */
+	private handleRequestError(response: any): Observable<null> {
+		this.toastService.remove(-1);
+
+		if (response.status === 504) {
+			// Query timed out
+			this.toastService.add({
+				message: this.translate('ERROR_TIMEOUT'),
+				type: 'error',
+				duration: environment.toastDuration,
+			});
+		} else if (response.status === 429) {
+			// Too many requests
+			this.toastService.add({
+				message: this.translate('ERROR_TOO_MANY_REQUESTS'),
+				type: 'error',
+				duration: environment.toastDuration,
+			});
+		} else {
+			console.error('Unknown error occurred of Overpass Turbo request:', response);
+		}
+
+		return of(null);
 	}
 
 	/* Helpers

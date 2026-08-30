@@ -21,6 +21,7 @@
   "UPDATE_AVAILABLE_DETAILS": "Eine neue Version der App ist verfügbar. Möchten Sie sie installieren?",
   "UPDATE_AVAILABLE": "Update verfügbar",
   "WARNING_NO_RESULTS": "Keine Ergebnisse gefunden, versuchen Sie herauszuzoomen",
+  "WARNING_FELL_BACK_TO_MIRROR": "Overpass ist überlastet, für diese Abfrage wurde der eigene Spiegel verwendet",
   "WARNING_TOO_MANY_RESULTS": "Zu viele Ergebnisse, nur die ersten 1000 werden angezeigt",
   "HIDE_WAYS": "Wege ausblenden",
   "HIDE_NODES": "Knoten ausblenden",

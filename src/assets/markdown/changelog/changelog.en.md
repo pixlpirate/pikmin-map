@@ -4,6 +4,7 @@
 
 - Added a self-hosted Overpass mirror to the instance selector, as a fallback when the public instances are overloaded
 - Fixed decors not reappearing when selected again after being unselected
+- The map now falls back to the self-hosted mirror when the chosen Overpass instance is overloaded, and keeps using whichever instance answered
 
 ### v1.0.16 <time>2026-06-12</time>
 

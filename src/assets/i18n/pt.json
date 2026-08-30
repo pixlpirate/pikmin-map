@@ -21,6 +21,7 @@
   "UPDATE_AVAILABLE_DETAILS": "Uma nova versão do aplicativo está disponível. Deseja instalá-la?",
   "UPDATE_AVAILABLE": "Atualização disponível",
   "WARNING_NO_RESULTS": "Nenhum resultado encontrado, tente dar zoom para fora",
+  "WARNING_FELL_BACK_TO_MIRROR": "O Overpass está sobrecarregado, esta consulta usou o espelho auto-hospedado",
   "WARNING_TOO_MANY_RESULTS": "Muitos resultados, apenas os primeiros 1000 são exibidos",
   "HIDE_WAYS": "Ocultar caminhos",
   "HIDE_NODES": "Ocultar nós",

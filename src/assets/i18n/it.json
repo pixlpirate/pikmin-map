@@ -21,6 +21,7 @@
   "UPDATE_AVAILABLE_DETAILS": "È disponibile una nuova versione dell'app. Vuoi installarla?",
   "UPDATE_AVAILABLE": "Aggiornamento disponibile",
   "WARNING_NO_RESULTS": "Nessun risultato trovato, prova a fare zoom all'indietro",
+  "WARNING_FELL_BACK_TO_MIRROR": "Overpass è sovraccarico, questa richiesta ha usato il mirror self-hosted",
   "WARNING_TOO_MANY_RESULTS": "Troppi risultati, vengono visualizzati solo i primi 1000",
   "HIDE_WAYS": "Nascondi percorsi",
   "HIDE_NODES": "Nascondi nodi",

@@ -21,6 +21,7 @@
   "UPDATE_AVAILABLE_DETAILS": "A new version of the app is available. Do you want to install it?",
   "UPDATE_AVAILABLE": "Update available",
   "WARNING_NO_RESULTS": "No results found, try to zoom out",
+  "WARNING_FELL_BACK_TO_MIRROR": "Overpass is overloaded, this query used the self-hosted mirror instead",
   "WARNING_TOO_MANY_RESULTS": "Too many results, only first 1000 displayed",
   "HIDE_WAYS": "Hide ways",
   "HIDE_NODES": "Hide nodes",

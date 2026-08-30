@@ -4,6 +4,7 @@
 
 - Aggiunto un mirror Overpass self-hosted nel selettore dell'istanza, come alternativa quando le istanze pubbliche sono sovraccariche
 - Corretto il problema per cui le decorazioni non riapparivano quando venivano selezionate di nuovo dopo essere state deselezionate
+- La mappa ora ripiega sul mirror self-hosted quando l'istanza Overpass scelta è sovraccarica, e continua a usare quella che ha risposto
 
 ### v1.0.16 <time>2026-06-12</time>
 

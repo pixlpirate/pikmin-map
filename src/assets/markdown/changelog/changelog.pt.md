@@ -4,6 +4,7 @@
 
 - Foi adicionado um espelho do Overpass auto-hospedado no seletor de instância, como alternativa quando as instâncias públicas estão sobrecarregadas
 - Foi corrigido o problema em que as decorações não reapareciam ao serem selecionadas novamente após terem sido desmarcadas
+- O mapa agora recorre ao espelho auto-hospedado quando a instância do Overpass escolhida está sobrecarregada, e continua a usar aquela que respondeu
 
 ### v1.0.16 <time>2026-06-12</time>
 

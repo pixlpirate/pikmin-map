@@ -21,6 +21,7 @@
   "UPDATE_AVAILABLE_DETAILS": "有新版本可供下载。请问您想下载吗？",
   "UPDATE_AVAILABLE": "可用更新",
   "WARNING_NO_RESULTS": "找不到结果，请尝试放大",
+  "WARNING_FELL_BACK_TO_MIRROR": "Overpass 过载，本次查询已改用自建镜像",
   "WARNING_TOO_MANY_RESULTS": "太多搜寻结果，只能显示首1000项",
   "HIDE_WAYS": "隐藏路径",
   "HIDE_NODES": "隐藏标记",
