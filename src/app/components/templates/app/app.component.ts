@@ -43,7 +43,7 @@ export class AppComponent {
 			this.localStorageService.getItem('locale') ||
 			navigator.language ||
 			'en';
-		const languageCode = browserLanguage.split('-')[0];
+		const languageCode = languageService.resolve(browserLanguage);
 		this.translateService.setDefaultLang(languageCode);
 		this.translateService.use(languageCode);
 		this.translateService.addLangs(languageService.getLocales());

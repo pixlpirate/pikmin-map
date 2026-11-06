@@ -90,4 +90,39 @@ export class LanguageService {
 	public getLocales(): string[] {
 		return this.languages.map((lang: Language) => lang.locale);
 	}
+
+	/**
+	 * Get the available language closest to a locale
+	 *
+	 * @param {string} locale a browser or stored locale
+	 *
+	 * @returns {string} an available language, en by default
+	 */
+	public resolve(locale: string | null | undefined): string {
+		const locales = this.getLocales();
+
+		if (!locale) {
+			return 'en';
+		}
+
+		const exact = locales.find(
+			(candidate: string) => candidate.toLowerCase() === locale.toLowerCase()
+		);
+
+		if (exact) {
+			return exact;
+		}
+
+		const [base, ...rest] = locale.toLowerCase().split('-');
+
+		if (base === 'zh') {
+			return rest.some((part: string) =>
+				['tw', 'hk', 'mo', 'hant'].includes(part)
+			)
+				? 'zh-TW'
+				: 'zh-CN';
+		}
+
+		return locales.find((candidate: string) => candidate === base) ?? 'en';
+	}
 }
