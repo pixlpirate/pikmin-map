@@ -52,17 +52,25 @@ Note: Game assets are not included in this repository. See [icons README](https:
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Post-build scripts are located in the `./scripts` folder.
 
-### Self-hosted Overpass mirror (optional)
+### Where the data comes from
 
-The instance picker includes a `pixelpirate.fr` entry backed by
-[pikmin-map-data](https://github.com/pixlpirate/pikmin-map-data), a SQLite mirror
-of the OSM data this map queries. It is a fallback for when the public Overpass
-instances are overloaded.
+The map asks a self-hosted mirror first: [pikmin-map-data](https://github.com/pixlpirate/pikmin-map-data),
+a SQLite copy of the OSM data this map queries. Only when the mirror cannot answer
+(the area is not covered, or it is down or too slow) is the query sent to the public
+Overpass instance at overpass-api.de, so that instance is kept for what the mirror
+does not have rather than used for every pan of the map. The mirror's data is refreshed
+by hand about every six months, or when the game updates its map, so it can be a little
+behind OSM; overpass-api.de is live.
 
-Set `mirrorInstance` in `src/environments/` to wherever you serve it. For local
-development, `npm start` creates `proxy.conf.json` from
-`proxy.conf.example.json` on first run — point its `pathRewrite` at your
-`pikmin-map-data` checkout so the dev server never has to execute PHP.
+The About page has a "Data source" picker with just those two, pixelpirate.fr (the default)
+and overpass-api.de, and remembers the choice once it has been made. Picking
+overpass-api.de sends every query there.
+
+Nothing needs setting up to run the app: `npm start` uses the deployed mirror, which
+allows `http://localhost:4200`. To try your own `pikmin-map-data` checkout, set
+`mirrorInstance` in `src/environments/environment.development.ts` to `/api/overpass.php`,
+copy `proxy.conf.example.json` to `proxy.conf.json`, point its `pathRewrite` at the
+checkout, and run `ng serve --proxy-config proxy.conf.json`.
 
 ## License
 

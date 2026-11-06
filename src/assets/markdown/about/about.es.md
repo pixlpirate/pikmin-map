@@ -25,7 +25,7 @@ Por ejemplo, si el jugador está cerca de un restaurante, el juego mostrará el 
 
 Este mapa se basa exclusivamente en los datos disponibles en OSM, por lo que faltan los datos de Foursquare. En nuestro ejemplo, los restaurantes aparecen asociados a la etiqueta OSM `amenity=restaurant`.
 Cuando se selecciona el deco **restaurante**, la aplicación pide a OSM que le proporcione los objetos que contienen la etiqueta [`amenity=restaurant`](https://wiki.openstreetmap.org/wiki/Key:amenity) y que los muestre en el mapa.
-OSM no tiene una función para recuperar directamente objetos para una etiqueta en particular. Esta aplicación utiliza la herramienta Overpass-Turbo para recuperar estos datos.
+OSM no tiene una función para recuperar directamente objetos para una etiqueta en particular. Por ello, esta aplicación lee una copia de los datos de OSM alojada por el proyecto ([pikmin-map-data](https://github.com/pixlpirate/pikmin-map-data)) y, para las zonas que esa copia no cubre, recurre a la [API de Overpass](https://overpass-api.de/) pública. La copia se actualiza a mano aproximadamente cada seis meses, o cuando el juego actualiza su mapa, por lo que puede ir un poco por detrás de OSM.
 
 ### Consejos
 

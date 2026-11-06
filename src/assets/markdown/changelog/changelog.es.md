@@ -1,5 +1,10 @@
 ## Registro de cambios
 
+### v1.0.18 <time>2026-11-06</time>
+
+- El mapa ahora lee primero del espejo autoalojado y solo consulta la instancia pública de Overpass para las zonas que el espejo no cubre (o cuando no responde)
+- El selector de fuente de datos ahora solo ofrece pixelpirate.fr y overpass-api.de, y recuerda tu elección; se eliminaron las demás instancias públicas
+
 ### v1.0.17 <time>2026-08-30</time>
 
 - Se agregó un espejo de Overpass autoalojado en el selector de instancia, como alternativa cuando las instancias públicas están sobrecargadas

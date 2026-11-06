@@ -1,5 +1,10 @@
 ## Journal des modifications
 
+### v1.0.18 <time>2026-11-06</time>
+
+- La carte interroge désormais d'abord le miroir auto-hébergé, et ne sollicite l'instance Overpass publique que pour les zones qu'il ne couvre pas (ou lorsqu'il ne répond pas)
+- Le sélecteur de source de données ne propose plus que pixelpirate.fr et overpass-api.de, et mémorise votre choix ; les autres instances publiques ont été retirées
+
 ### v1.0.17 <time>2026-08-30</time>
 
 - Ajout d'un miroir Overpass auto-hébergé dans le sélecteur d'instance, comme solution de repli lorsque les instances publiques sont surchargées

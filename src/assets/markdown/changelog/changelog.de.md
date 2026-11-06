@@ -1,5 +1,10 @@
 ## Änderungsprotokoll
 
+### v1.0.18 <time>2026-11-06</time>
+
+- Die Karte liest jetzt zuerst vom selbst gehosteten Spiegel und fragt die öffentliche Overpass-Instanz nur für Gebiete ab, die der Spiegel nicht abdeckt (oder wenn er nicht antwortet)
+- Der Datenquellen-Selektor bietet nur noch pixelpirate.fr und overpass-api.de an und merkt sich deine Wahl; die anderen öffentlichen Instanzen wurden entfernt
+
 ### v1.0.17 <time>2026-08-30</time>
 
 - Hinzufügen eines selbst gehosteten Overpass-Spiegels im Instanz-Selektor, als Ausweichlösung, wenn die öffentlichen Instanzen überlastet sind

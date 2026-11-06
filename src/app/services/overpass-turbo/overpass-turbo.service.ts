@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, Subject, Subscription, switchMap, tap, debounceTime, distinctUntilChanged, catchError, of } from 'rxjs';
+import { Observable, Subject, Subscription, switchMap, tap, debounceTime, distinctUntilChanged, catchError, of, timeout } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { LatLng, LatLngBounds } from 'leaflet';
 
@@ -20,48 +20,41 @@ import { environment } from '@environments';
 })
 export class OverpassTurboService {
 	private readonly storageKey = 'overpassInstance';
+
+	/**
+	 * What the user can pick. Anything else, including an instance stored before
+	 * this list was cut down, is ignored. The mirror is first and the default.
+	 */
 	private readonly overpassInstances: SelectOption[] = [
 		{
-			label: 'overpass-api.de',
-			value: 'https://overpass-api.de/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
-		},
-		{
 			// Self-hosted SQLite mirror built by the pikmin-map-data repository.
-			// Fast, but may be outdated, and only cover the ~50 most active countries.
+			// Fast, but may be outdated, and only covers the countries it was built for:
+			// elsewhere the public instance below answers instead.
 			label: 'pixelpirate.fr',
 			value: environment.mirrorInstance,
-			description: 'OVERPASS_INSTANCE_OPTION_LIMITED_COVERAGE',
+			description: 'DATA_SOURCE_OPTION_LIMITED_COVERAGE',
 		},
 		{
-			label: 'overpass.openstreetmap.fr',
-			value: 'https://overpass.openstreetmap.fr/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
+			label: 'overpass-api.de',
+			value: environment.overpassInstance,
+			description: 'DATA_SOURCE_OPTION_WORLDWIDE',
 		},
-		{
-			label: 'overpass.private.coffee',
-			value: 'https://overpass.private.coffee/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_WORLDWIDE',
-		},
-		{
-			label: 'overpass.atownsend.org.uk',
-			value: 'https://overpass.atownsend.org.uk/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_BRITAIN_AND_IRELAND_ONLY',
-		},
-		{
-			label: 'overpass.osm.ch',
-			value: 'https://overpass.osm.ch/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_SWITZERLAND_ONLY',
-		},
-		// Ethiopia is down for a while now, might be back in future
-		/* {
-			label: 'ethiopia.overpass.openplaceguider.org',
-			value: 'https://ethiopia.overpass.openplaceguider.org/api/interpreter',
-			description: 'OVERPASS_INSTANCE_OPTION_ETHIOPIA_ONLY',
-		} */
 	];
+
 	private currentInstance: string;
-	private activeInstance: string;
+
+	/** The self-hosted mirror answers or it does not: a slow one is not waited for */
+	private readonly mirrorTimeout = 6000;
+
+	/** After a failure that is not about the area, the mirror is left alone this long */
+	private readonly mirrorCooldown = 60000;
+
+	private mirrorDownUntil = 0;
+
+	/** Areas the mirror said it does not cover, so that panning inside them skips it */
+	private readonly uncoveredBounds: DecorQuery['bounds'][] = [];
+	private readonly maxUncoveredBounds = 20;
+
 	private decors: Decor[] = [];
 	private decorSubscription?: Subscription;
 	private fetchOverpassTurboResultsSubject = new Subject<DecorQuery>();
@@ -76,7 +69,6 @@ export class OverpassTurboService {
 		private translateService: TranslateService,
 	) {
 		this.currentInstance = this.resolveStoredInstance();
-		this.activeInstance = this.currentInstance;
 
 		if (!this.decorSubscription) {
 			this.decorSubscription = this.decorService.getDecors().subscribe({
@@ -132,14 +124,10 @@ export class OverpassTurboService {
 		return this.currentInstance;
 	}
 
+	/** Remembered from then on: it is only stored once the user has chosen. */
 	public setCurrentInstance(instance: string): void {
-		const nextInstance = this.isKnownInstance(instance)
-			? instance
-			: environment.overpassInstance;
-
-		this.currentInstance = nextInstance;
-		this.activeInstance = nextInstance;
-		this.localStorageService.setItem(this.storageKey, nextInstance);
+		this.currentInstance = this.isKnownInstance(instance) ? instance : this.defaultInstance();
+		this.localStorageService.setItem(this.storageKey, this.currentInstance);
 	}
 
 	/**
@@ -170,29 +158,63 @@ export class OverpassTurboService {
 			type: 'success',
 		});
 
-		return this.request$(this.activeInstance, body).pipe(
+		return this.requestWithFallback$(decorQuery.bounds, body);
+	}
+
+	/**
+	 * The self-hosted mirror is asked first. The public Overpass instance only gets
+	 * the query when the mirror cannot answer it: the area is not covered, the query
+	 * is not supported, or the mirror is down or too slow. A user who chose the public
+	 * instance has it asked directly.
+	 *
+	 * @param bounds - South, west, north, east of the query
+	 * @param body - The prepared Overpass QL query
+	 */
+	private requestWithFallback$(bounds: DecorQuery['bounds'], body: string): Observable<any> {
+		const overpass$ = this.request$(environment.overpassInstance, body).pipe(
+			catchError((response: any) => this.handleRequestError(response)),
+		);
+
+		if (this.currentInstance !== environment.mirrorInstance || !this.shouldTryMirror(bounds)) {
+			return overpass$;
+		}
+
+		return this.request$(environment.mirrorInstance, body).pipe(
+			timeout(this.mirrorTimeout),
 			catchError((response: any) => {
-				const overloaded = response.status === 504 || response.status === 429;
-				const isMirror = this.activeInstance === environment.mirrorInstance;
+				this.noteMirrorFailure(response, bounds);
 
-				if (!overloaded || isMirror) {
-					return this.handleRequestError(response);
-				}
-
-				return this.request$(environment.mirrorInstance, body).pipe(
-					tap(() =>
-						this.toastService.add({
-							message: this.translate('WARNING_FELL_BACK_TO_MIRROR'),
-							type: 'warning',
-							duration: environment.toastDuration,
-						}),
-					),
-					catchError((fallbackResponse: any) =>
-						this.handleRequestError(fallbackResponse),
-					),
-				);
+				return overpass$;
 			}),
 		);
+	}
+
+	private shouldTryMirror(bounds: DecorQuery['bounds']): boolean {
+		return Date.now() >= this.mirrorDownUntil
+			&& !this.uncoveredBounds.some((area) => this.contains(area, bounds));
+	}
+
+	/**
+	 * 404 is the mirror saying it has no data there (and 400 that it does not
+	 * understand the query): neither says anything about whether it is up. Any
+	 * other failure - no answer, an error, a timeout - puts it aside for a while,
+	 * so that every pan of the map does not wait for it again.
+	 */
+	private noteMirrorFailure(response: any, bounds: DecorQuery['bounds']): void {
+		if (response?.status === 404) {
+			this.uncoveredBounds.push(bounds);
+
+			if (this.uncoveredBounds.length > this.maxUncoveredBounds) {
+				this.uncoveredBounds.shift();
+			}
+		} else if (response?.status !== 400) {
+			this.mirrorDownUntil = Date.now() + this.mirrorCooldown;
+		}
+	}
+
+	/** Whether `inner` lies within `outer`, both as south, west, north, east */
+	private contains(outer: DecorQuery['bounds'], inner: DecorQuery['bounds']): boolean {
+		return outer[0] <= inner[0] && outer[1] <= inner[1] && outer[2] >= inner[2] && outer[3] >= inner[3];
 	}
 
 	/**
@@ -211,7 +233,6 @@ export class OverpassTurboService {
 			.pipe(
 				tap((response: any) => {
 					this.toastService.remove(-1);
-					this.activeInstance = instance;
 
 					// Direct node and way elements
 					const nodeWayElements = response.elements.filter(
@@ -401,14 +422,14 @@ export class OverpassTurboService {
 		return this.translateService.instant(key);
 	}
 
+	private defaultInstance(): string {
+		return environment.mirrorInstance;
+	}
+
 	private resolveStoredInstance(): string {
 		const storedInstance = this.localStorageService.getItem(this.storageKey);
 
-		if (this.isKnownInstance(storedInstance)) {
-			return storedInstance;
-		}
-
-		return environment.overpassInstance;
+		return this.isKnownInstance(storedInstance) ? storedInstance : this.defaultInstance();
 	}
 
 	private isKnownInstance(instance: unknown): instance is string {

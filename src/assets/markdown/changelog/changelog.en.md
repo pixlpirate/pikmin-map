@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.0.18 <time>2026-11-06</time>
+
+- The map now reads from the self-hosted mirror first, and only asks the public Overpass instance for the areas the mirror does not cover (or when it does not answer)
+- The data source selector now only offers pixelpirate.fr and overpass-api.de, and remembers your choice; the other public instances were removed
+
 ### v1.0.17 <time>2026-08-30</time>
 
 - Added a self-hosted Overpass mirror to the instance selector, as a fallback when the public instances are overloaded

@@ -1,5 +1,10 @@
 ## Registro delle modifiche
 
+### v1.0.18 <time>2026-11-06</time>
+
+- La mappa ora legge prima dal mirror self-hosted e interroga l'istanza Overpass pubblica solo per le aree che il mirror non copre (o quando non risponde)
+- Il selettore della fonte dei dati ora offre solo pixelpirate.fr e overpass-api.de e ricorda la tua scelta; le altre istanze pubbliche sono state rimosse
+
 ### v1.0.17 <time>2026-08-30</time>
 
 - Aggiunto un mirror Overpass self-hosted nel selettore dell'istanza, come alternativa quando le istanze pubbliche sono sovraccariche

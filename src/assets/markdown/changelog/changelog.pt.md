@@ -1,5 +1,10 @@
 ## Registro de Alterações
 
+### v1.0.18 <time>2026-11-06</time>
+
+- O mapa passa a ler primeiro do espelho auto-hospedado e só consulta a instância pública do Overpass para as zonas que o espelho não cobre (ou quando não responde)
+- O seletor de fonte de dados passa a oferecer apenas pixelpirate.fr e overpass-api.de, e memoriza a sua escolha; as outras instâncias públicas foram removidas
+
 ### v1.0.17 <time>2026-08-30</time>
 
 - Foi adicionado um espelho do Overpass auto-hospedado no seletor de instância, como alternativa quando as instâncias públicas estão sobrecarregadas

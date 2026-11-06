@@ -16,16 +16,16 @@ app-language-picker {
 	bottom: $gap--small;
 }
 
-.overpass-instance-container {
+.data-source-container {
 	padding: $gap--medium;
 	margin: $gap--medium auto 0 auto;
 	border: $border-size solid $grey--lighter;
 	border-radius: $border-radius;
 }
 
-.overpass-instance-message {
-	margin: 0 0 1rem;
-	color: $grey--dark;
+.data-source-label {
+	display: block;
+	margin-bottom: $gap--small;
 }
 
 .markdown {

@@ -25,7 +25,7 @@
 
 此地图仅依赖于 OSM 上提供的数据，因此缺少 Foursquare 数据。在我们的例子中，餐厅似乎与 OSM 中的 `amenity=restaurant` 标签相关联。
 当选择了**餐厅**装饰时，应用程序会请求 OSM 提供带有 [`amenity=restaurant`](https://wiki.openstreetmap.org/wiki/Key:amenity) 标签的对象，并在地图上显示它们。
-OSM 没有直接检索特定标签对象的功能。此应用程序使用 Overpass-Turbo 工具来获取这些数据。
+OSM 没有直接检索特定标签对象的功能。因此，此应用程序读取项目托管的 OSM 数据副本（[pikmin-map-data](https://github.com/pixlpirate/pikmin-map-data)），对于该副本未覆盖的地区，则改用公共的 [Overpass API](https://overpass-api.de/)。该副本约每六个月手动刷新一次，或在游戏更新地图时刷新，因此可能略落后于 OSM。
 
 ### 提示
 

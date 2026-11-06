@@ -25,7 +25,7 @@ Now, how does the game determine that there is a restaurant in this location? It
 
 This map relies exclusively on data available on OSM, the Foursquare data is therefore missing. In our example, restaurants appear to be associated with the OSM `amenity=restaurant` tag.
 When the **restaurant** deco is selected, the application asks OSM to give it the objects that contain the [`amenity=restaurant`](https://wiki.openstreetmap.org/wiki/Key:amenity) tag and to display them on the map.
-OSM does not have a function for directly retrieving objects for a particular tag. This application uses the Overpass-Turbo tool to retrieve this data.
+OSM does not have a function for directly retrieving objects for a particular tag. This application therefore reads a copy of the OSM data hosted by the project ([pikmin-map-data](https://github.com/pixlpirate/pikmin-map-data)) and, for the areas that copy does not cover, falls back on the public [Overpass API](https://overpass-api.de/). The copy is refreshed by hand about every six months, or when the game updates its map, so it can be a little behind OSM.
 
 ### Tips
 
